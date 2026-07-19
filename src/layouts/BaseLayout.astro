@@ -1,0 +1,132 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+}
+
+const {
+  title = '민생쿠폰',
+  description = '2026 민생회복 소비쿠폰·지원금 신청 안내 (비공식)',
+  path = Astro.url.pathname,
+} = Astro.props;
+
+const fullTitle =
+  title === '민생쿠폰' ? '민생쿠폰 — 민생회복 소비쿠폰 안내' : `${title} | 민생쿠폰`;
+const year = new Date().getFullYear();
+const nav = [
+  { href: '/', label: '홈' },
+  { href: '/posts/', label: '안내글' },
+  { href: '/income/', label: '소득구간' },
+  { href: '/guides/', label: '가이드' },
+  { href: '/about/', label: '소개' },
+];
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#e8f5f3" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <title>{fullTitle}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/">
+          <span class="brand__mark" aria-hidden="true">쿠</span>
+          <span class="brand__text">
+            <span class="brand__name">민생쿠폰</span>
+            <span class="brand__tag">민생회복 소비쿠폰 안내</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="주요">
+          {
+            nav.map((item) => (
+              <a
+                href={item.href}
+                aria-current={
+                  path === item.href || (item.href !== '/' && path.startsWith(item.href))
+                    ? 'page'
+                    : undefined
+                }
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+        <button
+          class="menu-btn"
+          type="button"
+          id="menu-btn"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="메뉴 열기"
+        >
+          <span class="menu-btn__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobile-nav" hidden>
+        <div class="container mobile-nav__inner">
+          {
+            nav.map((item) => (
+              <a
+                href={item.href}
+                aria-current={
+                  path === item.href || (item.href !== '/' && path.startsWith(item.href))
+                    ? 'page'
+                    : undefined
+                }
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy">© {year} minsaeng-coupon · 민생쿠폰</p>
+        <p class="footer-note">
+          민생쿠폰은 정부·지자체와 제휴·공식 관계가 없는 개인 안내용 사이트입니다. 지원 자격·금액·일정은
+          정부24·지자체 공고 등 원문에서 확인해 주세요.
+        </p>
+      </div>
+    </footer>
+
+    <script is:inline>
+      (function () {
+        var btn = document.getElementById('menu-btn');
+        var panel = document.getElementById('mobile-nav');
+        if (!btn || !panel) return;
+        function setOpen(open) {
+          panel.hidden = !open;
+          btn.setAttribute('aria-expanded', String(open));
+          btn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+          btn.classList.toggle('is-open', open);
+        }
+        btn.addEventListener('click', function () {
+          setOpen(panel.hidden);
+        });
+        panel.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            setOpen(false);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

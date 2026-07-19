@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishedPosts } from '../../lib/posts';
+
+const posts = await getPublishedPosts();
+---
+
+<BaseLayout title="안내글" description="민생회복 소비쿠폰 관련 안내글 목록" path="/posts/">
+  <section class="section" style="padding-top: 2.5rem;">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2>안내글</h2>
+          <p>{posts.length}건 · 2026 초안</p>
+        </div>
+      </div>
+      <div class="post-list">
+        {
+          posts.map((post) => (
+            <a class="post-row" href={`/posts/${post.id}/`}>
+              <div class="post-row__meta">
+                <span class="chip chip--teal">{post.data.category}</span>
+                <span class="chip">{post.data.updatedAt}</span>
+              </div>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

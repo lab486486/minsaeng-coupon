@@ -1,0 +1,11 @@
+name = "minsaeng-coupon"
+compatibility_date = "2025-07-01"
+pages_build_output_dir = "dist"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "minsaeng-coupon-media"
+preview_bucket_name = "minsaeng-coupon-media"
+
+[vars]
+GITHUB_CLIENT_ID = "Ov23liNHMXLlTCY5gBS0"

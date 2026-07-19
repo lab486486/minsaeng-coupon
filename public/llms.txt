@@ -1,0 +1,10 @@
+# 민생쿠폰
+
+> 2026 민생회복 소비쿠폰·지원금 비공식 안내
+
+## 주요 페이지
+
+- [홈](https://minsaeng-coupon.pages.dev/)
+- [안내글](https://minsaeng-coupon.pages.dev/posts/)
+- [소득구간](https://minsaeng-coupon.pages.dev/income/)
+- [가이드](https://minsaeng-coupon.pages.dev/guides/)

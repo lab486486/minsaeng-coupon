@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minsaeng-coupon.pages.dev/sitemap-index.xml

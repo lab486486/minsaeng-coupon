@@ -1,0 +1,52 @@
+backend:
+  name: github
+  repo: lab486486/minsaeng-coupon
+  branch: main
+  base_url: https://minsaeng-coupon.pages.dev
+  auth_endpoint: api/auth
+  cms_label_prefix: minsaeng
+
+local_backend: false
+
+media_library:
+  name: r2
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: posts
+    label: 글/안내
+    label_singular: 글
+    folder: src/content/posts
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - { label: 제목, name: title, widget: string }
+      - { label: 요약, name: description, widget: string }
+      - { label: 카테고리, name: category, widget: select, options: [총정리, 신청방법, 지역, 소득기준, FAQ, 기타], default: 총정리 }
+      - { label: 태그, name: tags, widget: list, required: false }
+      - { label: 작성일, name: publishedAt, widget: string }
+      - { label: 수정일, name: updatedAt, widget: string }
+      - { label: 핵심 노출, name: featured, widget: boolean, default: false }
+      - { label: 초안, name: draft, widget: boolean, default: false }
+      - { label: 본문, name: body, widget: markdown }
+
+  - name: guides
+    label: 가이드
+    label_singular: 가이드
+    folder: src/content/guides
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - { label: 제목, name: title, widget: string }
+      - { label: 설명, name: description, widget: string }
+      - { label: 정렬, name: order, widget: number, default: 99 }
+      - { label: 업데이트, name: updatedAt, widget: string }
+      - { label: 본문, name: body, widget: markdown }

@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { INCOME_BRACKETS_2026, formatWon } from '../../lib/income';
+---
+
+<BaseLayout
+  title="소득구간 확인"
+  description="연소득을 입력해 2026년 추정치 기준 소득 상위·하위 구간을 확인하세요"
+  path="/income/"
+>
+  <section class="section" style="padding-top: 2.5rem;">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2>내 소득구간 확인</h2>
+          <p>지원금·소비쿠폰 대상 기준을 볼 때 자주 쓰는 소득 구간을 대략 확인합니다</p>
+        </div>
+      </div>
+
+      <div class="income-card">
+        <label>
+          연소득(세전, 원)
+          <input
+            id="income-input"
+            type="number"
+            inputmode="numeric"
+            min="0"
+            step="100000"
+            placeholder="예: 45000000"
+          />
+        </label>
+        <div style="margin-top: 0.9rem; display: flex; gap: 0.6rem; flex-wrap: wrap;">
+          <button class="btn btn--primary" type="button" id="income-calc">구간 확인</button>
+          <a class="btn btn--ghost" href="/posts/income-top-10/">상위 10% 설명</a>
+          <a class="btn btn--ghost" href="/posts/income-lower/">하위 구간 설명</a>
+        </div>
+        <div class="income-result" id="income-result" hidden></div>
+      </div>
+
+      <p class="notice">
+        아래 표는 <strong>2026년 초안용 추정 구간</strong>입니다. 국세청·통계청 확정치와 다를 수 있으며,
+        지원금 자격 심사 기준(중위소득 %, 건보료 등)과는 다를 수 있습니다.
+      </p>
+
+      <div class="post-list" style="margin-top: 1.25rem;">
+        {
+          INCOME_BRACKETS_2026.map((b) => (
+            <div class="post-row">
+              <div class="post-row__meta">
+                <span class="chip chip--teal">{b.label}</span>
+                <span class="chip">상위 약 {b.topPercent}%</span>
+              </div>
+              <h3>
+                {formatWon(b.min)}원 이상
+                {b.max === Infinity ? '' : ` ~ ${formatWon(b.max)}원 미만`}
+              </h3>
+              <p>{b.note}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      var brackets = [
+        { label: '상위 1%', min: 200000000, max: Infinity, topPercent: 1 },
+        { label: '상위 5%', min: 120000000, max: 200000000, topPercent: 5 },
+        { label: '상위 10%', min: 90000000, max: 120000000, topPercent: 10 },
+        { label: '상위 20%', min: 70000000, max: 90000000, topPercent: 20 },
+        { label: '상위 30%', min: 55000000, max: 70000000, topPercent: 30 },
+        { label: '중위권', min: 35000000, max: 55000000, topPercent: 50 },
+        { label: '하위 40%', min: 25000000, max: 35000000, topPercent: 60 },
+        { label: '하위 30%', min: 18000000, max: 25000000, topPercent: 70 },
+        { label: '하위 20%', min: 12000000, max: 18000000, topPercent: 80 },
+        { label: '하위 10%', min: 0, max: 12000000, topPercent: 90 },
+      ];
+
+      var input = document.getElementById('income-input');
+      var btn = document.getElementById('income-calc');
+      var out = document.getElementById('income-result');
+      if (!input || !btn || !out) return;
+
+      function won(n) {
+        return new Intl.NumberFormat('ko-KR').format(Math.round(n));
+      }
+
+      function calc() {
+        var value = Number(String(input.value).replace(/,/g, ''));
+        if (!Number.isFinite(value) || value < 0) {
+          out.hidden = false;
+          out.textContent = '연소득을 숫자로 입력해 주세요.';
+          return;
+        }
+        var hit =
+          brackets.find(function (b) {
+            return value >= b.min && value < b.max;
+          }) || brackets[brackets.length - 1];
+
+        var bottomish = hit.topPercent >= 60;
+        out.hidden = false;
+        out.innerHTML =
+          '연소득 <strong>' +
+          won(value) +
+          '원</strong>은 대략 <strong>' +
+          hit.label +
+          '</strong> (상위 약 ' +
+          hit.topPercent +
+          '%대)로 보입니다.<br />' +
+          (bottomish
+            ? '하위·중하위 안내에 가까운 구간입니다. '
+            : '중상위·상위 안내에 가까운 구간입니다. ') +
+          '<a href="' +
+          (bottomish ? '/posts/income-lower/' : '/posts/income-top-10/') +
+          '">관련 설명 보기 →</a>';
+      }
+
+      btn.addEventListener('click', calc);
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') calc();
+      });
+    })();
+  </script>
+</BaseLayout>

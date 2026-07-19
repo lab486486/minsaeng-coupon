@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPublishedPosts } from '../lib/posts';
+
+const posts = await getPublishedPosts();
+const featured = posts.filter((p) => p.data.featured).slice(0, 4);
+const latest = posts.slice(0, 6);
+---
+
+<BaseLayout title="민생쿠폰" description="2026 민생회복 소비쿠폰·지원금 신청 대상·일정·소득구간 안내">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="hero__kicker">2026 DRAFT</span>
+        <h1>민생쿠폰</h1>
+        <p class="hero__lead">
+          민생회복 소비쿠폰, 누가·얼마나·어떻게 받는지 한눈에.<br class="hero__br" />
+          소득구간 확인부터 신청 안내까지 모아두었습니다.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="/posts/2026-overview/">2026 총정리 보기</a>
+          <a class="btn btn--ghost" href="/income/">내 소득구간 확인</a>
+        </div>
+      </div>
+
+      <aside class="hero__aside" aria-label="빠른 이동">
+        <p class="hero__aside-label">자주 찾는 안내</p>
+        <div class="hero__shortcuts">
+          <a class="hero__shortcut" href="/income/">소득구간</a>
+          <a class="hero__shortcut" href="/posts/income-top-10/">상위 10%</a>
+          <a class="hero__shortcut" href="/posts/income-lower/">하위 구간</a>
+          <a class="hero__shortcut" href="/posts/faq/">FAQ</a>
+          <a class="hero__shortcut hero__shortcut--accent" href="/posts/apply-guide/">신청방법 보기</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2><span class="mark-highlight">핵심 안내</span></h2>
+          <p>검토용 초안 · 공고 확정 후 수치·일정을 갱신하세요</p>
+        </div>
+        <a href="/posts/">전체 글 →</a>
+      </div>
+      <div class="post-list">
+        {
+          featured.map((post) => (
+            <a class="post-row" href={`/posts/${post.id}/`}>
+              <div class="post-row__meta">
+                <span class="chip chip--teal">{post.data.category}</span>
+                <span class="chip">{post.data.updatedAt}</span>
+              </div>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2>최신 글</h2>
+          <p>블로그스팟 글을 2026 버전으로 재구성한 초안입니다</p>
+        </div>
+      </div>
+      <div class="post-list">
+        {
+          latest.map((post) => (
+            <a class="post-row" href={`/posts/${post.id}/`}>
+              <div class="post-row__meta">
+                <span class="chip">{post.data.category}</span>
+              </div>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

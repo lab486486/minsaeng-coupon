@@ -1,0 +1,21 @@
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+/ads.txt
+  Content-Type: text/plain; charset=utf-8
+
+# 장캐시(immutable)는 누락 자산이 HTML로 캐시되는 사고가 있어 짧게 유지
+/assets/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/_astro/*
+  Cache-Control: public, max-age=60, must-revalidate
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+/logo.png
+  Cache-Control: public, max-age=604800

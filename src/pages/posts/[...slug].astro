@@ -1,0 +1,35 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishedPosts } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} path="/posts/">
+  <article class="detail-hero">
+    <div class="container">
+      <div class="post-row__meta">
+        <span class="chip chip--teal">{post.data.category}</span>
+        <span class="chip">업데이트 {post.data.updatedAt}</span>
+      </div>
+      <h1>{post.data.title}</h1>
+      <p class="hero__lead">{post.data.description}</p>
+      <div class="prose" style="margin-top: 1.75rem;">
+        <Content />
+      </div>
+      <p class="notice">
+        본 글은 검토용 초안입니다. 실제 지급액·대상·일정은 정부·지자체 공식 공고를 기준으로 확인하세요.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

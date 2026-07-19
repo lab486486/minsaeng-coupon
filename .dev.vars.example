@@ -1,0 +1,6 @@
+# Copy to .dev.vars (gitignored)
+# Cloudflare Pages → Settings → Environment variables 에도 동일하게 설정
+
+GITHUB_CLIENT_ID=Ov23liNHMXLlTCY5gBS0
+GITHUB_CLIENT_SECRET=replace-with-github-oauth-client-secret
+MEDIA_PUBLIC_BASE=https://media.minsaeng-coupon.pages.dev
