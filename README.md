@@ -39,3 +39,15 @@ Cloudflare Pages → Settings → Environment variables:
 ## 소득구간
 
 `/income` — 연소득 입력 시 2026 추정 분위 구간을 보여줍니다. 수치는 초안이므로 공식 통계로 교체하세요.
+
+## 뉴스 자동 수집
+
+매일 **한국시간 09:00** GitHub Actions가 Google 뉴스 RSS를 읽어 `data/news-watch.json`을 갱신합니다.
+
+```bash
+npm run news:fetch
+```
+
+- 페이지: `/news`
+- 본문 크롤링 없음 (제목·출처·링크만)
+- 수동 실행: Actions → **Daily news watch** → Run workflow

@@ -14,9 +14,10 @@ const { guide } = Astro.props;
 const { Content } = await render(guide);
 ---
 
-<BaseLayout title={guide.data.title} description={guide.data.description} path="/guides/">
+<BaseLayout title={guide.data.title} description={guide.data.description} path="/guides/checklist/">
   <article class="detail-hero">
     <div class="container">
+      <p class="hero__kicker">체크리스트</p>
       <h1>{guide.data.title}</h1>
       <p class="hero__lead">{guide.data.description}</p>
       <div class="prose" style="margin-top: 1.75rem;">

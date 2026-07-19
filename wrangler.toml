@@ -7,5 +7,4 @@ binding = "MEDIA"
 bucket_name = "minsaeng-coupon-media"
 preview_bucket_name = "minsaeng-coupon-media"
 
-[vars]
-GITHUB_CLIENT_ID = "Ov23liNHMXLlTCY5gBS0"
+# GITHUB_CLIENT_ID / GITHUB_CLIENT_SECRET 은 Pages Secrets로 설정

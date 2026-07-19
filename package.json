@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
+    "news:fetch": "node scripts/fetch-news.mjs",
     "pages:dev": "npm run build && wrangler pages dev dist --compatibility-date=2025-07-01"
   },
   "dependencies": {

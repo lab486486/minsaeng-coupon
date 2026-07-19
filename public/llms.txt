@@ -7,4 +7,4 @@
 - [홈](https://minsaeng-coupon.pages.dev/)
 - [안내글](https://minsaeng-coupon.pages.dev/posts/)
 - [소득구간](https://minsaeng-coupon.pages.dev/income/)
-- [가이드](https://minsaeng-coupon.pages.dev/guides/)
+- [체크리스트](https://minsaeng-coupon.pages.dev/guides/checklist/)

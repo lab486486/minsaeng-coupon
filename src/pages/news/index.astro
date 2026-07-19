@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import newsWatch from '../../../data/news-watch.json';
+
+const items = newsWatch.items ?? [];
+const updatedAt = newsWatch.updatedAt
+  ? new Intl.DateTimeFormat('ko-KR', {
+      timeZone: 'Asia/Seoul',
+      dateStyle: 'medium',
+      timeStyle: 'short',
+    }).format(new Date(newsWatch.updatedAt))
+  : '아직 수집 전';
+
+function formatDate(iso: string | null) {
+  if (!iso) return '';
+  return new Intl.DateTimeFormat('ko-KR', {
+    timeZone: 'Asia/Seoul',
+    dateStyle: 'medium',
+  }).format(new Date(iso));
+}
+---
+
+<BaseLayout
+  title="뉴스 모니터링"
+  description="민생지원금·소비쿠폰 관련 뉴스를 매일 자동 수집한 목록"
+  path="/news/"
+>
+  <section class="section" style="padding-top: 2.5rem;">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2>뉴스 모니터링</h2>
+          <p>Google 뉴스 RSS · 매일 오전 9시(한국시간) 자동 수집 · 최근 갱신 {updatedAt}</p>
+        </div>
+      </div>
+
+      <p class="notice">
+        기사 본문은 저장하지 않고 <strong>제목·출처·링크</strong>만 모읍니다. 원문은 각 언론사에서 확인하세요.
+        보조금24에 아직 안 올라온 지역 민생지원금 소식을 놓치지 않기 위한 용도입니다.
+      </p>
+
+      <div class="post-list">
+        {
+          items.length === 0 ? (
+            <p class="notice">아직 수집된 뉴스가 없습니다. Actions에서 Daily news watch를 실행해 주세요.</p>
+          ) : (
+            items.map((item) => (
+              <a class="post-row" href={item.link} target="_blank" rel="noopener noreferrer">
+                <div class="post-row__meta">
+                  {item.source && <span class="chip chip--teal">{item.source}</span>}
+                  {item.query && <span class="chip">{item.query}</span>}
+                  {item.publishedAt && <span class="chip">{formatDate(item.publishedAt)}</span>}
+                </div>
+                <h3>{item.title}</h3>
+                <p>원문 보기 →</p>
+              </a>
+            ))
+          )
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
