@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T12:14:46.697Z",
+  "updatedAt": "2026-07-20T12:33:36.410Z",
   "source": "Google News RSS",
   "note": "기사 본문은 수집하지 않습니다. 링크는 Google News 경유 URL일 수 있습니다.",
   "newCount": 86,
@@ -19,6 +19,14 @@
       "publishedAt": "2026-07-20T05:47:00.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-20T12:14:45.943Z"
+    },
+    {
+      "title": "“추석 전 1인당 30만 원씩 또 준다”… 4차 ‘민생지원금’ 지급일은?",
+      "source": "토픽트리",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdHc4MkZtVkVQSEEza0tOZUx4YU9icEI1ZWlEMDhyUk50el9tUFgwN0Z1VzUtZ0l0eFdYOUlQQmozYjBEc0pIQmJNWDFmUDJBMkJlX3lIUEw3b3dVYkRlazRzMnJsZllVckJ5VTJXTDFYaHZzdjgyWUxoM045dHdRZUN4YWthQzVFVHFMNkN6dU5HcUVMMThJX2l6RQ?oc=5",
+      "publishedAt": "2026-07-20T04:59:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-20T12:33:36.047Z"
     },
     {
       "title": "\"추석 전 1인당 30만 원씩 또 준다\"... 4차 '민생지원금' 지급일은?",
@@ -955,14 +963,6 @@
       "publishedAt": "2026-06-06T07:00:00.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "민생회복 소비쿠폰, 데이터로 검증하다: 정책효과의 실증분석과 향후과제 세미나",
-      "source": "KDI 경제교육",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBxVVY2WjkzTHNWUWdJMzNjTkFuWlVIaUVMR0J5VWJKOEcyRUsyU3VpVEZsaEZCRE9fSkcxaWVoZkJuaWpBY1B2VUduY3ZaSmd3OFUwU1R3UkxBbVJMV2Z3QVpQRWdhOWxFOHVVLUQtRXpUQlU?oc=5",
-      "publishedAt": "2026-06-05T16:02:04.000Z",
-      "query": "민생회복지원금/소비쿠폰",
-      "foundAt": "2026-07-19T02:30:23.955Z"
     }
   ]
 }
