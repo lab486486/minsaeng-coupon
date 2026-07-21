@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import globalCss from '../styles/global.css?inline';
 
 interface Props {
   title?: string;
@@ -8,19 +8,19 @@ interface Props {
 }
 
 const {
-  title = '민생쿠폰',
+  title = '민생회복지원금',
   description = '2026 민생회복 소비쿠폰·지원금 신청 안내 (비공식)',
   path = Astro.url.pathname,
 } = Astro.props;
 
 const fullTitle =
-  title === '민생쿠폰' ? '민생쿠폰 — 민생회복 소비쿠폰 안내' : `${title} | 민생쿠폰`;
+  title === '민생회복지원금'
+    ? '민생회복지원금 — 민생회복 소비쿠폰 안내'
+    : `${title} | 민생회복지원금`;
 const year = new Date().getFullYear();
 const nav = [
-  { href: '/', label: '홈' },
-  { href: '/posts/', label: '안내글' },
-  { href: '/news/', label: '뉴스' },
-  { href: '/income/', label: '소득구간' },
+  { href: '/posts/', label: '블로그' },
+  { href: '/news/', label: '지원금 뉴스' },
   { href: '/guides/checklist/', label: '체크리스트' },
 ];
 ---
@@ -31,18 +31,35 @@ const nav = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="naver-site-verification" content="c078f9ec83600f153e6e80fd22fc84855dba86fe" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#e8f5f3" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.v2.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon-32.v2.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16.v2.png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.v2.png" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="alternate" type="application/rss+xml" title="민생쿠폰 블로그" href="/rss.xml" />
     <title>{fullTitle}</title>
+    <style is:inline set:html={globalCss} />
   </head>
   <body>
     <header class="site-header">
       <div class="container site-header__inner">
         <a class="brand" href="/">
-          <span class="brand__mark" aria-hidden="true">쿠</span>
+          <picture>
+            <source srcset="/brand-logo.webp" type="image/webp" />
+            <img
+              class="brand__logo"
+              src="/brand-logo.png"
+              alt=""
+              width="36"
+              height="36"
+              decoding="async"
+            />
+          </picture>
           <span class="brand__text">
-            <span class="brand__name">민생쿠폰</span>
+            <span class="brand__name">민생회복지원금</span>
             <span class="brand__tag">민생회복 소비쿠폰 안내</span>
           </span>
         </a>
@@ -99,7 +116,7 @@ const nav = [
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p class="footer-copy">© {year} minsaeng-coupon · 민생쿠폰</p>
+        <p class="footer-copy">© {year} 민생회복 소비쿠폰.kr</p>
         <p class="footer-note">
           민생쿠폰은 정부·지자체와 제휴·공식 관계가 없는 개인 안내용 사이트입니다. 지원 자격·금액·일정은
           정부24·지자체 공고 등 원문에서 확인해 주세요.

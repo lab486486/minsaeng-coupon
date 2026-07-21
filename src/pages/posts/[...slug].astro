@@ -13,6 +13,18 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+const desc = post.data.description.trim();
+const chunks = desc
+  .replace(/\s+/g, ' ')
+  .split(/(?<=다\.|요\.|니다\.|까요\?|까요\.|세요\.|습니다\.)\s+/)
+  .map((s) => s.trim())
+  .filter(Boolean);
+const bullets = (chunks.length >= 2 ? chunks.slice(0, 3) : [desc]).map((line) =>
+  line.length > 40 ? `${line.slice(0, 40)}…` : line,
+);
+const shareBody = `[${post.data.title}]\n${bullets.map((b) => `- ${b}`).join('\n')}`;
+const sharePayload = JSON.stringify({ body: shareBody });
 ---
 
 <BaseLayout title={post.data.title} description={post.data.description} path="/posts/">
@@ -23,7 +35,10 @@ const { Content } = await render(post);
         <span class="chip">업데이트 {post.data.updatedAt}</span>
       </div>
       <h1>{post.data.title}</h1>
-      <p class="hero__lead">{post.data.description}</p>
+      <div class="post-lead">
+        <p class="hero__lead post-lead__text">{post.data.description}</p>
+        <button type="button" class="share-btn" id="share-btn" aria-label="공유하기">공유</button>
+      </div>
       <div class="prose" style="margin-top: 1.75rem;">
         <Content />
       </div>
@@ -32,4 +47,49 @@ const { Content } = await render(post);
       </p>
     </div>
   </article>
+
+  <script id="share-payload" type="application/json" set:html={sharePayload} />
+  <script is:inline>
+    (function () {
+      var btn = document.getElementById('share-btn');
+      var payloadEl = document.getElementById('share-payload');
+      if (!btn || !payloadEl) return;
+
+      var payload = { body: '' };
+      try {
+        payload = JSON.parse(payloadEl.textContent || '{}');
+      } catch (e) {}
+
+      function buildMessage() {
+        return String(payload.body || document.title) + '\n\n' + window.location.href;
+      }
+
+      function flashCopied() {
+        btn.classList.add('is-copied');
+        btn.textContent = '복사됨';
+        setTimeout(function () {
+          btn.classList.remove('is-copied');
+          btn.textContent = '공유';
+        }, 1600);
+      }
+
+      btn.addEventListener('click', async function () {
+        var message = buildMessage();
+        try {
+          if (navigator.share) {
+            await navigator.share({ text: message });
+            return;
+          }
+        } catch (e) {
+          if (e && e.name === 'AbortError') return;
+        }
+        try {
+          await navigator.clipboard.writeText(message);
+          flashCopied();
+        } catch (e2) {
+          window.prompt('아래 내용을 복사하세요', message);
+        }
+      });
+    })();
+  </script>
 </BaseLayout>
