@@ -269,6 +269,154 @@ img {
   color: #fff;
 }
 
+.grant-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  margin: -0.35rem 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.grant-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.grant-legend__swatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.grant-legend__item--high .grant-legend__swatch {
+  background: #b45309;
+}
+
+.grant-legend__item--mid .grant-legend__swatch {
+  background: #006b64;
+}
+
+.grant-legend__item--base .grant-legend__swatch {
+  background: #0f766e;
+}
+
+.grant-legend__item--low .grant-legend__swatch {
+  background: #6b7c78;
+}
+
+.grant-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+@media (min-width: 640px) {
+  .grant-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .grant-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.grant-card {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--line);
+  border-left-width: 3px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+
+.grant-card:hover {
+  transform: translateY(-1px);
+}
+
+.grant-card__region {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.grant-card__amount {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.grant-card__note {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+/* 100만원 이상 */
+.grant-card--high {
+  border-left-color: #b45309;
+  background: rgba(180, 83, 9, 0.08);
+}
+
+.grant-card--high .grant-card__amount {
+  color: #9a3412;
+}
+
+.grant-card--high:hover {
+  border-color: #d97706;
+}
+
+/* 50만원 이상 */
+.grant-card--mid {
+  border-left-color: #006b64;
+  background: rgba(0, 107, 100, 0.1);
+}
+
+.grant-card--mid .grant-card__amount {
+  color: #006b64;
+}
+
+.grant-card--mid:hover {
+  border-color: #00857c;
+}
+
+/* 30만원 이상 */
+.grant-card--base {
+  border-left-color: #0f766e;
+  background: rgba(15, 118, 110, 0.08);
+}
+
+.grant-card--base .grant-card__amount {
+  color: #0f766e;
+}
+
+.grant-card--base:hover {
+  border-color: #14b8a6;
+}
+
+/* 30만원 미만 */
+.grant-card--low {
+  border-left-color: #6b7c78;
+  background: rgba(107, 124, 120, 0.08);
+}
+
+.grant-card--low .grant-card__amount {
+  color: #4b5c58;
+}
+
+.grant-card--low:hover {
+  border-color: #8a9b96;
+}
+
 .hero {
   padding: 3.2rem 0 2.2rem;
 }

@@ -50,3 +50,41 @@ collections:
       - { label: 정렬, name: order, widget: number, default: 99 }
       - { label: 업데이트, name: updatedAt, widget: string }
       - { label: 본문, name: body, widget: markdown }
+
+  - name: localGrants
+    label: 지자체 지원금
+    label_singular: 지자체 지원금
+    folder: src/content/local-grants
+    create: true
+    delete: true
+    identifier_field: region
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{region}} · {{amount}} · {{target}}"
+    sortable_fields: ['order', 'region', 'amount']
+    view_filters:
+      - { label: 게시 중, field: draft, pattern: false }
+      - { label: 초안, field: draft, pattern: true }
+    fields:
+      - { label: 지역, name: region, widget: string, hint: 예) 속초시 }
+      - { label: 금액, name: amount, widget: string, hint: 예) 20만원, 최대 200만원 }
+      - { label: 대상, name: target, widget: string, hint: 예) 전 시민, 군민 }
+      - {
+          label: 링크 URL,
+          name: url,
+          widget: string,
+          hint: "카드 클릭 시 이동. 예) /posts/seoul-2026/ 또는 https://뉴스·공고주소",
+        }
+      - {
+          label: 정렬(작을수록 앞),
+          name: order,
+          widget: number,
+          default: 1,
+          value_type: int,
+          min: 1,
+          max: 99,
+          hint: 메인에는 정렬 순으로 최대 6개만 노출됩니다. 7개 이상이면 앞 6개만 나갑니다.,
+        }
+      - { label: 초안(숨김), name: draft, widget: boolean, default: false }
+      - { label: 메모, name: body, widget: markdown, required: false }

@@ -25,4 +25,17 @@ const guides = defineCollection({
   }),
 });
 
-export const collections = { posts, guides };
+/** 메인 홈 노출용 지자체 지원금 (최대 6개) */
+const localGrants = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/local-grants' }),
+  schema: z.object({
+    region: z.string(),
+    amount: z.string(),
+    target: z.string(),
+    url: z.string(),
+    order: z.number().default(99),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { posts, guides, localGrants };
