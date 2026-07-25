@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-07-25T02:05:48.847Z",
+  "updatedAt": "2026-07-25T02:49:30.469Z",
   "source": "Google News RSS",
   "note": "기사 본문은 수집하지 않습니다. 링크는 Google News 경유 URL일 수 있습니다.",
-  "newCount": 111,
+  "newCount": 106,
   "items": [
     {
       "title": "\"재산 안 따지고 무조건 지급\"... 1인당 50만 원 '민생지원금' 또 뿌린다",
@@ -267,6 +267,14 @@
       "publishedAt": "2026-07-17T22:10:58.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-19T02:30:23.356Z"
+    },
+    {
+      "title": "\"추석 전 1인당 20만원씩 드려요\"…민생지원금 주는 이곳",
+      "source": "네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9YQmNZWElveWpGZVBYdlduM1dCMDdmV0RzaWRqSy1yMDdMWm1HMExOeTFpZUxwYl9xRklHbm5EQzlQOFluSGU4d2VWRmtoN1o2SGpz?oc=5",
+      "publishedAt": "2026-07-17T09:49:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-25T02:49:29.901Z"
     },
     {
       "title": "\"추석 전 1인당 20만원씩 드려요\"…민생지원금 주는 이곳",
@@ -669,6 +677,14 @@
       "foundAt": "2026-07-19T02:30:23.955Z"
     },
     {
+      "title": "민생지원금 공약, 공직선거법 개정 통해 규제 필요",
+      "source": "전북일보 인터넷신문",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE11VHE0ZkZ4X0RGNGZnR2xiUnAxOWJLdWQ0XzNiVEVWSnRQeVdUdHpMTzlJUnc2ckdvQ1p1NWNWaXBrczJKb2JnMkNteWg1VzBsWDlKLdIBWEFVX3lxTE5fcy1lOTlwNGFDVFB6SEZPMWNsNDc4Ql81NzhMLXUtQjBVbmZtelNEMDNZYTVzbU8xR01PQTdrUDN3QXJVR1hRaUVLcGtVdzltck9mTTNIaFA?oc=5",
+      "publishedAt": "2026-07-06T05:17:06.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-25T02:49:29.901Z"
+    },
+    {
       "title": "추석 전 '민생지원금 30만 원' 나온다...나도 대상일까?",
       "source": "gukjenews.com",
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE54VHpOaEhFZWhKZkg1V2RoODVLYjlJS1BlUDVhVGRuX3c1TjhMT0dlc3g0b1lmZl9sakhtankzVWtGLU90VC05N0NIeTc5WGFmZjZ5TVFKUHp2bHBjVG93UWlCN1VZdkJXSXpSYU9B?oc=5",
@@ -945,22 +961,6 @@
       "source": "hidomin.com",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBiWXRvMlR2dUozNjBPS3B5R3hXbW1rWHVUVmgtVzlTNkZGbi00NnZrLXV3THlEX0V2WHBaV1FYU09lUW9EMGJzM3JiNzhzcEFGcnJXUDUybGVYcDh3WW1zd3dEUlFxb2JyZkE?oc=5",
       "publishedAt": "2026-06-21T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "전산장애에 막힌 의성 민생지원금…329억 지급 첫날 ‘차질’",
-      "source": "kyongbuk.co.kr",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ZcGdJY09QSzlxejc1ZXMzNUluTkFNZ2xNeDNQVUQyNW1LV0RTX1o0dzFxV21XOWM5bmg2b2tWVTRYLTlmcnpVcEJGUDNPNmc3Zmw4bGx6cWpxMDhBN0pXMTBQcU9zUFhIaGVCUHVLSQ?oc=5",
-      "publishedAt": "2026-06-20T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "“민생지원금 추석전 지급..당진 호수공원 축소 없다”",
-      "source": "당진신문",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE84VVJpTUdTVThxWDhPR3FRY2tkaWxKTjRGc2dTMkRFSURHbWpSdkI2dVNTMG9hYXJvNnI5b2xCQThHM2dQdUJiZDkwMDZyTE9MNy1IRlBlQ2kwWmtMckIyTGZKd3FlckRK?oc=5",
-      "publishedAt": "2026-06-20T07:00:00.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-19T02:30:23.356Z"
     }
