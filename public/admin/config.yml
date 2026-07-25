@@ -36,24 +36,73 @@ collections:
       - { label: 초안, name: draft, widget: boolean, default: false }
       - { label: 본문, name: body, widget: markdown }
 
-  - name: guides
-    label: 가이드
-    label_singular: 가이드
-    folder: src/content/guides
+  - name: regionalGrants
+    label: 지역지원금 상세
+    label_singular: 지역지원금 상세
+    description: "뉴스에서 발견한 지자체 지원금을 한전넷 benefits처럼 정리합니다. 검토 후 게시하고, 홈 6칸(지자체 지원금)에 URL을 연결하세요."
+    folder: src/content/regional-grants
     create: true
+    delete: true
+    identifier_field: title
     slug: "{{slug}}"
     extension: md
     format: yaml-frontmatter
+    summary: "{{region}} · {{amount}} · {{title}}"
+    sortable_fields: ['verifiedAt', 'region', 'amount', 'title']
+    view_filters:
+      - { label: 게시 중, field: draft, pattern: false }
+      - { label: 초안, field: draft, pattern: true }
     fields:
-      - { label: 제목, name: title, widget: string }
-      - { label: 설명, name: description, widget: string }
-      - { label: 정렬, name: order, widget: number, default: 99 }
-      - { label: 업데이트, name: updatedAt, widget: string }
-      - { label: 본문, name: body, widget: markdown }
+      - { label: 제목, name: title, widget: string, hint: 예) 속초시 민생지원금 1인 20만원 안내 }
+      - { label: 지역, name: region, widget: string, hint: 예) 속초시 }
+      - { label: 금액, name: amount, widget: string, hint: 예) 20만원 }
+      - { label: 대상, name: target, widget: string, hint: 예) 전 시민 }
+      - { label: 신청 기간, name: applyPeriod, widget: string, default: 공고 확인 }
+      - { label: 출처 이름, name: sourceName, widget: string, default: 뉴스·지자체 공고 }
+      - {
+          label: 출처 URL,
+          name: sourceUrl,
+          widget: string,
+          hint: 뉴스 또는 공식 공고 링크 (지원금 뉴스에서 복사),
+        }
+      - { label: 확인일, name: verifiedAt, widget: string, hint: YYYY-MM-DD }
+      - {
+          label: 초안,
+          name: draft,
+          widget: boolean,
+          default: true,
+          hint: 초안이면 /regional/ 에 안 나갑니다. 검토 후 체크 해제,
+        }
+      - {
+          label: 본문,
+          name: body,
+          widget: markdown,
+          default: |
+            ## 한줄 요약
+
+            (뉴스에서 확인한 내용을 한두 문장으로)
+
+            ## 지원 내용(보도·공고 기준)
+
+            - 지역:
+            - 금액:
+            - 대상:
+
+            ## 신청·확인
+
+            1. 지자체 홈페이지·공고 확인
+            2. 신청 기간·지급 수단 확인
+            3. 사용처·기한 확인
+
+            ## 참고
+
+            실제 자격·금액·일정은 공식 공고를 우선합니다.
+        }
 
   - name: localGrants
     label: 지자체 지원금
     label_singular: 지자체 지원금
+    description: "메인 홈에 최대 6개 카드로 노출됩니다. 링크 URL에 /regional/파일명/ 을 넣으세요."
     folder: src/content/local-grants
     create: true
     delete: true
@@ -74,7 +123,7 @@ collections:
           label: 링크 URL,
           name: url,
           widget: string,
-          hint: "카드 클릭 시 이동. 예) /posts/seoul-2026/ 또는 https://뉴스·공고주소",
+          hint: "카드 클릭 시 이동. 예) /regional/sokcho-2026/",
         }
       - {
           label: 정렬(작을수록 앞),
@@ -84,7 +133,22 @@ collections:
           value_type: int,
           min: 1,
           max: 99,
-          hint: 메인에는 정렬 순으로 최대 6개만 노출됩니다. 7개 이상이면 앞 6개만 나갑니다.,
+          hint: 메인에는 정렬 순으로 최대 6개만 노출됩니다,
         }
       - { label: 초안(숨김), name: draft, widget: boolean, default: false }
       - { label: 메모, name: body, widget: markdown, required: false }
+
+  - name: guides
+    label: 가이드
+    label_singular: 가이드
+    folder: src/content/guides
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - { label: 제목, name: title, widget: string }
+      - { label: 설명, name: description, widget: string }
+      - { label: 정렬, name: order, widget: number, default: 99 }
+      - { label: 업데이트, name: updatedAt, widget: string }
+      - { label: 본문, name: body, widget: markdown }

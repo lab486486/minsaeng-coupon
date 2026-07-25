@@ -1,0 +1,68 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { grantTierFromAmount } from '../../lib/grants';
+import { getPublishedRegionalGrants } from '../../lib/regional';
+
+export async function getStaticPaths() {
+  const grants = await getPublishedRegionalGrants();
+  return grants.map((grant) => ({
+    params: { slug: grant.id },
+    props: { grant },
+  }));
+}
+
+const { grant } = Astro.props;
+const { Content } = await render(grant);
+const tier = grantTierFromAmount(grant.data.amount);
+---
+
+<BaseLayout
+  title={grant.data.title}
+  description={`${grant.data.region} ${grant.data.amount} · ${grant.data.target}`}
+  path={`/regional/${grant.id}/`}
+>
+  <article class="detail-hero">
+    <div class="container">
+      <div class="post-row__meta">
+        <span class={`chip chip--tier chip--tier-${tier}`}>{grant.data.amount}</span>
+        <span class="chip chip--teal">{grant.data.region}</span>
+        <span class="chip">확인 {grant.data.verifiedAt}</span>
+      </div>
+      <h1>{grant.data.title}</h1>
+      <p class="hero__lead">{grant.data.target}</p>
+
+      <div class="detail-panel">
+        <dl>
+          <dt>지역</dt>
+          <dd><strong>{grant.data.region}</strong></dd>
+          <dt>1인 지원(안내)</dt>
+          <dd><strong class={`grant-amount grant-amount--${tier}`}>{grant.data.amount}</strong></dd>
+          <dt>대상</dt>
+          <dd>{grant.data.target}</dd>
+          <dt>신청 기간</dt>
+          <dd>{grant.data.applyPeriod}</dd>
+          <dt>출처</dt>
+          <dd>{grant.data.sourceName}</dd>
+          <dt>확인일</dt>
+          <dd>{grant.data.verifiedAt}</dd>
+        </dl>
+      </div>
+
+      <p class="detail-actions">
+        <a class="btn btn--primary" href={grant.data.sourceUrl} target="_blank" rel="noopener noreferrer">
+          원문·공고 확인
+        </a>
+        <a class="btn btn--ghost" href="/news/">지원금 뉴스</a>
+      </p>
+
+      <div class="prose" style="margin-top: 2rem;">
+        <Content />
+      </div>
+
+      <p class="notice">
+        뉴스·보도 기반 검토용 안내입니다. 지원 자격·금액·일정은 해당 지자체 공식 공고를 기준으로 확인하세요.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

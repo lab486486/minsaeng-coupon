@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { getPublishedPosts } from '../lib/posts';
+import { getPublishedRegionalGrants } from '../lib/regional';
 
 function xmlEscape(value: string) {
   return value
@@ -17,11 +18,13 @@ export const GET: APIRoute = async ({ site }) => {
     .replace(/\/$/, '');
   const posts = await getPublishedPosts();
   const guides = await getCollection('guides');
+  const regional = await getPublishedRegionalGrants();
 
   const staticPaths = [
     { loc: '/', changefreq: 'daily', priority: '1.0' },
     { loc: '/posts/', changefreq: 'daily', priority: '0.9' },
     { loc: '/news/', changefreq: 'daily', priority: '0.9' },
+    { loc: '/regional/', changefreq: 'daily', priority: '0.85' },
     { loc: '/income/', changefreq: 'weekly', priority: '0.7' },
     { loc: '/guides/checklist/', changefreq: 'monthly', priority: '0.6' },
     { loc: '/rss.xml', changefreq: 'daily', priority: '0.5' },
@@ -34,6 +37,12 @@ export const GET: APIRoute = async ({ site }) => {
       lastmod: post.data.updatedAt || post.data.publishedAt,
       changefreq: 'weekly',
       priority: '0.8',
+    })),
+    ...regional.map((grant) => ({
+      loc: `/regional/${grant.id}/`,
+      lastmod: grant.data.verifiedAt,
+      changefreq: 'weekly',
+      priority: '0.75',
     })),
     ...guides.map((guide) => ({
       loc: `/guides/${guide.id}/`,

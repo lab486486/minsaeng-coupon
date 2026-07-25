@@ -25,6 +25,22 @@ const guides = defineCollection({
   }),
 });
 
+/** 검토·정리용 지역 지원금 상세 (한전넷 benefits와 유사) */
+const regionalGrants = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/regional-grants' }),
+  schema: z.object({
+    title: z.string(),
+    region: z.string(),
+    amount: z.string(),
+    target: z.string(),
+    applyPeriod: z.string().default('공고 확인'),
+    sourceName: z.string().default('뉴스·지자체 공고'),
+    sourceUrl: z.string(),
+    verifiedAt: z.string(),
+    draft: z.boolean().default(true),
+  }),
+});
+
 /** 메인 홈 노출용 지자체 지원금 (최대 6개) */
 const localGrants = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/local-grants' }),
@@ -38,4 +54,4 @@ const localGrants = defineCollection({
   }),
 });
 
-export const collections = { posts, guides, localGrants };
+export const collections = { posts, guides, regionalGrants, localGrants };
