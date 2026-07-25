@@ -7,4 +7,8 @@ binding = "MEDIA"
 bucket_name = "minsaeng-coupon-media"
 preview_bucket_name = "minsaeng-coupon-media"
 
-# GITHUB_CLIENT_ID / GITHUB_CLIENT_SECRET 은 Pages Secrets로 설정
+# Client ID는 OAuth authorize URL에 노출되는 공개값 → 배포 시 Functions에 바인딩
+[vars]
+GITHUB_CLIENT_ID = "Ov23liNHMXLlTCY5gBS0"
+
+# GITHUB_CLIENT_SECRET 은 Pages → Settings → Variables and Secrets (Secret)로만 설정

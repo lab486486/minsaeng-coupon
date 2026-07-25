@@ -27,10 +27,12 @@ GitHub → Settings → Developer settings → OAuth Apps
 
 **Client ID + Client Secret 둘 다** 필요합니다. ID만으로는 로그인 완료가 안 됩니다.
 
-Cloudflare Pages → Settings → Environment variables:
+설정 위치:
 
-- `GITHUB_CLIENT_ID`
-- `GITHUB_CLIENT_SECRET`
+- `GITHUB_CLIENT_ID` → `wrangler.toml`의 `[vars]` (공개값, 배포 시 Functions에 바인딩)
+- `GITHUB_CLIENT_SECRET` → Cloudflare Pages → Settings → Variables and Secrets (**Secret**만)
+
+`GITHUB_CLIENT_ID`를 Secret으로 넣으면 `[vars]`와 이름이 충돌하고, Secret만 넣으면 Functions에서 비어 보일 수 있습니다.
 
 ## Decap
 
