@@ -2,7 +2,7 @@ name: Daily news watch
 
 on:
   schedule:
-    # 매일 00:00 UTC = 한국시간 09:00
+    # 매일 00:00 UTC = 한국시간 09:00 (실제 실행은 GitHub 사정으로 지연될 수 있음)
     - cron: '0 0 * * *'
   workflow_dispatch:
 
@@ -20,19 +20,39 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - name: Fetch Google News RSS
         run: node scripts/fetch-news.mjs
 
       - name: Commit digest
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/news-watch.json
           if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No news changes"
           else
             git commit -m "chore: daily news watch digest"
             git push
-            echo "Pushed digest — Deploy Cloudflare Pages workflow will publish"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # GITHUB_TOKEN 커밋은 다른 워크플로(Deploy Pages)를 트리거하지 않음 → 여기서 직접 배포
+      - name: Install
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: npm ci
+
+      - name: Build
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=minsaeng-coupon --branch=main
