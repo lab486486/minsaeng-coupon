@@ -1,9 +1,17 @@
 {
-  "updatedAt": "2026-07-26T03:13:37.386Z",
+  "updatedAt": "2026-07-27T03:23:27.713Z",
   "source": "Google News RSS",
   "note": "기사 본문은 수집하지 않습니다. 링크는 Google News 경유 URL일 수 있습니다.",
-  "newCount": 114,
+  "newCount": 109,
   "items": [
+    {
+      "title": "‘전 군민 30만 원’…완주군, 민생지원금 300억 쏜다",
+      "source": "전북일보 인터넷신문",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1kOWpXclZIcGc5NW9GSFRZYTViU3N5MlVFbU1jZzZfYzBKOHJxeUk5UG5maW1XVV9qcGRtSnViU3BFdTdmVElWNGRkYmMtelU5dVIwc9IBWEFVX3lxTFB1cjlCRHNrNzJpcE9EQ1JsODB1ekpFYklwZjdSUkkxeVowQnQxWFk1dTFEamxxV1FTZ3FsdE1lSWwzbGVkOHRuY3N4TWRUdUp4bmFLaVZKams?oc=5",
+      "publishedAt": "2026-07-26T06:05:44.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-27T03:23:27.291Z"
+    },
     {
       "title": "\"재산 안 따지고 무조건 지급\"... 1인당 50만 원 '민생지원금' 또 뿌린다",
       "source": "토픽트리",
@@ -126,6 +134,14 @@
     },
     {
       "title": "통영시의회 원구성 갈등에 개원 차질…민생지원금 심의 지연될듯",
+      "source": "네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5VWFFkb24yeGFLaG1mM0V0MmNZQkdsWFRpWlcwS2ctb0tPZFVrMkplNC1JaDFvTXlkQ2xVdlJtb0I0MWxxWC14NXoyMTJMRVVwa0Fr?oc=5",
+      "publishedAt": "2026-07-21T01:02:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-27T03:23:27.292Z"
+    },
+    {
+      "title": "통영시의회 원구성 갈등에 개원 차질…민생지원금 심의 지연될듯",
       "source": "연합뉴스",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5XVWRKOWpZTERmSVZsTDgyT2ppRXZEMzljeVpzN05lbGo3MDlWUDVIMXVMdFFIMndZZkFKSHJTSl9zWmFsU1ZyME4yZGN2TFhKenFmVDZxZm9hUUHSAWBBVV95cUxPbVNPYWNBWU9SNFVYRUhkRnlUY090cEs4T0ppbHk2cU1GOXRkYURVS3VQM0phY1lhZTFMWHRLeDdJRkZDbU9WWE9la0NaV1lmNU50amhkUGRpTkxlVllNelk?oc=5",
       "publishedAt": "2026-07-21T01:01:49.000Z",
@@ -139,6 +155,14 @@
       "publishedAt": "2026-07-20T10:02:00.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-20T12:10:55.516Z"
+    },
+    {
+      "title": "‘여야 동수’ 통영시의회 결국 개문발차…8월 민생지원금도 무산",
+      "source": "v.daum.net",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8zOTdrdWpvN0VNUWtfUjllcUtoM0tjTXRBTExsNk1wUWdPc18zTW9YeVJZcG1OOTRDYllxZzRUbUduOTd0eXRRNlZEb2tmS00?oc=5",
+      "publishedAt": "2026-07-20T08:54:15.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-27T03:23:27.291Z"
     },
     {
       "title": "‘여야 동수’ 통영시의회 결국 개문발차…8월 민생지원금도 무산",
@@ -805,6 +829,22 @@
       "foundAt": "2026-07-19T02:30:23.356Z"
     },
     {
+      "title": "정영두 김해시장 '민생지원금 지급 조례' 1호 결재",
+      "source": "네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBjc2tRdkpoWGZXTm1EQ1pIS3FCZVVMc05jWGdad0s0Szc4MFVMTDNTWHhKY2pwYlNsWlI5OHRQU2lrUzgzNDlWeHpLQktqUkd6emE0?oc=5",
+      "publishedAt": "2026-07-01T07:00:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-27T03:23:27.292Z"
+    },
+    {
+      "title": "정영두 김해시장 '1호 결재'는 '김해시민 민생지원금'",
+      "source": "네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE8ycGtPR0ZLaTF4QTJvZmx2Tkt5amc0U2g5Z19sZm5qM2duUE9RZndnUkpHblFYb3ZhNWpRVmJNTmlrVkZvYzJyS3F3dk02VzR0cXFV?oc=5",
+      "publishedAt": "2026-07-01T07:00:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-27T03:23:27.292Z"
+    },
+    {
       "title": "정영두 김해시장 ‘김해시민 민생지원금 지급’ 조례안 첫 결재",
       "source": "경남일보",
       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE95bmlNTGhKYW5iN0sxV3Y3X2JvcDUxOXd2TTF6LTlxZ1lXN2RZckhqVERNTzhIWFU4UnVReUVNc2R5TlJ2cWF4SkhCejlWOE03ZVFmUlB6MFdMNjRmLVpyM1o2d1pVWTZ1Z19B?oc=5",
@@ -921,46 +961,6 @@
       "source": "LG헬로비전",
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9NTXNtbGJQcjN4dDZtUWhpeGh4RTVENU9VbjY1YnBzcVpMZUo0OTd0dGd3YWpOdF9DY195WHE2VFEzNk5COWdHQ2FsYU0zZ0ZoZnFVaVlZSnJ5TUJocldjSUF5c0VabkRydzlVV21TbU1jd9IBdkFVX3lxTE5nVThaQ1JqdmJfTTZ6LUtsekhLWVY3MTBUZWFKcWRhdGtaN2VtczFCZGppRHI5cFFyMWlrNXpCczFUOTgyNFgtUjhJTnE1QUdFTDZ4Q0VONUJBYW50ak9nSlpPSVQzS3BQQUVnYzBHZ2FfN3pyQ3c?oc=5",
       "publishedAt": "2026-06-30T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "\"통영 시민에 민생지원금 33만원 지급\"",
-      "source": "조선일보",
-      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5KZ1RrQ0M4WHNfMlJMSFhSazN1clNsd3BPQjhVaXBqS1JwMHJoZEVUTG5SOUFJOFJvdzZWRnE3VVh0cnZiQ1h2a1l4MDRMWF9SZGFPY0RqTUhTRUVqaWpwS0FDQkt0MmExaFctaXd1azNkRHRjb0NNd2lB?oc=5",
-      "publishedAt": "2026-06-26T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "'민생지원금 3차 지급일' 이르면 7월 20일...나도 대상일까?",
-      "source": "gukjenews.com",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE51eDJzS1ZILWI0YlY4dVBJOFd0TE8yZWhJMndwVXJDSDB5UXRCQTM3SXJtREZxaWhKQXhNblV6Tk9BZkJTSnFwTnlxSFNPcEliTThpYy10YjRuZXVYaUVRaVNwLWRhZm9YVk9CSVB3?oc=5",
-      "publishedAt": "2026-06-25T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-20T12:10:55.516Z"
-    },
-    {
-      "title": "속초시, 전 시민 1인당 ‘민생지원금 20만원 지급’ 가속도",
-      "source": "v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4wT1NrUm1zSmtGZzZKQTlid3hDeEZhNDRWTjVTdWpJWVJPX1c2cGRDRHUxc3BuVkM0ZmhORDItMlhvamN6Y0hHTHdnSk02Zlk?oc=5",
-      "publishedAt": "2026-06-24T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "영동군 민생 지원금 추가 지급…자치단체 속앓이",
-      "source": "v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFA0b010ZF9zMU1yLWh1RTY1SU5mOE1NQXhZOWRXUmkwUjdHVmtIeTBUTm1wcmd2Z1k2VTRMeHh3c0hzTnFwUmc?oc=5",
-      "publishedAt": "2026-06-24T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "속초시 '전 시민 20만원' 민생지원금 지급 속도…추경안 의결",
-      "source": "뉴스1",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ZX3cxbHV6RWMybEsyZ0JNRDM5RFBCeEVRRUFmMFRxaHpfWHloNmFhd1poRWg5VVZTVGJLOGRfeTBtNFg2YWtrNkp6dU9kWW9GVmFZTg?oc=5",
-      "publishedAt": "2026-06-24T07:00:00.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-19T02:30:23.356Z"
     }
