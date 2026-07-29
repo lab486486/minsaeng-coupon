@@ -1,9 +1,17 @@
 {
-  "updatedAt": "2026-07-28T02:42:02.546Z",
+  "updatedAt": "2026-07-29T02:48:24.643Z",
   "source": "Google News RSS",
   "note": "기사 본문은 수집하지 않습니다. 링크는 Google News 경유 URL일 수 있습니다.",
-  "newCount": 115,
+  "newCount": 117,
   "items": [
+    {
+      "title": "고유가 피해지원금(3차 민생지원금), 1·2차 사용 만료→3차 지급? 정부 측 입장은",
+      "source": "톱스타뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9HWDhSLWNrYVJhWTNDYkJSdVlpNFRDNzZGSXBRTzV6X0o4eVBfejV6bWNfaVowOGNwUkZ0bVV0QzJ2QUdHUEJDd09pb0dZQk9lNGFWOXBwbk9GcVBEOE1PRjhXbDBUcmxFYUIxUGdzWHBjdw?oc=5",
+      "publishedAt": "2026-07-28T11:07:03.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-29T02:48:24.214Z"
+    },
     {
       "title": "[허프 사람&말] 영국 총리 버넘, 영국민 민생지원 위해 기후 지원금 손댄다 : 영국 '선진국' 위상 흔들리나",
       "source": "허프포스트코리아",
@@ -413,6 +421,14 @@
       "foundAt": "2026-07-28T02:42:02.160Z"
     },
     {
+      "title": "1인당 50만 원→30만 원 또 지급...'민생지원금 4차' 대상 누구?",
+      "source": "gukjenews.com",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCRzFiV0QySjhKVGRpMFpTSUtvNnZFR3NKSGxUSHpabTZhMlJJUElqVFRsaXNlRTU1cXBLc2VWdFh1a082Tmd4YWdGRVpScFJsQ3FxT1JDeTFxN3RHNEJ0OGtrTHNHWTBDMnB5b0hR?oc=5",
+      "publishedAt": "2026-07-15T04:02:30.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-29T02:48:24.214Z"
+    },
+    {
       "title": "\"추석 전 '민생지원금' 1인당 30만 원 또 준다\"... 무려 6,912억 추경 확정",
       "source": "토픽트리",
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLS1kMldBUUViNVpMeXBOMTF5NlVUSHBZXzVMUi1BbXNqMTJaVzVqT0VoZWg1QUNtczMwZjZhNUlORnJQRXp3MVBmZDNyLUZkN2FyNlFmOGlGTE1KYTlOVzJLSmdVV24zQnBtSUk2QUdWa05pNVZmMWVvb3pDQlFQVHlCMW93OUFzU2hDNmFkcElBekHSAZsBQVVfeXFMTmFGTUdZVHBHd3JyQTdwN1lNWFVWUzNZS0pyNEd2N280ck5NYU5RTjNjVy15Z1JXZ01wWThHWnpsS0p4RUJZNDRJNDZsakxrTG9UbjNaVDFVQkNvS0xudllydXZWdHZLT3VmVEFrLTlJQ2FRb1N3NC1od1ozUml2QWJma1phbjhjZ2tQM09qaW43NnZtM3BkZG9lYUE?oc=5",
@@ -571,6 +587,14 @@
       "publishedAt": "2026-07-13T11:49:04.000Z",
       "query": "민생회복지원금/소비쿠폰",
       "foundAt": "2026-07-19T02:30:23.955Z"
+    },
+    {
+      "title": "[오목대] 민생지원금, 약속과 책임 사이",
+      "source": "전북일보 인터넷신문",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1QVUdneUNYMEFTT1d1dDRmZ1c3cWpfcFJHVmNnZzc0Ykl0ajRHdUI2MHZZd0FGOWJrQnF0YnRCNXIwS0pWWXE5aWNZaFFUYk1oTVB0dtIBWEFVX3lxTFBEODJmSUVSRGdJRFlOWFN5MHdBMGJXY3NjSmZ5eWFFcm15SDd2dDN2ZWc5STd3OVMwelRMUVRub19nRUk2TXMyOG83ZTlMbW42a2FZMG5NOVE?oc=5",
+      "publishedAt": "2026-07-13T09:14:04.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-29T02:48:24.214Z"
     },
     {
       "title": "\"1인당 20만 원 전부 드립니다\"… 오는 20일부터 '민생지원금' 추가 지급",
@@ -877,6 +901,14 @@
       "foundAt": "2026-07-19T02:30:23.356Z"
     },
     {
+      "title": "청년미팅, 민생지원금 결재…PK기초단체장도 업무 시작",
+      "source": "국제신문",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdm1JRU56YW0tYjJjQlQzUHBadTgzSTlabldWc0o5RVlEY21DMGlkQU5meXpjekM1Y0hXSm92eGVfZ0JRY01GYklvZ1gtWFdPQXFDalE5UXRhdTB5WE1idVdhNnVBR0F4c2xNT3RkZDJZVUIzNW1mb0hINUZxd2lJVDI2M00xSGtFOXNwWXpn?oc=5",
+      "publishedAt": "2026-07-01T07:00:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-07-29T02:48:24.214Z"
+    },
+    {
       "title": "정영두 김해시장 '민생지원금 지급 조례' 1호 결재",
       "source": "네이트",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBjc2tRdkpoWGZXTm1EQ1pIS3FCZVVMc05jWGdad0s0Szc4MFVMTDNTWHhKY2pwYlNsWlI5OHRQU2lrUzgzNDlWeHpLQktqUkd6emE0?oc=5",
@@ -928,38 +960,6 @@
       "title": "정영두 김해시장, 취임 첫날 ‘민생지원금 조례안’ 1호 결재…100일 내 지급 추진",
       "source": "국제신문",
       "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZWFpbllTWUo4VFhtcjNfQjByVzJ5Vm9wR2Q1QWpGdzZyMUYzdDBvZVVDb2xOZkwyVjlXOGQ5cS1rOHFNQkFzNmtydHhsYlVEMHkzZkY1VVdRclhIazM3Y3VuSk1uN1hzZ2hTNXZRWUQyWDhLdDM5ak9vNU4wTXR1bWtDckN4MUUxNjBDUFJn?oc=5",
-      "publishedAt": "2026-07-01T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "정영두 김해시장 취임…1호 결재는 민생지원금 조례",
-      "source": "김해뉴스",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9XMS15ZzlPTWJJZUZZczdBenpEMWl6cnBfN2hJU0pxRU5rZmM0Rmk4b0xWeloxTDhVb1BuaFE5aFladXNjMDJnaFk3bmdjcC1VUF9RaE5JSVlqZ3BNSUgtcjVHVE1ReUFnWWRIQnRB?oc=5",
-      "publishedAt": "2026-07-01T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "정영두 김해시장 취임…1호 결재 ‘민생지원금 조례’",
-      "source": "v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9nZFVvOEM4dEZ5LXVHQ1FROU0ydTNOVHZlLUxXTVlUMnlRbWF5UHZOWm1ySE5KWE9DMjNhYmNtX1lUZDRpeU9yWTY2U2llZGs?oc=5",
-      "publishedAt": "2026-07-01T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "정영두 김해시장 취임…1호 결재는 '민생지원금 조례안'",
-      "source": "뉴시스",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8xZGdZRW83bTA3RVJMZVFXOEQwNlpueWIxby11d3RiTks3ZG1fUFNlanhqVGJBMEhOTjRiWVJHOXpxR3ppeHBudnFWblhYYUxBVEdHbk9ZcUJLTmF4Ti1HetIBeEFVX3lxTE50cXpxNHZfN2Z5TFEzRjJ1VU9aVWUxWU9DY2J1MGsyX19tV2JBOVN5NW9yT1VGMUw2T2hzenpfUk5hWVYySTlPa0t6ZlZxaV9kT3RGNFE3MHJwNFJITWo1WjlSX1BLTndUbjF6bGlFc3N6a2VXTjFuYg?oc=5",
-      "publishedAt": "2026-07-01T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "정영두 김해시장 취임 1호 결재…'민생지원금 10만 원 지급'",
-      "source": "뉴스1",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5kYVlLMEx0NUo5V3BSdW9qZFFWSDAtWGt2THRhNllQbU4tMW9oQUpWeU9Jc3pRSnpSb2JQRVRwNmxCVU5kZ1hGR1pybzNHWWlHekhDQVFBVXd5emNJVG9v?oc=5",
       "publishedAt": "2026-07-01T07:00:00.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-19T02:30:23.356Z"
