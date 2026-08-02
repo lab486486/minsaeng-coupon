@@ -1,9 +1,73 @@
 {
-  "updatedAt": "2026-08-01T03:12:39.461Z",
+  "updatedAt": "2026-08-02T02:57:33.108Z",
   "source": "Google News RSS",
   "note": "기사 본문은 수집하지 않습니다. 링크는 Google News 경유 URL일 수 있습니다.",
   "newCount": 127,
   "items": [
+    {
+      "title": "민생지원금 무산된 강릉…김중남 시장, 새벽시장서 지역경제 점검",
+      "source": "네이트",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5BNmhSbGhiWjJ3akpMTlYyb3pNWUFieXI2MTl2bHk5c3JPdFl4YjJ2elgwT2x2bm1salJxMVRrSXVaNVpyMGlXUU91Uzc5V1ozRU5YTnJST2xuMkd4c0VJQg?oc=5",
+      "publishedAt": "2026-08-02T02:11:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "강릉시, 민생지원금 부결 후 새벽시장 행보…“시민 목소리 직접 듣는다”",
+      "source": "reporternside.com",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5pNzJhZGhIeFZMMjBZQTRHMlRiVVh0Q2xlbGJNMHFkMzVReUZpMEdvTk9uYmM3elNlWHYwbjhmZWVSOW5TdjZ4NDdubU9WMlFQaW50ZUoxY3QwR2VFLWdQWENpYnU4WFlyYjJ2ZlFWREZVQQ?oc=5",
+      "publishedAt": "2026-08-02T01:18:41.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "＂소득 상관없이 1인 민생지원금 50만원＂…이달 초 지급 목표",
+      "source": "한국경제TV",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE96Q1kyakN2Q0JzZjYySmpuQnlRMzhNQnZjZzg2ZFdGb1dkdThhZklwR25Tdm01TWJvQnh5dVhiMGxtQ2FfbXZKLUVRdmpJUFN6dGU2eHBYVjBEM1R2NmUtb2wyUmxLOEpPYXJ4ZXJOYlZfQnkzX3FN?oc=5",
+      "publishedAt": "2026-08-01T23:53:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "의령군, 전 군민에 민생지원금 50만원…이달 초 지급 목표",
+      "source": "v.daum.net",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ic05kY3o2RmVidm9WaEp5VEUyRzdVc3dIZFo2LXFWOEQ1RThEUzZBU0FSREFUbl9mOFVkdHR0VzJ0MTNmVElJLVBKM1pSN2M?oc=5",
+      "publishedAt": "2026-08-01T23:09:53.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "의령 50만 원·통영 33만 원 민생지원금… 민생인가, 선거공약형 현금 살포인가",
+      "source": "진주인터넷뉴스",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE56RzhZOUdrUkd2aW9CZklxVTJBUEpjUnpwdWpJdzlfZUxiWVBpbHVZdWNkaFNVazNvaTlXUS04Q1BTc0NTOXNhMUNsb21zR2FLVmRCd2RKWEZlRFR2OUFCOXFPcEJQMS14NjF4bHlGcVkzSDFZUGc?oc=5",
+      "publishedAt": "2026-08-01T10:00:05.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "'3대 모이면 50만 원' 민생지원금 급이라는 이 지원금 정체",
+      "source": "gukjenews.com",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE11anRlY2M2c1FRekR4Qzd0NTlJb0VlMnZXd25zN254NjBaUW5fZVRYMmhLWmI3SlBhNTRBeHNaY0FpcXB4TUZiS3VqQjRWeURXUEJ6LU5xb19ZUmFyZGl6UFVxT0c5U0RzdC1ZMGpR?oc=5",
+      "publishedAt": "2026-08-01T05:40:41.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "[성명]김중남 강릉시장 1호 결재 '민생지원금'...시의회 부결",
+      "source": "시사줌뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5LbmtTblhWclh0aGtvcFJqLVcxRWIzUURSZTVJWFVHdUd5OHdOM3VvR0tBVFc1aF8zOGJuYVlnOVZWelpYeXA0?oc=5",
+      "publishedAt": "2026-08-01T05:02:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "강릉시 민생안정지원금 지급 조례안, 시의회 부결 논란",
+      "source": "강원타임즈",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9iQkNxY01qdTQ3VWo2ZHRmRzhfQW1fMXJ6MEFFanF5NjhLS1RGOWt5S1hQQldJQ214bThvOVp4MzZ6MnRnRUcyd0dTMTVVQ2RNN0Jnc2FwdnVrT1B5?oc=5",
+      "publishedAt": "2026-08-01T02:41:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
     {
       "title": "강릉시민생지원금 지급 조례안, 시의회 부결 논란",
       "source": "강원타임즈",
@@ -46,11 +110,35 @@
     },
     {
       "title": "김중남 강릉시장 '1호 결재' 민생지원금 조례안 시의회 부결",
+      "source": "네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBwOXhIZWdrN0o5OG54RlliTk1MOWJsVHJUZVRtNE9zSkdoUnZSMUw1eTZLMEdHRTR4N09yMXJZN3lWaDlBMElVQzZQZ2x3QS1yUWxB?oc=5",
+      "publishedAt": "2026-07-31T06:48:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "김중남 강릉시장 '1호 결재' 민생지원금 조례안 시의회 부결",
+      "source": "yna.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9UdS1weTFYT1lseWJ5ZGx2SnllMmZlOUdZVjhZY25wdEVNMnE3bGIxTlNocDlkeDV5bWJfRUZhN2VwZlBVc3FteVVhNW10THdDOXZNRTRwSkFaU3Zaamp3dNIBYEFVX3lxTE9UdS1weTFYT1lseWJ5ZGx2SnllMmZlOUdZVjhZY25wdEVNMnE3bGIxTlNocDlkeDV5bWJfRUZhN2VwZlBVc3FteVVhNW10THdDOXZNRTRwSkFaU3Zaamp3dA?oc=5",
+      "publishedAt": "2026-07-31T06:47:45.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "김중남 강릉시장 '1호 결재' 민생지원금 조례안 시의회 부결",
       "source": "연합뉴스",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9UdS1weTFYT1lseWJ5ZGx2SnllMmZlOUdZVjhZY25wdEVNMnE3bGIxTlNocDlkeDV5bWJfRUZhN2VwZlBVc3FteVVhNW10THdDOXZNRTRwSkFaU3Zaamp3dNIBYEFVX3lxTE9UdS1weTFYT1lseWJ5ZGx2SnllMmZlOUdZVjhZY25wdEVNMnE3bGIxTlNocDlkeDV5bWJfRUZhN2VwZlBVc3FteVVhNW10THdDOXZNRTRwSkFaU3Zaamp3dA?oc=5",
       "publishedAt": "2026-07-31T06:47:45.000Z",
       "query": "민생지원금",
       "foundAt": "2026-08-01T03:12:39.078Z"
+    },
+    {
+      "title": "민주당계 첫 강릉시장 '1호 결재'…'민생지원금' 시의회서 발목",
+      "source": "v.daum.net",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBjSzN2dnpoNUw0dmx1Q3lHeGhJUVotcU5fYWxfZjNtTnU4d1k1QmktWWNOckh0WENPSTFyNkxiNXdGZmgxb0NGXzJhRW9rVjA?oc=5",
+      "publishedAt": "2026-07-31T06:06:53.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
     },
     {
       "title": "민주당계 첫 강릉시장 '1호 결재'…'민생지원금' 시의회서 발목",
@@ -107,6 +195,14 @@
       "publishedAt": "2026-07-30T00:55:40.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-30T02:33:43.026Z"
+    },
+    {
+      "title": "통영시의회, 내달 3일∼14일 임시회…추경안·민생지원금 심사",
+      "source": "yna.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9KY25PY3JyWjdod28tQ3luNEhFbmQ1Rkg5c0ZEeTBJSTUzRTlGamRmNkZ2S19pcXh3RXZMb2NYWXl1MTJPbEFCWHExZVdKUndNM204T3ZxOVR3WG_SAWBBVV95cUxNUlNITENtVWlnU2F3REJ1aU9fLXBCd01hbi1hRjl0Q0FULVpPSWY4SUNQMS01TmhSUnh0bGRya1NQMi1uWVI0bExNRnBNT1JVcnROeUhEamx2QjJUWHBobm0?oc=5",
+      "publishedAt": "2026-07-30T00:53:53.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
     },
     {
       "title": "통영시의회, 내달 3일∼14일 임시회…추경안·민생지원금 심사",
@@ -219,6 +315,14 @@
       "publishedAt": "2026-07-28T11:07:03.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-29T02:48:24.214Z"
+    },
+    {
+      "title": "[허프 사람&말] 영국 총리 버넘, 영국민 민생지원 위해 기후 지원금 손댄다 : 영국 '선진국' 위상 흔들리나",
+      "source": "huffingtonpost.kr",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1OVmpVX1pxUjVMN0F3d21ZcGtHVTkyTjRndWM5c3lrblJNS0pLbWxZc0w2LUIwdjRQQ1dNWlJ2NnpUOHZ6V2xGTVA4VVRRSVdJZmVzbTlMaw?oc=5",
+      "publishedAt": "2026-07-27T05:48:05.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
     },
     {
       "title": "[허프 사람&말] 영국 총리 버넘, 영국민 민생지원 위해 기후 지원금 손댄다 : 영국 '선진국' 위상 흔들리나",
@@ -357,6 +461,22 @@
       "foundAt": "2026-07-25T02:05:48.364Z"
     },
     {
+      "title": "민형배 인수위, 지역화폐 할인을 '민생지원금'으로 생색",
+      "source": "yna.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PZktZWkVRWTc4NzJ0QmhMdmRxQ093QlBrZ1M1S2w0ZHZSOTR0cTI4amZZR09iSkwyYzNBSDRsTFFucmZDcWFaaktWeF9Xbk4wLTdmb1NWSUNLVnfSAWBBVV95cUxNX2tRR1UtMnRVSkhzYTFhajZRZGlnS3g5dk95RXN3a3Z0bmxIN2NOVFQ0UUpBbFF6N3VkWGhkWU1zQVlkc0IwQ3VtT25pWGRKTXFjMVhpaU5UbWlPNHJXUk8?oc=5",
+      "publishedAt": "2026-07-21T07:00:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "통영시의회 원구성 갈등에 개원 차질…민생지원금 심의 지연될듯",
+      "source": "yna.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5XVWRKOWpZTERmSVZsTDgyT2ppRXZEMzljeVpzN05lbGo3MDlWUDVIMXVMdFFIMndZZkFKSHJTSl9zWmFsU1ZyME4yZGN2TFhKenFmVDZxZm9hUUHSAWBBVV95cUxPbVNPYWNBWU9SNFVYRUhkRnlUY090cEs4T0ppbHk2cU1GOXRkYURVS3VQM0phY1lhZTFMWHRLeDdJRkZDbU9WWE9la0NaV1lmNU50amhkUGRpTkxlVllNelk?oc=5",
+      "publishedAt": "2026-07-21T07:00:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
       "title": "추석 전 전남광주특별시 시민 민생지원금, 어떻게 뿌려지나?",
       "source": "세계중심나주뉴스",
       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB0UGxNbVBPNWk3Q0gxRTlBVFZQc3UxajVybzBTWlFXSkJsVUhib1RnbjVrWXh4YXEyYmtTOUhDXzhULVQxWmlNYmZ2QmF5dERzT0NmaWQzX1c3Q3hQUXlQbHNxRlpDZlU?oc=5",
@@ -443,6 +563,14 @@
       "publishedAt": "2026-07-20T08:54:15.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-27T03:23:27.291Z"
+    },
+    {
+      "title": "‘여야 동수’ 통영시의회 결국 개문발차…8월 민생지원금도 무산",
+      "source": "busan.com",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE00WUFaeGFnMGJtVHVLbzdNV2FHTWZrLVQyZ2VfVmZ4eW40S3FCXzUtUm1VSEZvWDJhek5hNXlrYzBLTHN2dXRiRTJiSHNmTGI2dDdDUm1seThJTGNhS0EyZHJocXVXVGRmT2F4WHZuM3VYQURZ?oc=5",
+      "publishedAt": "2026-07-20T08:54:02.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
     },
     {
       "title": "‘여야 동수’ 통영시의회 결국 개문발차…8월 민생지원금도 무산",
@@ -734,6 +862,14 @@
     },
     {
       "title": "개원과 동시에 ‘식물 의회’된 통영시의회…8월 민생지원금 물 건너 가나?",
+      "source": "busan.com",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5iSFBxMFNmZ1hLRTJyZkVvUEtVYVg2R1BpaVY0cjJaTmF0QWdMdDlDOFl4NDFKV3VHOWd2ZU5tUWF5RXlCQkhnRlNIbzhNZU9wZHNhRUFXQ0ZvWkVwNXRzR2pEVm95akxTcjFISnFrQXJMeFc0?oc=5",
+      "publishedAt": "2026-07-15T02:49:57.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-02T02:57:32.736Z"
+    },
+    {
+      "title": "개원과 동시에 ‘식물 의회’된 통영시의회…8월 민생지원금 물 건너 가나?",
       "source": "부산일보",
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5iSFBxMFNmZ1hLRTJyZkVvUEtVYVg2R1BpaVY0cjJaTmF0QWdMdDlDOFl4NDFKV3VHOWd2ZU5tUWF5RXlCQkhnRlNIbzhNZU9wZHNhRUFXQ0ZvWkVwNXRzR2pEVm95akxTcjFISnFrQXJMeFc0?oc=5",
       "publishedAt": "2026-07-15T02:49:57.000Z",
@@ -825,142 +961,6 @@
       "source": "대한민국 정책브리핑",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5uYmFRWWI5WnJyRFBFZGVmRnQ5UEFLR3l5ZExYdmFVdGZSRVdPdEpBdEM2RnpwWE5EbEp4VWhEbEw1OWdBdi03ZFZSdDFGSEVKam95WjRjSFZySWVoM3k0a0dVazQ5UWhlZUE?oc=5",
       "publishedAt": "2026-07-14T02:38:47.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "'3차 민생지원금' 사용기한 임박... 4차 지급 가능성은?",
-      "source": "금강일보",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1yOFZZSld0TXloQUJYQ19SbmVJNE1xeE5WUHp5cFIyZ2VqazhEN1JJUDBTT0w3emx2Y1NVX0FhUzdYZWcyRWl2alBocUlIS0NQZHZnZ0dyR3Y1d1RjMTdwS2xHdGxYUkE3Nmc?oc=5",
-      "publishedAt": "2026-07-14T00:59:44.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-22T02:49:28.827Z"
-    },
-    {
-      "title": "민생지원금 또 준다 “최대 60만원 지급”…우리 지역도 받을 수 있나?",
-      "source": "뉴스와",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBxN0dLd0hYTy1kMmlraXUwQmlTUnN2cENidXByZmxmRl9iZVB1dVRWX09ad1hGLTB3enpwcEpoSlhrV3VDNkRsdjdiV2lSUWIxYi1Ga2NDbWV4WnAyQldkUjdEZ2VtVW1wUnB6d3ducHduRGFJM3FiWA?oc=5",
-      "publishedAt": "2026-07-14T00:26:07.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-22T02:49:28.826Z"
-    },
-    {
-      "title": "\"소득 상관없이 1인당 20만원씩 드려요\"…전 시민에 민생지원금 주는 '이 곳'",
-      "source": "v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5sa01fMlBpNTBjcEQtczl6NjYtOFMxV3NuYmlyUGJUb1pGenI5Y3ZPUTdldzd0WlUyZENuZGRHb3N1NDQ1b016ek5sQ0NBQXc?oc=5",
-      "publishedAt": "2026-07-13T22:20:12.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "\"소득 상관없이 1인당 20만원씩 드려요\"…전 시민에 민생지원금 주는 '이 곳'",
-      "source": "파이낸셜뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9JNXBwVy1UZ0tNX1JXZWpobWpzYjBTcTVGdXQ4aW1jSHpQeEdtTTJLSTVQN1c2UHltWWRHMVlkcXRUSUNsbGlZTVZ2aUFBTDhjUDhwRTd0WGFhdw?oc=5",
-      "publishedAt": "2026-07-13T22:18:37.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-23T02:55:34.603Z"
-    },
-    {
-      "title": "\"소득 상관 없이 1인당 20만원\" 전 시민에 민생지원금 지급하는 '이곳'",
-      "source": "v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9BcTJXSnhBUW85XzFUNWowZTltTkJJVzFpZWYwOVpXT1ZSbDJEZ2NBOVRnUHRPMEJrcm0yUlNDQTdyOVBjY1E?oc=5",
-      "publishedAt": "2026-07-13T12:02:41.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-20T12:10:55.516Z"
-    },
-    {
-      "title": "\"소득 상관 없이 1인당 20만원\" 전 시민에 민생지원금 지급하는 '이곳'",
-      "source": "네이트",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5jZVdUTFFVNm9XcXlJNllWLXl4bFJYUHpnXy1nTVg1M1J3eVdJYkpERjM3YmhIMXJZRGFudnZDUW1lcHJKUUVlREYzMm0xZFN6VFg5ZGhpcGxxaW9KRUNueF9ETGhlWEVxY2JRZWszeDNVeWJ0Q2lF?oc=5",
-      "publishedAt": "2026-07-13T12:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-20T12:10:55.516Z"
-    },
-    {
-      "title": "\"소득 상관 없이 1인당 20만원\" 전 시민에 민생지원금 지급하는 '이곳'",
-      "source": "아시아경제",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5JbGlPS0NIM3YzUDUwN1VJQzFOYUVNWXJNM0Z0ME16OWw2ZkVGVk9aSWUwZDQ3dGhaMTVaNlFicVRBOTFjRUJiLUd5S2ZNeVFOakN4b0Q3UDdxTWxBc1BjSA?oc=5",
-      "publishedAt": "2026-07-13T11:59:50.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "'민생회복 소비쿠폰'에서 '고유가 피해지원금'까지…골목상권에 돌아온 활기",
-      "source": "대한민국 정책브리핑",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5pNVVnTGxxOXlzQ2g4aUItTGxUVGRDbkpKMzRfNWVqRWdoNWEyek5qTzBhRVBCT1NjX2luUUlHdmR3UUVFWWp2UmQzOTJxQm94d2VLZUVJUV9aN0Rva0lYclBBS2dhdmlIN2c?oc=5",
-      "publishedAt": "2026-07-13T11:49:04.000Z",
-      "query": "민생회복지원금/소비쿠폰",
-      "foundAt": "2026-07-19T02:30:23.955Z"
-    },
-    {
-      "title": "[오목대] 민생지원금, 약속과 책임 사이",
-      "source": "전북일보 인터넷신문",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1QVUdneUNYMEFTT1d1dDRmZ1c3cWpfcFJHVmNnZzc0Ykl0ajRHdUI2MHZZd0FGOWJrQnF0YnRCNXIwS0pWWXE5aWNZaFFUYk1oTVB0dtIBWEFVX3lxTFBEODJmSUVSRGdJRFlOWFN5MHdBMGJXY3NjSmZ5eWFFcm15SDd2dDN2ZWc5STd3OVMwelRMUVRub19nRUk2TXMyOG83ZTlMbW42a2FZMG5NOVE?oc=5",
-      "publishedAt": "2026-07-13T09:14:04.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-29T02:48:24.214Z"
-    },
-    {
-      "title": "\"1인당 20만 원 전부 드립니다\"… 오는 20일부터 '민생지원금' 추가 지급",
-      "source": "토픽트리",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS2h4aWVvUl9nc2lyNklvX1k4cVJEc1B5b2tZS3NHcjVYMmRPQWl5MEVIUHZoRFRUb01WamNoXzJOSlNJODFzVTNjOTJ6Vmk2TkVnYUc4OEM1Ulc0M3JfUk1ZS1ZJT2RHNVoxbW1PcFJiYXZ0NERFVDJoYVoxU05OZ1BOMDBObF9VZldJcDVmTVlkSTNyd1RaMnNJRjE3cTVTSFhMMG03b19HUdIBsgFBVV95cUxNOWlRTnNybXRmZTFUc3F2NEwtZmdFUUdjbng3ZElQVkxBMk43MHlfRWpUclRMVUlMV0pId3oycDhvQjR0Tl85ZVZlVDNsTUx1RVRZWVFFMFQ3SENNQUN0MkY3Wm16TEFGYmhfVTBNd0l1eVJhLURLTkd2SnVOTGZQVHZPRWl6eEo3VDVyQTBjb2pmVlQ0Zy1oVDZ6T1pZNUtPNk1xOVJSbDJDN0lSSnJBOFJn?oc=5",
-      "publishedAt": "2026-07-13T07:16:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "“1인당 20만원 또 드릴게요”…민생지원금 제한없이 뿌린다는 ‘이 지역’",
-      "source": "v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9fTFh3Mk5WZC1ERXFRX1hYX1d4eUtoaTJ2QnFZLXhETVVxQUNJTUNMNE9hRXUyd3UwRW5aY3VlLVEwNkJrakRsNHp3REdnS2c?oc=5",
-      "publishedAt": "2026-07-13T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-30T02:33:43.026Z"
-    },
-    {
-      "title": "\"1인당 20만원 또 드릴게요\"…민생지원금 제한없이 뿌린다는 '이 지역'",
-      "source": "네이트",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54eDhKZUlWVTQtSFFnSGtyYy1pS1hPWXA5UEk3X0lzTFVhekxPbGdUVG5JTjR6Wjd6ZGNLb2VaZ2d4UnJLcjNKUjFHSXd6blVvNl9n?oc=5",
-      "publishedAt": "2026-07-13T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-24T02:50:05.467Z"
-    },
-    {
-      "title": "“1인당 20만원 또 드릴게요”…민생지원금 제한없이 뿌린다는 ‘이 지역’",
-      "source": "매일경제",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5sSDRHcG5SU2d5OTdfeVk4Nm9mbTYtdmM2VFp6d25ERmNNU1lwdUw3VFhETFQyMUNzZDNKTzFCaEgwZ0l5N0VmWGNxUkZDa1pHUDl4dQ?oc=5",
-      "publishedAt": "2026-07-13T06:03:34.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "'소득 상관없이 1인당 20만 원' 민생지원금 4차 지급일 확정",
-      "source": "gukjenews.com",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9ZTjdmc083NzZlTmpTTVlfYWNMZDJHYkp4MUlMZzR5OWRnZDVzYjM0bUdTR293RmNBVFY2eWNudjNQYnhOY0pROUpwQnJFb1FzWXlUQlFNVzh2T0VkUkg2c0RZemFMRzB6a2t2THVR?oc=5",
-      "publishedAt": "2026-07-13T03:27:59.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "\"시민 모두에게 20만원 드려요\"…속초시, 민생지원금 접수 시작",
-      "source": "네이트",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9sOXBvdTdhczJfSGUzbWRoM3RFZjdjaUVjSjMxZkF0bFZzdmhfWDRsNjBsYVE3NENsVS1GRjRXZDRTNGdqM3ZxazVpd0JGNlJFR3BtUDVPdXZDMWs2OEpwSGVQY2NrSzZ4NmpyYjR1em9CUDlLYmxF?oc=5",
-      "publishedAt": "2026-07-13T03:07:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "\"시민 모두에게 20만원 드려요\"…속초시, 민생지원금 접수 시작",
-      "source": "edaily.co.kr",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPVWtTSnF4ZGFSb3VLX3pwSGJfQjRERTFCVi1VVy1ZNnRRTDlDc29yakVoVHVrTkFYMF9zMzczRTY4RzNURTFXZW5DbmN0S3JMZU94OHJtTlBweDA5a0REOVNWbnlDb25RZ01KMUtyOHNzZUpxdHJuTmpnYWVub082Uw?oc=5",
-      "publishedAt": "2026-07-13T03:05:10.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-07-19T02:30:23.356Z"
-    },
-    {
-      "title": "속초시 민생지원금 20만 원 지급…20일부터 신청",
-      "source": "v.daum.net",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFByaFJMZUl5N2hrZlNGbDN6enF4bHB6SEdXYV91RllCQWlEd29WaEVqdFlGbEZFcF9qVVpCdDlxaWVEWG4yNUVBajN4Y0N5NFU?oc=5",
-      "publishedAt": "2026-07-13T00:16:40.000Z",
       "query": "민생지원금",
       "foundAt": "2026-07-19T02:30:23.356Z"
     }
