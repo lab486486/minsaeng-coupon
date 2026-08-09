@@ -29,6 +29,20 @@ const FEEDS = [
 
 const MAX_ITEMS = 120;
 
+/** 네이버 프리미엄콘텐츠 등 유료·구독 기사 제외 */
+function isBlockedNews(item) {
+  const source = String(item.source || '');
+  const title = String(item.title || '');
+  const link = String(item.link || '');
+  const haystack = `${source} ${title} ${link}`.toLowerCase();
+
+  if (/네이버\s*프리미엄/.test(source) || /네이버\s*프리미엄/.test(title)) return true;
+  if (haystack.includes('premium contents') || haystack.includes('premiumcontents')) return true;
+  if (haystack.includes('contents.premium.naver.com')) return true;
+  if (haystack.includes('premium.naver.com')) return true;
+  return false;
+}
+
 function decodeXml(text) {
   return text
     .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
@@ -51,12 +65,14 @@ function parseItems(xml) {
     const dash = title.lastIndexOf(' - ');
     const source = dash > 0 ? title.slice(dash + 3).trim() : '';
     const headline = dash > 0 ? title.slice(0, dash).trim() : title;
-    items.push({
+    const item = {
       title: headline,
       source,
       link,
       publishedAt: pubDate ? new Date(pubDate).toISOString() : null,
-    });
+    };
+    if (isBlockedNews(item)) continue;
+    items.push(item);
   }
   return items;
 }
@@ -72,7 +88,9 @@ async function loadExisting() {
 
 async function main() {
   const existing = await loadExisting();
-  const seen = new Set(existing.items.map((i) => `${i.title}::${i.source}`));
+  const existingKept = existing.items.filter((item) => !isBlockedNews(item));
+  const removedBlocked = existing.items.length - existingKept.length;
+  const seen = new Set(existingKept.map((i) => `${i.title}::${i.source}`));
   const collected = [];
 
   for (const feed of FEEDS) {
@@ -96,7 +114,7 @@ async function main() {
     }
   }
 
-  const merged = [...collected, ...existing.items]
+  const merged = [...collected, ...existingKept]
     .sort((a, b) => String(b.publishedAt || b.foundAt).localeCompare(String(a.publishedAt || a.foundAt)))
     .slice(0, MAX_ITEMS);
 
@@ -110,7 +128,10 @@ async function main() {
 
   await fs.mkdir(path.dirname(OUT_FILE), { recursive: true });
   await fs.writeFile(OUT_FILE, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
-  console.log(`news-watch: +${collected.length} new, total ${merged.length}`);
+  console.log(
+    `news-watch: +${collected.length} new, total ${merged.length}` +
+      (removedBlocked ? `, removed blocked ${removedBlocked}` : ''),
+  );
 }
 
 main().catch((err) => {
