@@ -5,6 +5,6 @@
 ## 주요 페이지
 
 - [홈](https://minsaeng-coupon.pages.dev/)
-- [안내글](https://minsaeng-coupon.pages.dev/posts/)
+- [민생회복지원금 정보](https://minsaeng-coupon.pages.dev/posts/)
+- [지역지원금 정보](https://minsaeng-coupon.pages.dev/regional/)
 - [소득구간](https://minsaeng-coupon.pages.dev/income/)
-- [체크리스트](https://minsaeng-coupon.pages.dev/guides/checklist/)

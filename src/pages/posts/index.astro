@@ -5,13 +5,17 @@ import { getPublishedPosts } from '../../lib/posts';
 const posts = await getPublishedPosts();
 ---
 
-<BaseLayout title="안내글" description="민생회복 소비쿠폰 관련 안내글 목록" path="/posts/">
+<BaseLayout
+  title="민생회복지원금 정보"
+  description="지역경제 활성화하는 민생회복지원금 안내 정보"
+  path="/posts/"
+>
   <section class="section" style="padding-top: 2.5rem;">
     <div class="container">
       <div class="section__head">
         <div>
-          <h2>안내글</h2>
-          <p>{posts.length}건 · 2026 초안</p>
+          <h2>민생회복지원금 정보</h2>
+          <p>지역경제 활성화하는 민생회복지원금 안내 정보</p>
         </div>
       </div>
       <div class="post-list">

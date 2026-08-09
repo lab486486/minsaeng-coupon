@@ -15,17 +15,7 @@ const posts = defineCollection({
   }),
 });
 
-const guides = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/guides' }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    order: z.number().default(99),
-    updatedAt: z.string(),
-  }),
-});
-
-/** 검토·정리용 지역 지원금 상세 (한전넷 benefits와 유사) */
+/** 검토·정리용 지역 지원금 안내 */
 const regionalGrants = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/regional-grants' }),
   schema: z.object({
@@ -41,4 +31,4 @@ const regionalGrants = defineCollection({
   }),
 });
 
-export const collections = { posts, guides, regionalGrants };
+export const collections = { posts, regionalGrants };

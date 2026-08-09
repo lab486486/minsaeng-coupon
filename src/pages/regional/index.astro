@@ -7,16 +7,16 @@ const grants = await getPublishedRegionalGrants();
 ---
 
 <BaseLayout
-  title="지역지원금 상세"
-  description="뉴스 모니터링을 바탕으로 정리한 지자체 민생지원금 안내"
+  title="지역지원금 정보"
+  description="최신 뉴스를 기반으로 작성한 지역지원금 안내 정보"
   path="/regional/"
 >
   <section class="section" style="padding-top: 2.5rem;">
     <div class="container">
       <div class="section__head">
         <div>
-          <h2>지역지원금 상세</h2>
-          <p>뉴스에서 확인한 뒤 Decap에서 정리한 검토용 안내입니다</p>
+          <h2>지역지원금 정보</h2>
+          <p>최신 뉴스를 기반으로 작성한 지역지원금 안내 정보</p>
         </div>
         <a href="/news/">뉴스 보기 →</a>
       </div>
@@ -24,7 +24,7 @@ const grants = await getPublishedRegionalGrants();
       <div class="post-list">
         {
           grants.length === 0 ? (
-            <p class="notice">게시된 지역지원금 상세가 없습니다. Decap → 지역지원금 상세에서 초안을 작성해 주세요.</p>
+            <p class="notice">게시된 지역지원금 정보가 없습니다.</p>
           ) : (
             grants.map((grant) => {
               const tier = grantTierFromAmount(grant.data.amount);

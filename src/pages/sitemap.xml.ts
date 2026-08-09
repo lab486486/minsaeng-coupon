@@ -1,5 +1,4 @@
 import type { APIRoute } from 'astro';
-import { getCollection } from 'astro:content';
 import { getPublishedPosts } from '../lib/posts';
 import { getPublishedRegionalGrants } from '../lib/regional';
 
@@ -17,7 +16,6 @@ export const GET: APIRoute = async ({ site }) => {
     .toString()
     .replace(/\/$/, '');
   const posts = await getPublishedPosts();
-  const guides = await getCollection('guides');
   const regional = await getPublishedRegionalGrants();
 
   const staticPaths = [
@@ -26,7 +24,6 @@ export const GET: APIRoute = async ({ site }) => {
     { loc: '/news/', changefreq: 'daily', priority: '0.9' },
     { loc: '/regional/', changefreq: 'daily', priority: '0.85' },
     { loc: '/income/', changefreq: 'weekly', priority: '0.7' },
-    { loc: '/guides/checklist/', changefreq: 'monthly', priority: '0.6' },
     { loc: '/rss.xml', changefreq: 'daily', priority: '0.5' },
   ];
 
@@ -43,12 +40,6 @@ export const GET: APIRoute = async ({ site }) => {
       lastmod: grant.data.verifiedAt,
       changefreq: 'weekly',
       priority: '0.75',
-    })),
-    ...guides.map((guide) => ({
-      loc: `/guides/${guide.id}/`,
-      lastmod: guide.data.updatedAt,
-      changefreq: 'monthly',
-      priority: '0.6',
     })),
   ];
 
