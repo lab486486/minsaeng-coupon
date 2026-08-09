@@ -13,6 +13,8 @@
     "astro": "astro",
     "check": "astro check",
     "news:fetch": "node scripts/fetch-news.mjs",
+    "news:draft": "node scripts/draft-regional-from-news.mjs",
+    "news:draft:dry": "node scripts/draft-regional-from-news.mjs --dry-run",
     "pages:dev": "npm run build && wrangler pages dev dist --compatibility-date=2025-07-01"
   },
   "dependencies": {

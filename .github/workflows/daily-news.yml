@@ -25,17 +25,20 @@ jobs:
       - name: Fetch Google News RSS
         run: node scripts/fetch-news.mjs
 
-      - name: Commit digest
+      - name: Draft regional grants from news titles
+        run: node scripts/draft-regional-from-news.mjs --max=5
+
+      - name: Commit digest and drafts
         id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news-watch.json
+          git add data/news-watch.json data/news-draft-state.json src/content/regional-grants
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No news changes"
+            echo "No news/draft changes"
           else
-            git commit -m "chore: daily news watch digest"
+            git commit -m "chore: daily news digest and regional draft stubs"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi

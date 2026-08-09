@@ -39,7 +39,7 @@ collections:
   - name: regionalGrants
     label: 지역지원금 상세
     label_singular: 지역지원금 상세
-    description: "뉴스에서 발견한 지자체 지원금을 한전넷 benefits처럼 정리합니다. 검토 후 게시하고, 홈 6칸(지자체 지원금)에 URL을 연결하세요."
+    description: "뉴스 제목으로 자동 초안(draft)이 매일 생길 수 있습니다. 검토·수정 후 초안 해제하고, 홈 6칸(지자체 지원금)에 /regional/파일명/ 을 연결하세요."
     folder: src/content/regional-grants
     create: true
     delete: true
