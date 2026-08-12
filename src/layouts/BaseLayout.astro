@@ -5,12 +5,15 @@ interface Props {
   title?: string;
   description?: string;
   path?: string;
+  /** SNS 미리보기 이미지 (사이트 상대 경로, 예: /guides/band-id/logo.jpg) */
+  image?: string;
 }
 
 const {
   title = '민생회복지원금',
   description = '2026 민생회복 소비쿠폰·지원금 신청 안내 (비공식)',
   path = Astro.url.pathname,
+  image,
 } = Astro.props;
 
 const fullTitle =
@@ -18,6 +21,16 @@ const fullTitle =
     ? '민생회복지원금 — 민생회복 소비쿠폰 안내'
     : `${title} | 민생회복지원금`;
 const year = new Date().getFullYear();
+const siteOrigin = (Astro.site ?? new URL('https://xn--lg3bwrn5a71ebza324d9pgtrf.kr'))
+  .toString()
+  .replace(/\/$/, '');
+const canonicalPath = path.endsWith('/') || path.includes('.') ? path : `${path}/`;
+const canonicalUrl = `${siteOrigin}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
+const ogImage = image
+  ? image.startsWith('http')
+    ? image
+    : `${siteOrigin}${image.startsWith('/') ? image : `/${image}`}`
+  : undefined;
 const nav = [
   { href: '/posts/', label: '블로그' },
   { href: '/news/', label: '지원금 뉴스' },
@@ -31,6 +44,18 @@ const nav = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="민생회복지원금" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    {ogImage && <meta property="og:image:alt" content={title} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
     <meta name="naver-site-verification" content="c078f9ec83600f153e6e80fd22fc84855dba86fe" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#e8f5f3" />
