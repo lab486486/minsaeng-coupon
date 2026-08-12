@@ -23,6 +23,7 @@ export const GET: APIRoute = async ({ site }) => {
     { loc: '/posts/', changefreq: 'daily', priority: '0.9' },
     { loc: '/news/', changefreq: 'daily', priority: '0.9' },
     { loc: '/regional/', changefreq: 'daily', priority: '0.85' },
+    { loc: '/band-id/', changefreq: 'monthly', priority: '0.7' },
     { loc: '/income/', changefreq: 'weekly', priority: '0.7' },
     { loc: '/rss.xml', changefreq: 'daily', priority: '0.5' },
   ];

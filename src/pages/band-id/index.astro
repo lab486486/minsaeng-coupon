@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '밴드 아이디(계정) 쉽게 찾는법';
+const description =
+  '네이버 밴드에서 휴대폰 번호로 로그인한 계정을 찾는 방법. 비밀번호 재설정·본인 확인·이메일 등록까지 화면으로 안내합니다.';
+
+const steps = [
+  {
+    title: '밴드 앱에서 로그인하기',
+    body: '밴드를 실행한 뒤, 회원가입 화면 하단의 **로그인하기**를 누릅니다. 이미 가입한 계정을 찾을 때 쓰는 시작 화면입니다.',
+    img: '/guides/band-id/step-02.jpg',
+    alt: '밴드 시작 화면에서 로그인하기 선택',
+  },
+  {
+    title: '휴대폰 번호로 로그인 선택',
+    body: '로그인 수단 목록에서 **휴대폰 번호로 로그인**을 선택합니다. 이메일·네이버·구글 등으로 가입했어도, 휴대폰이 연결되어 있으면 이 경로로 계정을 확인할 수 있는 경우가 많습니다.',
+    img: '/guides/band-id/step-01.jpg',
+    alt: '휴대폰 번호로 로그인 버튼이 표시된 밴드 로그인 화면',
+  },
+  {
+    title: '비밀번호 재설정으로 계정 확인',
+    body: '휴대폰 번호·비밀번호 입력 화면에서 **비밀번호를 잊으셨나요? → 비밀번호 재설정**을 누릅니다. 가입한 번호로 인증하면, 내 밴드 계정이 맞는지 확인할 수 있습니다.',
+    img: '/guides/band-id/step-03.jpg',
+    alt: '비밀번호 재설정 링크가 표시된 로그인 화면',
+  },
+  {
+    title: '가입한 휴대폰 번호 입력',
+    body: '밴드에 가입할 때 쓴 **휴대폰 번호**를 입력한 뒤 **확인**을 누릅니다. 번호가 다르면 계정을 찾지 못할 수 있으니, 예전에 쓰던 번호를 포함해 확인해 보세요.',
+    img: '/guides/band-id/step-04.jpg',
+    alt: '비밀번호 재설정 화면에서 휴대폰 번호 입력',
+  },
+  {
+    title: 'SMS 인증번호 입력',
+    body: '해당 번호로 **SMS 인증번호**가 오면 입력합니다. 문자가 오지 않으면 수신 차단·통신사 지연을 확인하거나, 잠시 후 다시 요청하세요.',
+    img: '/guides/band-id/step-05.jpg',
+    alt: 'SMS 인증번호 입력 화면',
+  },
+  {
+    title: '이름 일부 확인(본인 인증)',
+    body: '‘본인이 맞으신가요?’ 화면에서 가려진 이름(* 부분)을 채워 **전체 이름**을 입력한 뒤 **확인**을 누릅니다. 여기서 이름이 맞으면 해당 번호에 연결된 밴드 계정이 내 계정이라는 뜻입니다.',
+    img: '/guides/band-id/step-06.jpg',
+    alt: '본인 확인을 위해 이름을 입력하는 화면',
+  },
+  {
+    title: '비밀번호 입력 또는 재설정',
+    body: '안내에 따라 **비밀번호**를 입력하고 **확인**을 누릅니다. 재설정 흐름이라면 새 비밀번호를 설정한 뒤 로그인하면 됩니다.',
+    img: '/guides/band-id/step-07.jpg',
+    alt: '비밀번호 입력 화면',
+  },
+  {
+    title: '이메일 주소 등록(권장)',
+    body: '로그인 수단을 바꾸거나 휴대폰을 잃어버려도 찾을 수 있도록 **이메일 주소 등록**을 해 두면 좋습니다. 이메일을 입력한 뒤 **인증하기**를 진행하세요. 지금은 넘어가려면 **다음에 하기**를 눌러도 됩니다.',
+    img: '/guides/band-id/step-08.jpg',
+    alt: '계정 찾기를 위한 이메일 주소 등록 화면',
+  },
+  {
+    title: '밴드 계정 찾기 완료',
+    body: '인증·로그인이 끝나면 밴드 홈(내 밴드)으로 들어갑니다. 이후에는 프로필·설정에서 로그인 수단과 이메일을 한 번 더 확인해 두면, 다음에 계정을 잃어버릴 가능성이 줄어듭니다.',
+    img: '/guides/band-id/step-09.jpg',
+    alt: '밴드 계정 찾기 완료 후 홈 화면',
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path="/band-id/">
+  <article class="detail-hero band-guide">
+    <div class="container">
+      <div class="post-row__meta">
+        <span class="chip chip--teal">가이드</span>
+        <span class="chip">네이버 밴드</span>
+      </div>
+      <h1>{title}</h1>
+      <p class="hero__lead">
+        밴드 아이디(계정)를 잊었을 때, 휴대폰 번호 인증으로 계정을 확인하고 다시 로그인하는 방법을 화면 순서대로 정리했습니다.
+      </p>
+
+      <div class="prose band-guide__prose">
+        <p>
+          밴드는 이메일·네이버·구글·휴대폰 등 여러 방법으로 가입할 수 있어, “내 아이디가 뭐였지?” 하고 헷갈리는 경우가 많습니다.
+          아래는 <strong>휴대폰 번호로 로그인 → 비밀번호 재설정(계정 확인)</strong> 흐름을 기준으로 한 안내입니다.
+        </p>
+
+        <div class="band-guide__tips notice">
+          <strong>시작 전 준비</strong>
+          <ul>
+            <li>밴드에 가입할 때 썼던 <strong>휴대폰 번호</strong>가 필요합니다.</li>
+            <li>SMS를 받을 수 있는 상태여야 합니다.</li>
+            <li>앱 화면은 버전에 따라 조금 다를 수 있습니다.</li>
+          </ul>
+        </div>
+
+        {
+          steps.map((step, i) => (
+            <section class="band-guide__step">
+              <h2>
+                {i + 1}. {step.title}
+              </h2>
+              <p set:html={step.body.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+              <figure class="band-guide__figure">
+                <img src={step.img} alt={step.alt} width="390" height="780" loading={i < 2 ? 'eager' : 'lazy'} decoding="async" />
+                <figcaption>{i + 1}단계 · {step.alt}</figcaption>
+              </figure>
+            </section>
+          ))
+        }
+
+        <h2>자주 막히는 경우</h2>
+        <ul>
+          <li>
+            <strong>SMS가 안 와요</strong> — 스팸함·차단 앱을 확인하고, 다른 기기에서 같은 번호로 다시 시도해 보세요.
+          </li>
+          <li>
+            <strong>이름이 기억나지 않아요</strong> — 화면 하단 ‘이름이 기억나지 않나요?’ 안내를 따르거나, 밴드·네이버 고객센터 도움을 받으세요.
+          </li>
+          <li>
+            <strong>예전 번호로 가입했어요</strong> — 현재 번호로는 안 찾아질 수 있습니다. 당시 번호로 유심·번호 이동이 가능한지 먼저 확인하세요.
+          </li>
+        </ul>
+
+        <p class="notice">
+          본 글은 밴드 앱 화면을 바탕으로 한 사용 안내이며, 네이버·밴드 공식 고객센터 안내가 우선합니다. 계정·개인정보 관련 문제는 공식 채널을 이용해 주세요.
+        </p>
+      </div>
+
+      <aside class="band-guide__more" aria-label="관련 안내">
+        <p class="band-guide__more-label">같이 보면 좋은 정보</p>
+        <p>
+          지역 지원금·민생회복지원금 소식이 궁금하다면
+          <a href="/regional/">지역지원금 정보</a>와
+          <a href="/news/">지원금 뉴스</a>도 확인해 보세요.
+        </p>
+      </aside>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .band-guide__prose {
+    margin-top: 1.75rem;
+  }
+
+  .band-guide__tips ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.15rem;
+  }
+
+  .band-guide__step {
+    margin: 2.25rem 0;
+  }
+
+  .band-guide__step h2 {
+    margin-bottom: 0.65rem;
+  }
+
+  .band-guide__figure {
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+
+  .band-guide__figure img {
+    display: block;
+    width: min(100%, 22rem);
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    background: #111;
+  }
+
+  .band-guide__figure figcaption {
+    margin-top: 0.45rem;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+  }
+
+  .band-guide__more {
+    margin-top: 2.5rem;
+    padding: 1.1rem 1.15rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: rgba(0, 133, 124, 0.06);
+  }
+
+  .band-guide__more-label {
+    margin: 0 0 0.35rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--teal-deep);
+    text-transform: uppercase;
+  }
+
+  .band-guide__more p:last-child {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  .band-guide__more a {
+    color: var(--teal-deep);
+    font-weight: 700;
+  }
+</style>
