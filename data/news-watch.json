@@ -1,9 +1,41 @@
 {
-  "updatedAt": "2026-08-16T01:25:07.912Z",
+  "updatedAt": "2026-08-17T01:22:37.774Z",
   "source": "Google News RSS",
   "note": "기사 본문은 수집하지 않습니다. 링크는 Google News 경유 URL일 수 있습니다.",
-  "newCount": 138,
+  "newCount": 142,
   "items": [
+    {
+      "title": "2026 4차 민생지원금, 지자체별 지원금액",
+      "source": "브런치",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1OeE9CNV9mNkFJa3BpMjRycXVvMzc1Z0xlWmZaVTZKZ0gtLVNXN2FFOVBkSGtGeTQ3QkY1akMxUXNXNUVIYXBuOFB3WHhDQ2VIZXlj?oc=5",
+      "publishedAt": "2026-08-17T00:16:02.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-17T01:22:37.405Z"
+    },
+    {
+      "title": "김해시 민생지원금 조례 ‘속전속결’…544억 혈세 사업, 졸속 심사 논란",
+      "source": "뉴스프리존",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9KeUllX1BMZ3hHenZBNllMdHd6Sks1a2I4ZGc0VlFUVDZMTFRYZ3V3MUM0R1RLSUVLUVQyVTVjVTNlX196T3dRZk5mVUNCNlotbW54ZlRFZnloSHIyMmNJRUdNckpUTHM1dHgxa09UYnM2bDjSAXdBVV95cUxNS1Nyb2J5TnlWTm9BRGpsc3Jfd3g5SnpSYkRoeGhIVzl6OTA1Mll0WWtmMWNpNDlDbVZVMGVLSzlzQV9iR1NjT1llUTVCTHRqLUJDR1VpMktlWWxaSEg5TnBycndNT3hDZzVWVmcxV2NNNTJPT09hTQ?oc=5",
+      "publishedAt": "2026-08-16T05:38:06.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-17T01:22:37.405Z"
+    },
+    {
+      "title": "“4인 가족이면 40만원 받는다”… 추석 전 모든 시민에게 10만 원씩 지급되는 '민생지원금'",
+      "source": "경제시그널",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE15NkZpVWZjcUVQYm9oeDZ1dEEwb2g4ZDBlLW95cWM1aEZYZGxjeXlBTGh3c1VfX2gwWlE2T2I5UW9vT0NtMG9MZXpzcElvOWR2TUdjN2czdnJGWGxQaDA1S211cTZNT0draGlzZ29fV2lDT1E?oc=5",
+      "publishedAt": "2026-08-16T01:00:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-17T01:22:37.406Z"
+    },
+    {
+      "title": "“추석 전 30만 원 지급한다더니”…당진 530억 민생지원금 결국 부결된 이유",
+      "source": "경제시그널",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9zTjNyYTd6UWI4ZXBJUVM4ZzdzdDhwMmprc09SSkJOSVFvX0RBQzU1YkdoeERwcFBiTFhDSHdIb284Q3NKQnU0ZlVhcE12UHd1aDhDNnBzVUtuZjRGVUJmc1NwZGVkMTZ0dGVVRDhlWkppU0k?oc=5",
+      "publishedAt": "2026-08-15T23:00:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-17T01:22:37.406Z"
+    },
     {
       "title": "'1인 당 25만 원' 소득 상관없이 민생지원금 4차 나오는 지역",
       "source": "gukjenews.com",
@@ -67,6 +99,22 @@
       "publishedAt": "2026-08-14T07:26:18.000Z",
       "query": "민생지원금",
       "foundAt": "2026-08-15T01:19:52.107Z"
+    },
+    {
+      "title": "정영두 시장 ‘1호 공약’ 민생지원금 조례 시의회 통과…추석 전 10만원 지급",
+      "source": "gimhaenews.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4wSUlrMTcya0VKQUs4MV8wZWpjVTZkOEJHQ2pacDRCQ0dnbGRuZ05FY0hIM3FRa1ViUGpYdzFOTjVlSDJyWkc0M05zeTYyakk5NWxfVkRhREtueHpnUDZzbVRzaEhqSGJZM2kzeFlR?oc=5",
+      "publishedAt": "2026-08-14T07:00:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-17T01:22:37.406Z"
+    },
+    {
+      "title": "통영시 '시민 1인당 35만원' 민생회복지원금 31일부터 지급",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5VWTFjQXRncnQ3TnBPVE1MRXJGZmIwbm9yUDlTaFJHV0lDUVBYbVJ5XzF0SWpER3lpRVVKbThLUlBRUUFUcXVzYnRXaDh0RDlWTlc2bm04R0ZHQ2fSAWBBVV95cUxPbXpMZTJrN0p0M0J2ZXBhRG5CRkJtZ1JFdnltcmlwTHlKNGEtLW5pbHJaMXF5LUM5MTltV3BoVVNUcHJMQTFUdG93X19PNkNfbVhGSDN6c1hrVzdYdjFjYko?oc=5",
+      "publishedAt": "2026-08-14T06:59:15.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-17T01:22:37.405Z"
     },
     {
       "title": "‘민생지원금’만 3조3천억…추미애 “경기, 빚 증가속도 전국의 3배, 이대로면 부도”",
@@ -211,6 +259,14 @@
       "publishedAt": "2026-08-12T05:32:42.000Z",
       "query": "민생지원금",
       "foundAt": "2026-08-13T02:08:00.071Z"
+    },
+    {
+      "title": "김해시민 1인당 10만원 받는다…민생지원금 조례안 통과",
+      "source": "koreaeaglenews.com",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5mWjJQOFVRSENLUTJJU2JIU3RWRUpSdnZ6dTNwTjZxdEN4bXdFV3JPTklySVJTM0dienFRbDZ1NGtTTjdrX1FCa1ZNcU91VDFoQU04UXUta216YXZXSG1leVZEb0Q0d0dOd0thWUJKWnNUMG8?oc=5",
+      "publishedAt": "2026-08-12T01:35:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-17T01:22:37.406Z"
     },
     {
       "title": "김해시민 1인당 10만원 받는다…민생지원금 조례안 통과",
@@ -483,6 +539,14 @@
       "publishedAt": "2026-08-11T07:00:15.000Z",
       "query": "민생지원금",
       "foundAt": "2026-08-13T02:08:00.071Z"
+    },
+    {
+      "title": "김해시민 1인당 10만원 민생지원금 조례 통과",
+      "source": "mediagn.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9RdHJGZ2VtMEQ1a0hBOWVNaVNHd3hxTGhsNUhXRkJlZFJnSlBCSmVtMGp4a3FVbVpBTURBN205c19tZkM1LU9RR0dxNjg3aW1ydlZ4amY5QmNxMFJla01TTjVTdHc4bmdZQ2hF?oc=5",
+      "publishedAt": "2026-08-11T06:48:24.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-17T01:22:37.406Z"
     },
     {
       "title": "김해시민 1인당 10만원 민생지원금 조례 통과",
@@ -774,6 +838,14 @@
     },
     {
       "title": "김해시의회, 민생지원금 추석 전 지급 조례안 의결",
+      "source": "straightnews.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5BZVBUenNZckxGN1lTUTFqNUdId21GOU1iaUpkci03eWdGNzR2YkNNMjFtU3AtN09OMXlLYi1OaVN1N20xc2FaT3huNUJsbXVQb2VXZ2wwSWNBY3RQNmhTOGdyZjl1SXQ2MHowdjR6WkNJWWvSAXdBVV95cUxQMnZrbmEyOXl6SkxNbW1lSDlMdS1SYW5Mb19yOWplZmk1R3o4Q2luSUZ2TTFKZFduMkpNRTE3UW1xam9WN2pTdHJ3UkxkZm00UzZRUmNkZ1lXNjJzX2IyUTAxQ1JyNHdfMnFNVTVXVHM2SFM5RmpFZw?oc=5",
+      "publishedAt": "2026-08-10T07:00:00.000Z",
+      "query": "민생지원금",
+      "foundAt": "2026-08-17T01:22:37.406Z"
+    },
+    {
+      "title": "김해시의회, 민생지원금 추석 전 지급 조례안 의결",
       "source": "스트레이트뉴스",
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5BZVBUenNZckxGN1lTUTFqNUdId21GOU1iaUpkci03eWdGNzR2YkNNMjFtU3AtN09OMXlLYi1OaVN1N20xc2FaT3huNUJsbXVQb2VXZ2wwSWNBY3RQNmhTOGdyZjl1SXQ2MHowdjR6WkNJWWvSAXdBVV95cUxQMnZrbmEyOXl6SkxNbW1lSDlMdS1SYW5Mb19yOWplZmk1R3o4Q2luSUZ2TTFKZFduMkpNRTE3UW1xam9WN2pTdHJ3UkxkZm00UzZRUmNkZ1lXNjJzX2IyUTAxQ1JyNHdfMnFNVTVXVHM2SFM5RmpFZw?oc=5",
       "publishedAt": "2026-08-10T07:00:00.000Z",
@@ -891,78 +963,6 @@
       "publishedAt": "2026-08-09T01:31:05.000Z",
       "query": "민생지원금",
       "foundAt": "2026-08-11T01:53:26.755Z"
-    },
-    {
-      "title": "\"상반기만 9667억\"…올해 '폐업 신기록' 경신하나",
-      "source": "newsis.com",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VdEt6NkVQaHRTZWhTdjE2ZXI1c2FGNld0WGw5U1BqQlRLbjc2dG1yQU9BdG9rdU1MelR0MkRCU0ZkZGdFSXJMQ0laMWZjYnNIOGJLb0djMm9CVE5MYVRndNIBeEFVX3lxTE9taTN4SDEyRUd0T2ZxNVJ6RzlnYlF6MjAxTUxwVkFHTzN1aERscGFDU2Z1dDZHQ2NqdENXQlJ2VWJLdTFreEh4MVVXVUUtZl82amRJaDZ6VlZVdzBEWkV2Z3Q0RXlMVFhKa0JGYlhJR2JMUjRqOVFsXw?oc=5",
-      "publishedAt": "2026-08-08T21:01:00.000Z",
-      "query": "민생회복지원금/소비쿠폰",
-      "foundAt": "2026-08-09T03:39:52.529Z"
-    },
-    {
-      "title": "'추석 설렌다! 1인당 50만원'...지원금 소식에 들썩이는 '이곳'",
-      "source": "supple.kr",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBXb29ZZTJJVDdPRDh2Vl9RQjJ5Y3U0cU5SSTRqUEQ5QnNReXdIcWRkVzF0cDllT3RZQzJpRzBNSmJIX0VKOF96MFNVMUtNNHVmTnB1ejg5eTVacFRD?oc=5",
-      "publishedAt": "2026-08-08T21:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-08-09T03:39:52.028Z"
-    },
-    {
-      "title": "속초 20만원 지급 '순항'…강릉은 10만원 민생지원금 조례안 '부결'",
-      "source": "강원신문",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Ta3EycGR6NUZ2alZzZ0EyTUl2ZkxzMlZKOTdzUkJXRmRNakNmYUx0M0NJRkNBdThvU3VyRXNsS1loNlhxaW1WNjNWNVNyZW5FX0UyVFNNNXFjOC1pNTltTVBqZzNuSGZK?oc=5",
-      "publishedAt": "2026-08-08T08:51:11.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-08-09T03:39:52.028Z"
-    },
-    {
-      "title": "당진시, 2차 추경 1조 6774억원 편성..민생지원금 526억 담았다",
-      "source": "idjnews.kr",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Nci1BYzE4aDRGTTZlWXhpMGF0UzNTS1VhZmJVT1FOSWlybFFJNko4ZlZPckxvd2JIN2NmdU9EQkdobFlQRFZtbm5HLS1XZkJhMlhXVkRsWFBsMTBuMW5MQkNzeUhjYWwy?oc=5",
-      "publishedAt": "2026-08-08T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-08-11T01:53:26.755Z"
-    },
-    {
-      "title": "당진시, 2차 추경 1조 6774억원 편성..민생지원금 526억 담았다",
-      "source": "당진신문",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Nci1BYzE4aDRGTTZlWXhpMGF0UzNTS1VhZmJVT1FOSWlybFFJNko4ZlZPckxvd2JIN2NmdU9EQkdobFlQRFZtbm5HLS1XZkJhMlhXVkRsWFBsMTBuMW5MQkNzeUhjYWwy?oc=5",
-      "publishedAt": "2026-08-08T07:00:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-08-09T03:39:52.028Z"
-    },
-    {
-      "title": "2026 추석 민생지원금 최대 50만원, 받을 수 있는 지역과 조건",
-      "source": "창원특례신문",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8wSFplMEFRajkybERMOHBzLTVjWGFJOWxMXzVnMWxsTGM2OEJpVDZNUmJuamhzTzJOeFNyRzVveVphNFhOT2k5X241dzgtOXNKODNaajNqSURGVm1sT0lFa3NaNTJkUzDSAWtBVV95cUxOX2k1ZDRmVFh4d09ITFZYWXN2UW5rdDI5bHZsNVJycURkVzFNZkhUa1BORDA1UGdDQjM3Z056a3VOSUczMmtFYVFQOXpjS0FIUnVVQU5SdGphbmh4TmpPRW0yZTJQSm1OaUtZaw?oc=5",
-      "publishedAt": "2026-08-08T01:04:10.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-08-13T02:08:00.071Z"
-    },
-    {
-      "title": "추석 전 '민생지원금 4차' 대상 지역은? 지급일 속속 확정",
-      "source": "gukjenews.com",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5LajltUVdpbmVHeWthX3JKSHhmbThwMUdTdWZLdG5iZk0wejN2bnJDNjFsRXJYUjZwblJWUlV5MXhReTFEOEN3VjdNZ1RoSHprWFZaNTdtRkI4MlR0UXZmOGdKYXBNODEwaTkxZldB?oc=5",
-      "publishedAt": "2026-08-08T00:48:20.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-08-10T01:57:39.868Z"
-    },
-    {
-      "title": "\"1인당 30만 원 또 준다네요\"... 명절 전 '4차 민생지원금' 지급 확정",
-      "source": "토픽트리",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQS1WZnZZNXI5Q0VzSmFKQVdWTUhiUnZ1bXV3VFplaWZSaGJ0MHBRTGhta2ltWk1NWWVFdVliT1J4U1hnSHpJc0xoOWY1T0EybnhiZFlyMzJicXQwN0RCRVY5dlYzQnlzMzJOMkZHQVFrRnNwMFV1VVFlNjZVUXBWT25ZVk1nY1BqVFlTSWFwbmFzakd6bGtvbnFFT2JtLWdFSXN0cTdvVkd1SnFja1RxeHFCZ9IBuwFBVV95cUxPaGlVeGpISHkwa2tRZXpmMmZGUWVXWFhGejBxMVBxT2FxbVBjY0FmSU96MzVBOUtoRHJrM1ExcFNOczZDWUdYdXFoSEx2VjB2QTlIYWEwZG0zdElTcmdjOHBLRWNZLUpRcWJwSFhaRi1XVkwxcWhiOHhQQkJtd09aVDk5eGNKaVpjRzk4V3NVdUJaX19tbnY3MXpGeXhUeFJ0ZVY0ZkUxYjI2X2VPc1ZjRVhwM1IteHpGNFRn?oc=5",
-      "publishedAt": "2026-08-07T07:12:00.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-08-09T03:39:52.028Z"
-    },
-    {
-      "title": "[뉴스 브리핑] 추석 민생지원금 최대 50만 원… 우리 지역도 받을 수 있을까?",
-      "source": "더퍼블릭",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9pd3JDUFBJM01rS0pLUWx5eHlKVjA4QWsxZ2Q4NXBwbl9iRWY0dFRfWExBVFQ5VHBubTBxb3ZaUVhpM0lLdDV2a0RiUzBtZ0J3aFhTQkFfWmJqZEFYVkNaYTF5Ti1YaTVkbTJB0gFvQVVfeXFMT2d1b2VETWpJLXk0RnRFYTg4d3ZBV196ZDFSUS0yamN3aGthWEMtZHBRT0Vha2cwUldYamRUT1YtZGR0TS1IbElMdk1oR2pCcVp3LTVRdmNmZnplckd6NEYyaDdydEJyTEswazZfS09B?oc=5",
-      "publishedAt": "2026-08-06T23:48:27.000Z",
-      "query": "민생지원금",
-      "foundAt": "2026-08-09T03:39:52.028Z"
     }
   ]
 }
