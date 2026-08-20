@@ -5,9 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <title>민생회복지원금 CMS</title>
+    <style>
+      /* 에디터 영역 넓게 */
+      [class*='EditorContainer'],
+      [class*='ControlPaneContainer'],
+      [class*='ControlPane'],
+      [class*='EditorControlPane'] {
+        max-width: none !important;
+      }
+
+      .cms-preview-fab {
+        position: fixed;
+        right: 1.25rem;
+        bottom: 1.25rem;
+        z-index: 99999;
+        display: none;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.75rem 1.1rem;
+        border: 0;
+        border-radius: 999px;
+        background: #006b64;
+        color: #fff;
+        font: inherit;
+        font-size: 0.92rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 10px 28px rgba(0, 107, 100, 0.35);
+      }
+
+      .cms-preview-fab:hover {
+        background: #005751;
+      }
+
+      .cms-preview-fab.is-visible {
+        display: inline-flex;
+      }
+
+      .cms-preview-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 100000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1.25rem;
+        background: rgba(18, 35, 31, 0.55);
+      }
+
+      .cms-preview-modal.is-open {
+        display: flex;
+      }
+
+      .cms-preview-dialog {
+        width: min(720px, 100%);
+        max-height: min(88vh, 900px);
+        overflow: auto;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      }
+
+      .cms-preview-header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem 1.1rem;
+        border-bottom: 1px solid #d7e5e1;
+        background: #f7fcfb;
+      }
+
+      .cms-preview-header strong {
+        font-size: 0.95rem;
+      }
+
+      .cms-preview-close {
+        border: 0;
+        background: transparent;
+        color: #006b64;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .cms-preview-body {
+        padding: 1.25rem 1.35rem 1.75rem;
+        color: #12231f;
+        font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+        line-height: 1.65;
+        word-break: keep-all;
+      }
+
+      .cms-preview-body h1,
+      .cms-preview-body h2,
+      .cms-preview-body h3 {
+        letter-spacing: -0.02em;
+        line-height: 1.3;
+      }
+
+      .cms-preview-body h1 {
+        font-size: 1.55rem;
+        margin: 0 0 0.85rem;
+      }
+
+      .cms-preview-body h2 {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0.55rem;
+      }
+
+      .cms-preview-body h3 {
+        font-size: 1.05rem;
+        margin: 1.2rem 0 0.45rem;
+      }
+
+      .cms-preview-body p,
+      .cms-preview-body ul,
+      .cms-preview-body ol {
+        margin: 0.55rem 0;
+      }
+
+      .cms-preview-body img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .cms-preview-empty {
+        color: #3d5a54;
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
+    <button type="button" class="cms-preview-fab" id="cms-preview-fab" aria-label="본문 미리보기">
+      미리보기
+    </button>
+    <div class="cms-preview-modal" id="cms-preview-modal" role="dialog" aria-modal="true" aria-labelledby="cms-preview-title">
+      <div class="cms-preview-dialog">
+        <div class="cms-preview-header">
+          <strong id="cms-preview-title">본문 미리보기</strong>
+          <button type="button" class="cms-preview-close" id="cms-preview-close">닫기</button>
+        </div>
+        <div class="cms-preview-body" id="cms-preview-body">
+          <p class="cms-preview-empty">본문 내용이 없습니다.</p>
+        </div>
+      </div>
+    </div>
+
     <script src="https://unpkg.com/decap-cms@^3.3.3/dist/decap-cms.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
       CMS.registerMediaLibrary({
         name: 'r2',
@@ -54,6 +203,93 @@
           };
         },
       });
+
+      (function setupPopupPreview() {
+        var fab = document.getElementById('cms-preview-fab');
+        var modal = document.getElementById('cms-preview-modal');
+        var body = document.getElementById('cms-preview-body');
+        var closeBtn = document.getElementById('cms-preview-close');
+        if (!fab || !modal || !body || !closeBtn) return;
+
+        function isEditorRoute() {
+          return /#\/collections\/[^/]+\/(?:entries|new)/.test(location.hash || '');
+        }
+
+        function syncFab() {
+          fab.classList.toggle('is-visible', isEditorRoute());
+        }
+
+        function readFieldByLabel(labelText) {
+          var labels = document.querySelectorAll('label, [class*="ControlLabel"], [class*="label"]');
+          for (var i = 0; i < labels.length; i++) {
+            var label = labels[i];
+            if ((label.textContent || '').trim().indexOf(labelText) === -1) continue;
+            var root = label.closest('[class*="ControlContainer"], [class*="Control"], fieldset, div') || label.parentElement;
+            if (!root) continue;
+
+            var cm = root.querySelector('.CodeMirror');
+            if (cm && cm.CodeMirror) return cm.CodeMirror.getValue();
+
+            var textarea = root.querySelector('textarea');
+            if (textarea) return textarea.value;
+
+            var input = root.querySelector('input[type="text"], input:not([type])');
+            if (input) return input.value;
+          }
+          return '';
+        }
+
+        function readMarkdownBody() {
+          var byLabel = readFieldByLabel('본문');
+          if (byLabel) return byLabel;
+
+          var mirrors = document.querySelectorAll('.CodeMirror');
+          if (mirrors.length) {
+            var last = mirrors[mirrors.length - 1];
+            if (last.CodeMirror) return last.CodeMirror.getValue();
+          }
+
+          var areas = document.querySelectorAll('textarea');
+          if (areas.length) return areas[areas.length - 1].value || '';
+          return '';
+        }
+
+        function readTitle() {
+          return readFieldByLabel('제목') || '본문 미리보기';
+        }
+
+        function openPreview() {
+          var markdown = (readMarkdownBody() || '').trim();
+          var title = (readTitle() || '').trim() || '본문 미리보기';
+          document.getElementById('cms-preview-title').textContent = title;
+
+          if (!markdown) {
+            body.innerHTML = '<p class="cms-preview-empty">본문 내용이 없습니다. 본문 필드를 작성한 뒤 다시 눌러 주세요.</p>';
+          } else if (window.marked && typeof window.marked.parse === 'function') {
+            body.innerHTML = window.marked.parse(markdown);
+          } else {
+            body.innerHTML = '<pre style="white-space:pre-wrap">' + markdown.replace(/</g, '&lt;') + '</pre>';
+          }
+          modal.classList.add('is-open');
+        }
+
+        function closePreview() {
+          modal.classList.remove('is-open');
+        }
+
+        fab.addEventListener('click', openPreview);
+        closeBtn.addEventListener('click', closePreview);
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) closePreview();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closePreview();
+        });
+
+        window.addEventListener('hashchange', syncFab);
+        setInterval(syncFab, 800);
+        syncFab();
+      })();
     </script>
   </body>
 </html>

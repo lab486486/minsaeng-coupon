@@ -16,6 +16,10 @@ slug:
   clean_accents: true
   sanitize_replacement: "-"
 
+# 좌우 분할 미리보기 끄기 → 에디터 전체 너비 (팝업 미리보기는 admin/index.html)
+editor:
+  preview: false
+
 collections:
   - name: posts
     label: 글/안내
