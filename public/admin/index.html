@@ -6,12 +6,39 @@
     <meta name="robots" content="noindex" />
     <title>민생회복지원금 CMS</title>
     <style>
-      /* 에디터 영역 넓게 */
-      [class*='EditorContainer'],
-      [class*='ControlPaneContainer'],
-      [class*='ControlPane'],
-      [class*='EditorControlPane'] {
-        max-width: none !important;
+      /*
+        사이트 본문(.prose max-width: 46rem ≈ 736px)에 맞춰
+        글 편집 화면에서만 에디터 가로를 제한합니다.
+      */
+      :root {
+        --cms-editor-max: 46rem;
+        --cms-editor-pad: 1.25rem;
+      }
+
+      body.cms-is-editing [class*='EditorContainer'],
+      body.cms-is-editing [class*='ControlPaneContainer'],
+      body.cms-is-editing [class*='ControlPane'],
+      body.cms-is-editing [class*='EditorControlPane'],
+      body.cms-is-editing [class*='EntryEditor'] {
+        width: min(100% - (var(--cms-editor-pad) * 2), var(--cms-editor-max)) !important;
+        max-width: var(--cms-editor-max) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+      }
+
+      body.cms-is-editing [class*='EditorControlPane'] textarea,
+      body.cms-is-editing [class*='ControlPane'] textarea,
+      body.cms-is-editing [class*='EditorControlPane'] .CodeMirror,
+      body.cms-is-editing [class*='ControlPane'] .CodeMirror {
+        max-width: 100% !important;
+      }
+
+      body.cms-is-editing [class*='ToolbarContainer'],
+      body.cms-is-editing [class*='EditorToolbar'] {
+        max-width: min(100% - 2rem, var(--cms-editor-max)) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
       }
 
       .cms-preview-fab {
@@ -57,8 +84,9 @@
         display: flex;
       }
 
+      /* 팝업도 사이트 본문 폭(46rem)에 맞춤 */
       .cms-preview-dialog {
-        width: min(720px, 100%);
+        width: min(46rem, 100%);
         max-height: min(88vh, 900px);
         overflow: auto;
         background: #fff;
@@ -216,7 +244,9 @@
         }
 
         function syncFab() {
-          fab.classList.toggle('is-visible', isEditorRoute());
+          var editing = isEditorRoute();
+          fab.classList.toggle('is-visible', editing);
+          document.body.classList.toggle('cms-is-editing', editing);
         }
 
         function readFieldByLabel(labelText) {
