@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T01:19:40.584Z",
+  "updatedAt": "2026-08-23T01:27:02.957Z",
   "processedLinks": [
     "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VdEt6NkVQaHRTZWhTdjE2ZXI1c2FGNld0WGw5U1BqQlRLbjc2dG1yQU9BdG9rdU1MelR0MkRCU0ZkZGdFSXJMQ0laMWZjYnNIOGJLb0djMm9CVE5MYVRndNIBeEFVX3lxTE9taTN4SDEyRUd0T2ZxNVJ6RzlnYlF6MjAxTUxwVkFHTzN1aERscGFDU2Z1dDZHQ2NqdENXQlJ2VWJLdTFreEh4MVVXVUUtZl82amRJaDZ6VlZVdzBEWkV2Z3Q0RXlMVFhKa0JGYlhJR2JMUjRqOVFsXw?oc=5",
     "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBXb29ZZTJJVDdPRDh2Vl9RQjJ5Y3U0cU5SSTRqUEQ5QnNReXdIcWRkVzF0cDllT3RZQzJpRzBNSmJIX0VKOF96MFNVMUtNNHVmTnB1ejg5eTVacFRD?oc=5",
@@ -352,14 +352,24 @@
     "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9uaHRtSXU0a1BKV2QtcGNtbmJhQ25OQjl0SzRPYzByUTNoT3lZX0MzLVB4UnRvRlpyclJ2SHF3ejlCNDIxYWc?oc=5",
     "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1hbGtoTlZhWno0SE1lQUd3QlFna1V3aGlmUllkWm5mUTVWOE1RU1N1S2lUNWtjNnJKYXdKQUVfMDJhRUYxenl0bWF3STUtdkluVnBUN3B3aktUZDI3OW9CVA?oc=5",
     "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9uUmZsUC02UTdpRFpuYk5kVUp4QzZRS0k2dmZ0SzB0X01lcWRkSDVmUW1zM1poSTctVzNHdU5ZQTNTUnRLWHI1OGJuZ3c4RzFIQ2FpUHYxYXRpR1Nva3M0TtIBYEFVX3lxTE9uUmZsUC02UTdpRFpuYk5kVUp4QzZRS0k2dmZ0SzB0X01lcWRkSDVmUW1zM1poSTctVzNHdU5ZQTNTUnRLWHI1OGJuZ3c4RzFIQ2FpUHYxYXRpR1Nva3M0Tg?oc=5",
-    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1jWVZlVnVZVmNYdzZUbW1fZTMzWGthbTQ5MDM5TUxtdTFTZ3hmNjRsMWtNR2xWcUlHcUc4YlprOU1QS29jVkFDSDZFaXM1cURMTDZBcndyOGhldkk?oc=5"
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1jWVZlVnVZVmNYdzZUbW1fZTMzWGthbTQ5MDM5TUxtdTFTZ3hmNjRsMWtNR2xWcUlHcUc4YlprOU1QS29jVkFDSDZFaXM1cURMTDZBcndyOGhldkk?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE93UXhYYzdCcExyd0VuRFJja0g4Y0NKSWdFaDhIUVFnd2xsQktFV2txeXdkeldEbUJxQkxjcV91MFJGWjNsbHJWVmR4aS1BMWJBNmJTUVQ2cUdJSjZvMjl2dXNJOGk3RlF2dk9oVER3?oc=5",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE84ZXBZNGlDdjhMT2otQzRCZHZMdjZLb1lSaUxMOHA1TVNtWGZ2NklrZjd6T0FkNEtWeWc0NTBiNXBkVWx2OGIwMUhtam84OV94WGc4NWdkZjlsR2M?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE1TS1dLdmltT2hhek1EUTVoaHFndnVlU2xPQW1TdHpqV2JGV2U1dFBYX1FYOWVOOEdGc200Q25JenozQTgzbHhLRnlBazZ4TnhocXljcVRZcGQxOGhnUnBHUk1HQ1h1dmJjZ3ZDUzl3?oc=5",
+    "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8wTWFoa0MzMmVMWUdHZjlhZFRkRFp3TDFWRjBNUjhHM3RIa2hJUDQtZFFnMEp5elNnTktEM1pfODkycDBrZ2c3UzMtYnkxZTVVT2JOODJB?oc=5",
+    "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA2Z0xja3M2SklyZzhOYXJYWlM3NTdiRnZCQ0JSM0JpVDRLMjFZWmkyUkZvZlhYWWRHMDdMSTJmeFkzUnl6Z3Rtak96aWRkUDllZmpZODNHOXFFdVEyR241Vg?oc=5",
+    "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1JTFFlM1k4ZWxjNDM3MDdGWnZYZGJVenM0cWFhY2RYUll5Q3paY1FlQkVSYmpUalk4dXJQSVVXWm5vbVlPOV81V0hMakQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiekFVX3lxTE5jVl9FWjVFVXpoSWIyMTRaZW9BSndiVnpFZjNsY1JkMHV3NGpSUV9zSEI4aTViVmNYdVhZYVk5dGdCTFhZY3N4ck1QUTlVQ2Q0VjFSSkJSU1RheV9mM2V5ZDh1YTdOcmcyR1VYZktQNy0xVUg2cldOQTVB0gF6QVVfeXFMUEhNUkROZHFhZ1BrcUZ0amhGUVFEaGkzMTdFaWhBVEcySnZHZDYzQjJmQzlubU5tUVhsQzF3VTZRWGw0MGhwX1lUYk5GdXkyZm5rQ28yUDJlMjc4UEp5VGFDb1VVWHdsMUFvRFMxSFJOVy1rMzhBUE1iZEE?oc=5",
+    "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1yMXBqTkRjdDNyVndRLWI3VS1sTUFvRW9aWmVoMFhLY1hVZ2NCd0Q0X0o5T2VnemV2LV81VGVrM0o1VDROeW1RN2ZreFRrZDNnemdKRmNybmI5aXVCVFI3bWZfamlwQzl5?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBuQ0Q5aVdSeUJEMGJuR2s0RmNTeG5DSWNPcVQzcFo2ZDhPT0QzYXBodFhNQTZIWE96eHp5V0dKSXo3OGlRRlRtb05ZcWpkZVE2bHFn?oc=5",
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBxYlo5SENqUjFoWnJNcXJSQzA5NDlnM1BSaS1YSHA5MlJVWTN4TmdMQ0pXLWlUc2o2THRtMVVGbEY4TW4zdmUwd1RZRmw5b3VX?oc=5"
   ],
   "lastCreated": [
     {
-      "slug": "gimhae-2026-6",
-      "pageTitle": "김해시 민생지원금 10만원 안내",
-      "region": "김해시",
-      "amount": "10만원"
+      "slug": "r4b5ff0-2026-4",
+      "pageTitle": "누구 민생지원금 50만원 안내",
+      "region": "누구",
+      "amount": "50만원"
     }
   ]
 }
