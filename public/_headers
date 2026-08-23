@@ -9,16 +9,18 @@
 
 /sitemap.xml
   Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=3600
 
 /rss.xml
   Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=3600
 
-# 장캐시(immutable)는 누락 자산이 HTML로 캐시되는 사고가 있어 짧게 유지
-/assets/*
-  Cache-Control: public, max-age=3600, must-revalidate
-
+# Astro 해시 번들은 파일명이 바뀌므로 장기 캐시 가능
 /_astro/*
-  Cache-Control: public, max-age=60, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
+
+/guides/band-id/*
+  Cache-Control: public, max-age=604800
 
 /favicon.ico
   Cache-Control: public, max-age=2592000

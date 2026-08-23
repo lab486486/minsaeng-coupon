@@ -66,10 +66,43 @@ const nav = [
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="alternate" type="application/rss+xml" title="민생쿠폰 블로그" href="/rss.xml" />
     <title>{fullTitle}</title>
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8094444885520451"
-      crossorigin="anonymous"></script>
+    {/* AdSense: 초기 로드/JS 낭비·CLS를 줄이려고 idle 이후에 삽입 */}
+    <script is:inline>
+      (function () {
+        var loaded = false;
+        function loadAds() {
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src =
+            'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8094444885520451';
+          s.crossOrigin = 'anonymous';
+          document.head.appendChild(s);
+        }
+        function onIdle(fn) {
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(fn, { timeout: 4000 });
+          } else {
+            setTimeout(fn, 2000);
+          }
+        }
+        function arm() {
+          onIdle(loadAds);
+          window.removeEventListener('scroll', arm, { passive: true });
+          window.removeEventListener('pointerdown', arm);
+          window.removeEventListener('keydown', arm);
+        }
+        if (document.readyState === 'complete') {
+          arm();
+        } else {
+          window.addEventListener('load', arm, { once: true });
+        }
+        window.addEventListener('scroll', arm, { passive: true, once: true });
+        window.addEventListener('pointerdown', arm, { once: true });
+        window.addEventListener('keydown', arm, { once: true });
+      })();
+    </script>
     <style is:inline set:html={globalCss} />
   </head>
   <body>
@@ -85,6 +118,7 @@ const nav = [
               width="36"
               height="36"
               decoding="async"
+              fetchpriority="high"
             />
           </picture>
           <span class="brand__text">

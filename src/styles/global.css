@@ -467,7 +467,8 @@ img {
 .hero__grid {
   display: grid;
   gap: 1.75rem;
-  align-items: center;
+  /* center면 왼쪽 텍스트 높이 변화 시 aside가 위아래로 움직여 CLS가 커짐 */
+  align-items: start;
 }
 
 @media (min-width: 860px) {
@@ -483,6 +484,9 @@ img {
   border-radius: var(--radius);
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(224, 244, 241, 0.75));
   box-shadow: var(--shadow);
+  /* 바로가기 5칸(2x2 + 전체폭 1) 기준 높이 예약 → 레이아웃 점프 완화 */
+  min-height: 17.5rem;
+  contain: layout;
 }
 
 .hero__aside-label {
