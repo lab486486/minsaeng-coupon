@@ -486,7 +486,8 @@ img {
   box-shadow: var(--shadow);
   /* 바로가기 5칸(2x2 + 전체폭 1) 기준 높이 예약 → 레이아웃 점프 완화 */
   min-height: 17.5rem;
-  contain: layout;
+  contain: layout style;
+  overflow: hidden;
 }
 
 .hero__aside-label {
@@ -499,6 +500,7 @@ img {
 .hero__shortcuts {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3.1rem 3.1rem 3.1rem;
   gap: 0.75rem;
 }
 
