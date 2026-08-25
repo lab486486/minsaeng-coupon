@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <title>민생회복지원금 CMS</title>
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/editor/3.2.2/toastui-editor.min.css"
+    />
     <style>
-      /*
-        사이트 본문(.prose max-width: 46rem ≈ 736px)에 맞춰
-        글 편집 화면에서만 에디터 가로를 제한합니다.
-      */
       :root {
-        --cms-editor-max: 46rem;
+        /* 사이트 본문(46rem)보다 넓게 — CMS 편집은 화면 폭을 씀 */
+        --cms-editor-max: min(96rem, calc(100vw - 2.5rem));
         --cms-editor-pad: 1.25rem;
+        --cms-toast-height: 420px;
       }
 
       body.cms-is-editing [class*='EditorContainer'],
@@ -27,18 +29,36 @@
         box-sizing: border-box !important;
       }
 
-      body.cms-is-editing [class*='EditorControlPane'] textarea,
-      body.cms-is-editing [class*='ControlPane'] textarea,
-      body.cms-is-editing [class*='EditorControlPane'] .CodeMirror,
-      body.cms-is-editing [class*='ControlPane'] .CodeMirror {
-        max-width: 100% !important;
-      }
-
       body.cms-is-editing [class*='ToolbarContainer'],
       body.cms-is-editing [class*='EditorToolbar'] {
         max-width: min(100% - 2rem, var(--cms-editor-max)) !important;
         margin-left: auto !important;
         margin-right: auto !important;
+      }
+
+      .toast-ui-cms-wrap {
+        width: 100%;
+      }
+
+      .toast-ui-cms-wrap .toastui-editor-defaultUI {
+        height: var(--cms-toast-height) !important;
+      }
+
+      .toast-ui-cms-wrap .toastui-editor-main,
+      .toast-ui-cms-wrap .toastui-editor-main-container,
+      .toast-ui-cms-wrap .toastui-editor-ww-container,
+      .toast-ui-cms-wrap .toastui-editor-md-container {
+        height: 100% !important;
+      }
+
+      .toast-ui-cms-wrap .toastui-editor-defaultUI {
+        border-radius: 10px;
+        border-color: #c5ddd6;
+      }
+
+      .toast-ui-cms-wrap .toastui-editor-ww-container,
+      .toast-ui-cms-wrap .toastui-editor-md-container {
+        background: #fff;
       }
 
       .cms-preview-fab {
@@ -84,7 +104,6 @@
         display: flex;
       }
 
-      /* 팝업도 사이트 본문 폭(46rem)에 맞춤 */
       .cms-preview-dialog {
         width: min(46rem, 100%);
         max-height: min(88vh, 900px);
@@ -171,7 +190,13 @@
     <button type="button" class="cms-preview-fab" id="cms-preview-fab" aria-label="본문 미리보기">
       미리보기
     </button>
-    <div class="cms-preview-modal" id="cms-preview-modal" role="dialog" aria-modal="true" aria-labelledby="cms-preview-title">
+    <div
+      class="cms-preview-modal"
+      id="cms-preview-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cms-preview-title"
+    >
       <div class="cms-preview-dialog">
         <div class="cms-preview-header">
           <strong id="cms-preview-title">본문 미리보기</strong>
@@ -183,9 +208,13 @@
       </div>
     </div>
 
+    <script src="https://uicdn.toast.com/editor/3.2.2/toastui-editor-all.min.js"></script>
+    <script src="https://uicdn.toast.com/editor/3.2.2/i18n/ko-kr.min.js"></script>
     <script src="https://unpkg.com/decap-cms@^3.3.3/dist/decap-cms.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
+      window.__cmsToastMarkdown = '';
+
       CMS.registerMediaLibrary({
         name: 'r2',
         config: {},
@@ -232,6 +261,120 @@
         },
       });
 
+      (function registerToastUiWidget() {
+        var Editor = window.toastui && window.toastui.Editor;
+        if (!Editor) {
+          console.error('TOAST UI Editor failed to load');
+          return;
+        }
+
+        async function uploadToR2(blob) {
+          var form = new FormData();
+          var name = blob.name || 'image-' + Date.now() + '.png';
+          form.append('file', blob, name);
+          var res = await fetch('/api/media', { method: 'POST', body: form });
+          if (!res.ok) {
+            throw new Error(await res.text());
+          }
+          var data = await res.json();
+          return data.url;
+        }
+
+        var ToastUiControl = createClass({
+          componentDidMount: function () {
+            var self = this;
+            var fieldDefault = '';
+            try {
+              fieldDefault = (this.props.field && this.props.field.get('default')) || '';
+            } catch (e) {}
+            var initial = this.props.value != null ? this.props.value : fieldDefault;
+            if (typeof initial !== 'string') initial = '';
+            window.__cmsToastMarkdown = initial;
+
+            if (this.props.value == null && fieldDefault) {
+              this.props.onChange(fieldDefault);
+            }
+
+            this.editor = new Editor({
+              el: this._mount,
+              height: '420px',
+              initialEditType: 'wysiwyg',
+              previewStyle: 'tab',
+              hideModeSwitch: false,
+              usageStatistics: false,
+              language: 'ko-KR',
+              initialValue: initial,
+              placeholder: '본문을 작성하세요',
+              autofocus: false,
+              hooks: {
+                addImageBlobHook: function (blob, callback) {
+                  uploadToR2(blob)
+                    .then(function (url) {
+                      callback(url, 'image');
+                    })
+                    .catch(function (err) {
+                      alert('이미지 업로드 실패: ' + (err && err.message ? err.message : err));
+                    });
+                },
+              },
+            });
+
+            this.editor.on('change', function () {
+              var md = self.editor.getMarkdown();
+              window.__cmsToastMarkdown = md;
+              self.props.onChange(md);
+            });
+          },
+
+          componentDidUpdate: function (prevProps) {
+            if (!this.editor) return;
+            var next = this.props.value || '';
+            var current = this.editor.getMarkdown();
+            // 외부에서 값이 바뀐 경우만 반영 (타이핑 중 커서가 튀지 않게)
+            if (next !== current && next !== prevProps.value) {
+              this.editor.setMarkdown(next, false);
+              window.__cmsToastMarkdown = next;
+            }
+          },
+
+          componentWillUnmount: function () {
+            if (this.editor) {
+              this.editor.destroy();
+              this.editor = null;
+            }
+          },
+
+          render: function () {
+            var self = this;
+            return h(
+              'div',
+              {
+                id: this.props.forID,
+                className: (this.props.classNameWrapper || '') + ' toast-ui-cms-wrap',
+              },
+              h('div', {
+                ref: function (node) {
+                  self._mount = node;
+                },
+              }),
+            );
+          },
+        });
+
+        var ToastUiPreview = createClass({
+          render: function () {
+            var value = this.props.value || '';
+            return h(
+              'pre',
+              { style: { whiteSpace: 'pre-wrap', fontSize: '0.85rem' } },
+              value,
+            );
+          },
+        });
+
+        CMS.registerWidget('toast-ui', ToastUiControl, ToastUiPreview);
+      })();
+
       (function setupPopupPreview() {
         var fab = document.getElementById('cms-preview-fab');
         var modal = document.getElementById('cms-preview-modal');
@@ -254,15 +397,10 @@
           for (var i = 0; i < labels.length; i++) {
             var label = labels[i];
             if ((label.textContent || '').trim().indexOf(labelText) === -1) continue;
-            var root = label.closest('[class*="ControlContainer"], [class*="Control"], fieldset, div') || label.parentElement;
+            var root =
+              label.closest('[class*="ControlContainer"], [class*="Control"], fieldset, div') ||
+              label.parentElement;
             if (!root) continue;
-
-            var cm = root.querySelector('.CodeMirror');
-            if (cm && cm.CodeMirror) return cm.CodeMirror.getValue();
-
-            var textarea = root.querySelector('textarea');
-            if (textarea) return textarea.value;
-
             var input = root.querySelector('input[type="text"], input:not([type])');
             if (input) return input.value;
           }
@@ -270,35 +408,25 @@
         }
 
         function readMarkdownBody() {
-          var byLabel = readFieldByLabel('본문');
-          if (byLabel) return byLabel;
-
-          var mirrors = document.querySelectorAll('.CodeMirror');
-          if (mirrors.length) {
-            var last = mirrors[mirrors.length - 1];
-            if (last.CodeMirror) return last.CodeMirror.getValue();
-          }
-
+          if (window.__cmsToastMarkdown) return window.__cmsToastMarkdown;
           var areas = document.querySelectorAll('textarea');
           if (areas.length) return areas[areas.length - 1].value || '';
           return '';
         }
 
-        function readTitle() {
-          return readFieldByLabel('제목') || '본문 미리보기';
-        }
-
         function openPreview() {
           var markdown = (readMarkdownBody() || '').trim();
-          var title = (readTitle() || '').trim() || '본문 미리보기';
+          var title = (readFieldByLabel('제목') || '').trim() || '본문 미리보기';
           document.getElementById('cms-preview-title').textContent = title;
 
           if (!markdown) {
-            body.innerHTML = '<p class="cms-preview-empty">본문 내용이 없습니다. 본문 필드를 작성한 뒤 다시 눌러 주세요.</p>';
+            body.innerHTML =
+              '<p class="cms-preview-empty">본문 내용이 없습니다. 본문 필드를 작성한 뒤 다시 눌러 주세요.</p>';
           } else if (window.marked && typeof window.marked.parse === 'function') {
             body.innerHTML = window.marked.parse(markdown);
           } else {
-            body.innerHTML = '<pre style="white-space:pre-wrap">' + markdown.replace(/</g, '&lt;') + '</pre>';
+            body.innerHTML =
+              '<pre style="white-space:pre-wrap">' + markdown.replace(/</g, '&lt;') + '</pre>';
           }
           modal.classList.add('is-open');
         }
