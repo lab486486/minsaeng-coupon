@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T01:21:29.560Z",
+  "updatedAt": "2026-08-26T01:24:42.888Z",
   "processedLinks": [
     "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VdEt6NkVQaHRTZWhTdjE2ZXI1c2FGNld0WGw5U1BqQlRLbjc2dG1yQU9BdG9rdU1MelR0MkRCU0ZkZGdFSXJMQ0laMWZjYnNIOGJLb0djMm9CVE5MYVRndNIBeEFVX3lxTE9taTN4SDEyRUd0T2ZxNVJ6RzlnYlF6MjAxTUxwVkFHTzN1aERscGFDU2Z1dDZHQ2NqdENXQlJ2VWJLdTFreEh4MVVXVUUtZl82amRJaDZ6VlZVdzBEWkV2Z3Q0RXlMVFhKa0JGYlhJR2JMUjRqOVFsXw?oc=5",
     "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBXb29ZZTJJVDdPRDh2Vl9RQjJ5Y3U0cU5SSTRqUEQ5QnNReXdIcWRkVzF0cDllT3RZQzJpRzBNSmJIX0VKOF96MFNVMUtNNHVmTnB1ejg5eTVacFRD?oc=5",
@@ -401,14 +401,22 @@
     "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4wQndwdzdEYlFVWWoxdVhiTmRfTXlLaUtfaUdaLVpvM3FyMDFXNmNMYWxqX25IR1NXdDlENXNfbFh6dXVEQlNrWkx0b0ZyZVNsejZz?oc=5",
     "https://news.google.com/rss/articles/CBMibEFVX3lxTFBSdmRtSDljWk1laC03U21lZC1iNDl0ZUxHVWszcGVCUXFHRkprcE1RR2xhbXdiQ3M5Y2lNaDNVaXYxaFN6RDVueVozUDB6RFFZYXJUOGVLRWtfWnYxbmR1UDJuVDJCWDUzbU9JaA?oc=5",
     "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBzWVJiSkUyWmFGSFdleENvLTFTYU5QWmczaFB4T2VUOUIyRzhtTkZ1OVIyWGhVcVJqbWNua3JyMy1GZ2lGanR1a0Vkb0F2X0E?oc=5",
-    "https://news.google.com/rss/articles/CBMiS0FVX3lxTE81dW53TDhPdlR1M3lWRHBIRUpTZ3UtU1A1VW15SXotVEN3d2Y5WDY5OWhycUhLZTQtdks4eDFjd3RfdzZQZzN2Z2M5Yw?oc=5"
+    "https://news.google.com/rss/articles/CBMiS0FVX3lxTE81dW53TDhPdlR1M3lWRHBIRUpTZ3UtU1A1VW15SXotVEN3d2Y5WDY5OWhycUhLZTQtdks4eDFjd3RfdzZQZzN2Z2M5Yw?oc=5",
+    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1mZUpLbGI2YzlwYklJWXRxQmlPX19Fc0VQTkp2TlA4eFByTTEtR25SRTFxU0x1SzlCcG1NQU1MaXk1WU1nQ2Z1cEN2VVplTERfS3RWNVllaUlXUEY2M19DWjc1UQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1rc1p5TFRpTVFoWG16OHVmS2hPa1o4Nm1WaUNubjM2WDNLWE10TFV5Vjl0dktHTGRWUGRIS3dtT0tXWXVkY3BOc1UwWUZJNFRHTE81TEZFeThUc0t6MDdRcnVybnY?oc=5",
+    "https://news.google.com/rss/articles/CBMickFVX3lxTE1rcFh3d0NNbzNDY1hHT1JDRWhFT0pCQU5HcTh6QzlKeU80UzM3TmlOMGlTWmpReFotdGUwa0pWT0VtTmFVZVpNb29XUkVJTGhrZmZzaDZ5blhaRTgzRUF6em5wUHFLYlh1WGhoV01tUGhRQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB4QkgwQ1l2eHJjUkF3SDZGNmw1VXhXX2dlSk5QYU44Qm1TN2x3YXBNQUlvSVY3eTV1REZ4VzRXVHhuLU9ERlpieV9laXA3QzVSQmdNazk5T0haRDRPTnhlVlNCSlg?oc=5",
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTE16YWdBa0lHYVhENTdxeU1zbm5rekFORVgtX0gxSnVGZnE0bjF3ZWZCbFZSbnlYQ1RrUVViLXpoLXoyZHN5R0lLcGxtWVJ4TnRlUHlSSWc2WUxoMnV6OUh6bDh6NTY5Ul9URmc?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ELW0xTnZ5NXc1bTNRZmpJcjJkeHlMWkhtbUQ5UnhkSlRMNVVzbzh3VFJIQk9RUnd1SmVBR1JXQmk1TWtRWHNHeDNzb1JnNlQ0cXBHdXNmbk1Fd2hFN0dvV21Vb2NCMUNqTEd6aXlR?oc=5",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE00OTB6NV9nTkxXTEZrUHk2NWNXYUs4SXlTTkxqckVydjc5WHRRWkpfMHpTYmUxU1BOYlpwYVFFcTlYZmNxbTRxSWt5ZXBURU8tZnNkS0FlRGEwRG_SAWBBVV95cUxObXpYbmF5NDEycUc0RDNTdks1MnZFbm93Y0F2bmZINFRud3hQSFZPaHliem1WcDdTeXlCMXBvdV80aWpudjNFRWhRTzhvMjNUWFYxMEFBeDlFSUNUaENIOGg?oc=5",
+    "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBfaDBJR3pPMnFNRDh6M2tXckZJaVJOajJPUFlhMWFsMEJ3Vm9pQU5XMUlMTTFUMHNDSTktTk9MUXFheFdyLXhER0l3cw?oc=5"
   ],
   "lastCreated": [
     {
-      "slug": "naju-2026",
-      "pageTitle": "나주시 민생지원금 20만원 안내",
-      "region": "나주시",
-      "amount": "20만원"
+      "slug": "r6bad7e-2026",
+      "pageTitle": "함평군 민생지원금 50만원 안내",
+      "region": "함평군",
+      "amount": "50만원"
     }
   ]
 }
