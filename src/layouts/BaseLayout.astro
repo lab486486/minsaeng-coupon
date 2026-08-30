@@ -13,7 +13,7 @@ const {
   title = '민생회복지원금',
   description = '2026 민생회복 소비쿠폰·지원금 신청 안내 (비공식)',
   path = Astro.url.pathname,
-  image,
+  image = '/og-default.jpg',
 } = Astro.props;
 
 const fullTitle =
@@ -26,11 +26,14 @@ const siteOrigin = (Astro.site ?? new URL('https://xn--lg3bwrn5a71ebza324d9pgtrf
   .replace(/\/$/, '');
 const canonicalPath = path.endsWith('/') || path.includes('.') ? path : `${path}/`;
 const canonicalUrl = `${siteOrigin}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
-const ogImage = image
-  ? image.startsWith('http')
-    ? image
-    : `${siteOrigin}${image.startsWith('/') ? image : `/${image}`}`
-  : undefined;
+const DEFAULT_OG_IMAGE = '/og-default.jpg';
+const DEFAULT_OG_WIDTH = 1024;
+const DEFAULT_OG_HEIGHT = 576;
+const imagePath = image || DEFAULT_OG_IMAGE;
+const ogImage = imagePath.startsWith('http')
+  ? imagePath
+  : `${siteOrigin}${imagePath.startsWith('/') ? imagePath : `/${imagePath}`}`;
+const isDefaultOg = imagePath === DEFAULT_OG_IMAGE || ogImage.endsWith(DEFAULT_OG_IMAGE);
 const nav = [
   { href: '/posts/', label: '블로그' },
   { href: '/news/', label: '지원금 뉴스' },
@@ -50,12 +53,21 @@ const nav = [
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
-    {ogImage && <meta property="og:image" content={ogImage} />}
-    {ogImage && <meta property="og:image:alt" content={title} />}
-    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={title} />
+    {
+      isDefaultOg && (
+        <>
+          <meta property="og:image:width" content={String(DEFAULT_OG_WIDTH)} />
+          <meta property="og:image:height" content={String(DEFAULT_OG_HEIGHT)} />
+          <meta property="og:image:type" content="image/jpeg" />
+        </>
+      )
+    }
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    {ogImage && <meta name="twitter:image" content={ogImage} />}
+    <meta name="twitter:image" content={ogImage} />
     <meta name="naver-site-verification" content="c078f9ec83600f153e6e80fd22fc84855dba86fe" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#e8f5f3" />
