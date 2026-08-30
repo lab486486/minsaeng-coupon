@@ -1,8 +1,6 @@
 /**
- * Reorder Decap CMS sidebar into three groups with dividers:
- * 1) Site settings
- * 2) Monetization (Coupang, AdSense)
- * 3) Content: 기존 글 목록 / 새 글쓰기 / 지역지원금
+ * Reorder Decap CMS sidebar into three groups with dividers.
+ * Only mutates DOM when the order actually changed.
  */
 (function () {
   var GROUPS = [
@@ -30,6 +28,7 @@
   var started = false;
   var pending = false;
   var applying = false;
+  var lastSignature = "";
 
   function getRoot() {
     return document.getElementById("nc-root") || document.body;
@@ -87,6 +86,19 @@
     return row;
   }
 
+  function signatureOf(rows) {
+    return rows
+      .map(function (row) {
+        if (row.getAttribute && row.getAttribute("data-cms-sidebar-divider")) {
+          return "d:" + row.getAttribute("data-cms-sidebar-divider");
+        }
+        var a = row.querySelector && row.querySelector("a[href], a.cms-coupang-nav");
+        if (!a && row.tagName === "A") a = row;
+        return a ? "a:" + (a.getAttribute("href") || a.className) : "x";
+      })
+      .join("|");
+  }
+
   function applyOrder() {
     if (applying) return;
     var root = getRoot();
@@ -120,6 +132,15 @@
 
       if (orderedRows.length < 2) return;
 
+      var nextSig = signatureOf(orderedRows);
+      if (nextSig === lastSignature) {
+        // Still drop stale dividers if any.
+        list.querySelectorAll("[data-cms-sidebar-divider]").forEach(function (row) {
+          if (!seen.has(row)) row.remove();
+        });
+        return;
+      }
+
       orderedRows.forEach(function (row) {
         list.appendChild(row);
       });
@@ -127,6 +148,8 @@
       list.querySelectorAll("[data-cms-sidebar-divider]").forEach(function (row) {
         if (!seen.has(row)) row.remove();
       });
+
+      lastSignature = nextSig;
     } finally {
       applying = false;
     }
