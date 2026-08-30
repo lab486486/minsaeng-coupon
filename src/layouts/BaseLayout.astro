@@ -27,8 +27,8 @@ const siteOrigin = (Astro.site ?? new URL('https://xn--lg3bwrn5a71ebza324d9pgtrf
 const canonicalPath = path.endsWith('/') || path.includes('.') ? path : `${path}/`;
 const canonicalUrl = `${siteOrigin}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
 const DEFAULT_OG_IMAGE = '/og-default.jpg';
-const DEFAULT_OG_WIDTH = 1024;
-const DEFAULT_OG_HEIGHT = 576;
+const DEFAULT_OG_WIDTH = 800;
+const DEFAULT_OG_HEIGHT = 450;
 const imagePath = image || DEFAULT_OG_IMAGE;
 const ogImage = imagePath.startsWith('http')
   ? imagePath
