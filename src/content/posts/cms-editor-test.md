@@ -1,5 +1,6 @@
 ---
 title: CMS 에디터 테스트 글 (삭제해도 됨)
+slug: cms-editor-test
 description: Decap 전체 너비 에디터와 팝업 미리보기를 확인하기 위한 테스트 글입니다.
 category: 기타
 tags:

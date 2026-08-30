@@ -1,5 +1,6 @@
 ---
 title: 민생회복 소비쿠폰 FAQ (2026 초안)
+slug: faq
 description: 신청 후 확인, 사용처, 가족 대리신청 등 자주 묻는 질문을 모았습니다.
 category: FAQ
 tags:

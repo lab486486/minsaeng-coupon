@@ -1,5 +1,6 @@
 ---
 title: 2026 소득 하위 구간 — 지원금 대상 이해용 초안
+slug: income-lower
 description: 하위 10·20·30%대 소득 구간을 지원금·소비쿠폰 맥락에서 이해하기 쉽게 정리했습니다.
 category: 소득기준
 tags:

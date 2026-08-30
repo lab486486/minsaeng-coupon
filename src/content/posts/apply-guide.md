@@ -1,5 +1,6 @@
 ---
 title: 민생회복지원금·소비쿠폰 신청방법 초안
+slug: apply-guide
 description: 신청 전 확인사항, 지급수단 선택, 일정 체크리스트를 2026년 버전으로 정리했습니다.
 category: 신청방법
 tags:

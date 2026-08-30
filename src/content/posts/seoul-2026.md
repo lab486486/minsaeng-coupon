@@ -1,5 +1,6 @@
 ---
 title: 서울시 민생회복지원금·소비쿠폰 안내 (2026 초안)
+slug: seoul-2026
 description: 서울시 사례를 바탕으로 신청 자격·방법을 정리한 검토용 초안입니다.
 category: 지역
 tags:

@@ -12,6 +12,8 @@ const posts = defineCollection({
     updatedAt: z.string(),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),
+    cover_image: z.string().optional(),
+    slug: z.string().optional(),
   }),
 });
 
