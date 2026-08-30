@@ -1,5 +1,8 @@
 /**
  * Sidebar: "쿠팡파트너스 API Key" → /admin/coupang (new tab)
+ *
+ * Important: never inherit Decap's active/selected classes from the current
+ * collection link — that made Coupang look hovered/selected forever.
  */
 (function () {
   const PAGE = "/admin/coupang";
@@ -19,12 +22,111 @@
     return root.querySelector("aside") || root.querySelector('[class*="Sidebar"]');
   }
 
-  function copySampleClasses(from, to) {
+  function looksActive(el) {
+    if (!el) return true;
+    if (el.getAttribute("aria-current")) return true;
+    if (el.getAttribute("aria-selected") === "true") return true;
+    var cls = typeof el.className === "string" ? el.className : "";
+    if (/\b(active|selected|current)\b/i.test(cls)) return true;
+    var parent = el.parentElement;
+    if (parent) {
+      var pCls = typeof parent.className === "string" ? parent.className : "";
+      if (/\b(active|selected|current)\b/i.test(pCls)) return true;
+      if (parent.getAttribute("aria-current")) return true;
+    }
+    return false;
+  }
+
+  function copyInactiveClasses(from, to) {
     if (!from) return;
     from.classList.forEach(function (cls) {
       if (cls.indexOf("cms-") === 0) return;
+      if (/\b(active|selected|current)\b/i.test(cls)) return;
       to.classList.add(cls);
     });
+  }
+
+  function stripActiveState(link) {
+    if (!link) return;
+    link.removeAttribute("aria-current");
+    link.removeAttribute("aria-selected");
+    link.removeAttribute("data-active");
+    Array.prototype.slice.call(link.classList).forEach(function (cls) {
+      if (/\b(active|selected|current)\b/i.test(cls)) {
+        link.classList.remove(cls);
+      }
+    });
+    // Drop emotion active hashes by rebasing against an inactive sibling sample.
+  }
+
+  function rebaseClasses(link, sample) {
+    if (!link || !sample || looksActive(sample)) return;
+    var keep = {};
+    link.classList.forEach(function (cls) {
+      if (cls.indexOf("cms-") === 0) keep[cls] = true;
+    });
+    link.className = "";
+    Object.keys(keep).forEach(function (cls) {
+      link.classList.add(cls);
+    });
+    if (!link.classList.contains("cms-coupang-nav")) link.classList.add("cms-coupang-nav");
+    if (!link.classList.contains("cms-collection-link")) link.classList.add("cms-collection-link");
+    copyInactiveClasses(sample, link);
+  }
+
+  function pickInactiveSample(sidebar) {
+    var preferred = [
+      sidebar.querySelector("a.cms-shortlinks-nav"),
+      sidebar.querySelector('a[href="#/collections/adsense"]'),
+      sidebar.querySelector('a[href*="#/collections/adsense"]'),
+      sidebar.querySelector('a[href="#/collections/site"]'),
+      sidebar.querySelector('a[href*="#/collections/site"]'),
+    ];
+    for (var i = 0; i < preferred.length; i++) {
+      if (preferred[i] && !looksActive(preferred[i])) return preferred[i];
+    }
+
+    var links = sidebar.querySelectorAll('a[href^="#/collections/"]');
+    for (var j = 0; j < links.length; j++) {
+      if (!looksActive(links[j])) return links[j];
+    }
+    return links[0] || preferred[0] || null;
+  }
+
+  function ensureOwnRow(link, sample) {
+    if (!link || !sample) return;
+    var sampleRow = sample.closest("li") || sample.parentElement;
+    if (!sampleRow || !sampleRow.parentElement) return;
+    var list = sampleRow.parentElement;
+
+    // Keep Coupang in its own <li> so it never shares Decap's active row styles.
+    var row = link.closest("li");
+    if (sampleRow.tagName === "LI") {
+      if (!row || row === sampleRow) {
+        row = document.createElement("li");
+        row.className = "cms-coupang-nav-row";
+        row.appendChild(link);
+      }
+      if (row.parentElement !== list) {
+        var adsense =
+          list.querySelector('a[href="#/collections/adsense"]') ||
+          list.querySelector('a[href*="#/collections/adsense"]');
+        var adsenseRow = adsense ? adsense.closest("li") : null;
+        if (adsenseRow && adsenseRow.parentElement === list) {
+          list.insertBefore(row, adsenseRow.nextSibling);
+        } else if (sampleRow.parentElement === list) {
+          list.insertBefore(row, sampleRow.nextSibling);
+        } else {
+          list.appendChild(row);
+        }
+      }
+      row.removeAttribute("aria-current");
+      Array.prototype.slice.call(row.classList).forEach(function (cls) {
+        if (/\b(active|selected|current)\b/i.test(cls)) row.classList.remove(cls);
+      });
+    } else if (!link.isConnected) {
+      sample.parentElement.insertBefore(link, sample.nextSibling);
+    }
   }
 
   function ensureNavLink(root) {
@@ -32,22 +134,14 @@
     if (!sidebar) return;
 
     let link = sidebar.querySelector("a.cms-coupang-nav");
-    const shortlinks = sidebar.querySelector("a.cms-shortlinks-nav");
-    const adsense =
-      sidebar.querySelector('a[href="#/collections/adsense"]') ||
-      sidebar.querySelector('a[href*="#/collections/adsense"]');
-    const sample =
-      shortlinks ||
-      adsense ||
-      sidebar.querySelector('a[href="#/collections/nav"]') ||
-      sidebar.querySelector('a[href^="#/collections/"]');
+    const sample = pickInactiveSample(sidebar);
     if (!sample || !sample.parentElement) return;
 
     if (!link) {
       link = document.createElement("a");
       link.className = "cms-coupang-nav cms-collection-link";
       link.dataset.collection = "coupang";
-      copySampleClasses(sample, link);
+      copyInactiveClasses(sample, link);
 
       const icon = document.createElement("span");
       icon.className = "cms-collection-icon";
@@ -81,15 +175,10 @@
     link.rel = "noopener";
     link.title = "쿠팡파트너스 API Key 설정";
 
-    // Place above shortlinks (or adsense) so it sits near monetization tools.
-    const anchor = shortlinks || adsense;
-    if (anchor && anchor.parentElement === sample.parentElement) {
-      if (link.nextElementSibling !== anchor) {
-        anchor.parentElement.insertBefore(link, anchor);
-      }
-    } else if (!link.isConnected) {
-      sample.parentElement.insertBefore(link, sample);
-    }
+    stripActiveState(link);
+    rebaseClasses(link, sample);
+    ensureOwnRow(link, sample);
+    stripActiveState(link);
   }
 
   function sync() {
@@ -113,7 +202,7 @@
     const root = getRoot();
     if (!root) return;
     const observer = new MutationObserver(schedule);
-    observer.observe(root, { childList: true, subtree: true });
+    observer.observe(root, { childList: true, subtree: true, attributes: true });
     window.addEventListener("hashchange", schedule);
     schedule();
   }
