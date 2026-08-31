@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T04:19:45.583Z",
+  "updatedAt": "2026-08-31T04:24:35.990Z",
   "processedLinks": [
     "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VdEt6NkVQaHRTZWhTdjE2ZXI1c2FGNld0WGw5U1BqQlRLbjc2dG1yQU9BdG9rdU1MelR0MkRCU0ZkZGdFSXJMQ0laMWZjYnNIOGJLb0djMm9CVE5MYVRndNIBeEFVX3lxTE9taTN4SDEyRUd0T2ZxNVJ6RzlnYlF6MjAxTUxwVkFHTzN1aERscGFDU2Z1dDZHQ2NqdENXQlJ2VWJLdTFreEh4MVVXVUUtZl82amRJaDZ6VlZVdzBEWkV2Z3Q0RXlMVFhKa0JGYlhJR2JMUjRqOVFsXw?oc=5",
     "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBXb29ZZTJJVDdPRDh2Vl9RQjJ5Y3U0cU5SSTRqUEQ5QnNReXdIcWRkVzF0cDllT3RZQzJpRzBNSmJIX0VKOF96MFNVMUtNNHVmTnB1ejg5eTVacFRD?oc=5",
@@ -485,7 +485,19 @@
     "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBjLTBrRmhMQ0M5VTVBMTh4VTVKSUVZVDJ2bkpTbEY0X01uZzJUeElKVHZPSGVZWVhPX01YQzU0dnhzMGxjMmFvR09kZnJYU25KSFE?oc=5",
     "https://news.google.com/rss/articles/CBMia0FVX3lxTE5QN2NISElmdmppcV9NSndOMmJ2cFM0UF9BTVFYTW5Pd2owaEp0X0JCTFVLQXJSWVRBZm16QWpRUXVBNWgtTXhGcXM3QlFlX25yakJncWZNNUU4VGE1X2JZOW5yelBISUpmQ2Qw?oc=5",
     "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1nRm9GUG9fclJjbnNsaTJZMEg3cUdUcVhwb3l4SGVLUjFOSGRoSzc1ZFBrM3dvVmhXTkRqLVM2c0NfbXhaSk5OeWVnbXoxRnVaMDR2Y2dybl96dnM?oc=5",
-    "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9IYmtKX1k1LTB5SUI2Yk9RZ1JaZmNuV1Z1ODlFazhkQkh3bHFmemNQVXJxRzI3THlRd0pXUGJXb1ZRRVFCRUtQSl8wVFJ6d28?oc=5"
+    "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9IYmtKX1k1LTB5SUI2Yk9RZ1JaZmNuV1Z1ODlFazhkQkh3bHFmemNQVXJxRzI3THlRd0pXUGJXb1ZRRVFCRUtQSl8wVFJ6d28?oc=5",
+    "https://news.google.com/rss/articles/CBMickFVX3lxTFBXekN0bEFxMEtlMzNsa0YwMTV0VHI3TkpSOFpsMHlVQTFhdG5CMVNySE5va1Fud2o3VXRwNWdnNk5iN0Y4NnlhUV9NSTFsQmZEVG95enYyTWdFY200QnRTTjZCNDdKTDhuRnhrQVhsV1ZOdw?oc=5",
+    "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5SOFNUaGVHRklkVHBLTzJWRlpzTU1QR2Z0ZWx2MDJBZFdBTlpPTU05Z3l1d013bEFvVVVQYUpOOFBqUkhiZmFnY0piS0VVajQ2RWJtTGNCWnhqVUhpaXNHYWtPa0ttZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTE01aU5UQkM0ZFVzS0tuWWJhQ1doZnNZdGczYzV4RTh0Y3pTajJmUzhpT3JIVlpuWkpSM09ETTRHM3pfQVlUUkUtN1NyYnRBUmR2U19NNVVjZ2FkVUQ5YmtlTGV2VmJfQm1WaHc?oc=5",
+    "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBWVWlzbjRNSWlkUlNBTXY5Z1pYM25SWXBYaEVwMTFHNG1VN0FzMFltamFPNzJYVjQ1YWo4X0plallYSU9MXy1YeXdKSDRNb2Zpdnc?oc=5",
+    "https://news.google.com/rss/articles/CBMid0FVX3lxTE9DWEd6c290b2p2VEFGRGs0ajI2b3VXakJQNXV2OU5uUnlISzZST2pOTkR2X0pSM21rcjJsOTctUjF2QnZyNGVfOGE5d2JLU0twbEVmYnpPQjR4VmNjSUYxWU5pMUZpbmMtV0NVb3RjT1Q2ZGFKQzE4?oc=5"
   ],
-  "lastCreated": []
+  "lastCreated": [
+    {
+      "slug": "r673495-2026-2",
+      "pageTitle": "신안군 민생지원금 10만원 안내",
+      "region": "신안군",
+      "amount": "10만원"
+    }
+  ]
 }
