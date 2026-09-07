@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T03:32:22.315Z",
+  "updatedAt": "2026-09-07T03:32:13.330Z",
   "processedLinks": [
     "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VdEt6NkVQaHRTZWhTdjE2ZXI1c2FGNld0WGw5U1BqQlRLbjc2dG1yQU9BdG9rdU1MelR0MkRCU0ZkZGdFSXJMQ0laMWZjYnNIOGJLb0djMm9CVE5MYVRndNIBeEFVX3lxTE9taTN4SDEyRUd0T2ZxNVJ6RzlnYlF6MjAxTUxwVkFHTzN1aERscGFDU2Z1dDZHQ2NqdENXQlJ2VWJLdTFreEh4MVVXVUUtZl82amRJaDZ6VlZVdzBEWkV2Z3Q0RXlMVFhKa0JGYlhJR2JMUjRqOVFsXw?oc=5",
     "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBXb29ZZTJJVDdPRDh2Vl9RQjJ5Y3U0cU5SSTRqUEQ5QnNReXdIcWRkVzF0cDllT3RZQzJpRzBNSmJIX0VKOF96MFNVMUtNNHVmTnB1ejg5eTVacFRD?oc=5",
@@ -588,14 +588,29 @@
     "https://news.google.com/rss/articles/CBMieEFVX3lxTE8wdkxSelNocW41cGZ6NFNPWF9vSWh0WFVlM2Z1TjFEWG9RdU5jUUxIeHVENHpWZ1ZKeDBhX0RXMEtOcTBHQ3NaYm9qUlY1RE1odDh4UEpWYlA2bFdjcXJ2bG5EcDM2cHZETS1MYTdiZ1N3M1cxTFUxSg?oc=5",
     "https://news.google.com/rss/articles/CBMib0FVX3lxTFBRNWwtZVhTZlpuYTJBMnp1T0h6eEpqVnE2YVJYZjdBTFJHaWUybTBPVDBTcTV3U2xqRzh3N2JNTEk2SDFxM2s2czBtYWZzX0Y3WGpFelZXZ3MxZHJTSnp4eENaQmZkRHAwbnk1VTJHMNIBb0FVX3lxTFBRNWwtZVhTZlpuYTJBMnp1T0h6eEpqVnE2YVJYZjdBTFJHaWUybTBPVDBTcTV3U2xqRzh3N2JNTEk2SDFxM2s2czBtYWZzX0Y3WGpFelZXZ3MxZHJTSnp4eENaQmZkRHAwbnk1VTJHMA?oc=5",
     "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9acmVMRERvajd6VXhBLVlSRS11dDhDUjFoVXRwQW44OVJycUlOdERrYUtiRzB4R1JrNGRaT1BuTUFGbXdaNU9VYzcydWUyWFdWWXBCeWF2M1JCbGM?oc=5",
-    "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVGpuVjcwWjJzVW5uR1pPX1RoZGFfOVhxd3RpaFE4UHZlX2tFNU80d255Z1l4T3c4RzdCY0dUakVHd1drRDZUcmQ1YmFJMmw0VWNsbVVFTnhCT2JnNzN1YkFiZVJ3d1BnN1JNUzlHUXNqMmsxeEh1enU3ajN1aGtuUg?oc=5"
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVGpuVjcwWjJzVW5uR1pPX1RoZGFfOVhxd3RpaFE4UHZlX2tFNU80d255Z1l4T3c4RzdCY0dUakVHd1drRDZUcmQ1YmFJMmw0VWNsbVVFTnhCT2JnNzN1YkFiZVJ3d1BnN1JNUzlHUXNqMmsxeEh1enU3ajN1aGtuUg?oc=5",
+    "https://news.google.com/rss/articles/CBMibEFVX3lxTE1td1ExY3Fjc0hDWnBNSlJlVVZ2SDBEMXJzMDNuWllnbV91cEdyMUNaY1VBMnRMYzhFYWI2UGloTUlrZEp5VThIR19oenpDVVRKOTNSM1BScHc0OF9YSklDV0hsa0EySE5icWsxX9IBcEFVX3lxTE9GLTA5QjhIQnViZ2lQWWlKUFVIRmFMUmlIa0ZYWGhpZndJbnJoUnRrbUNCZjRmNm1yT0dBdHRTWkgzVVI1eS1lZ0phVF94cmxkSHBPeWl6X0xHMTdrMmdFT1h1enZrZjB3eTdNSGxBQjk?oc=5",
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTE9iUDBYaGNUSnhvMzBlRVhzdTUxdXkzQzNLTFYxT0V6SlZpOS1DaTg1dk02Wi1fVjlPT2doWTVMOVhNcjVqQ0ZuQmRnSWl1N0F4NWthN2tFeGtPc0FSRVUtZGpUS21IS3NZdlE?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wYWJnbmRCYXQzWm1JTUVFVFFMVFJXTjhCU2tJY2dQbFUwLV9zVnlPOFc3QkMwS01PMDVfdUtuOWxXSHg2Q0s4V3VkczNwcnVLdi11dnBiSEt0LUlYVGs4R2FkNmN1SVdoa0ZSR2NB?oc=5",
+    "https://news.google.com/rss/articles/CBMia0FVX3lxTE1uLWhZQUhMb2JobkJkc2J2aDNDNFFqaXNidWpKbUQzMU84cFg2MGloYlBYQlpDTDhfN0VNVkJTWjVfdld0TFpsUGdYcXEwdHBtVDJxQ0w0emtSdU9tMHphQlQ0U1VjeHJ2R2ZZ?oc=5",
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTE9oS2pzZWoybmZkQ0JJV2hYdTB1Nm9CbGRRbWJPbHFXcmV3VUVrSW44eng0NmVmWVhyV1U4TUZibWswUW5Nc0wteFdjN09CckdTcmRVbklfVm9lS2hBWFdOSkMyVzBhUnlKeWc?oc=5",
+    "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5HVHRYR1ZJdUhKZGdzeUY5cFNORmctUVE4eDNfelc4VHdSSkxhRlEwaVM2QUo3S0FSNlFZUG1nT1kxWXRjZTJXZHAtdFF2RjZ4U1JCS1lTMjlqNDNfTHBDSUVVZXJENnhE?oc=5",
+    "https://news.google.com/rss/articles/CBMiXkFVX3lxTE03cFBZUkFnQTdibWRSWE1jcUhicktIdENqb3U4b1ZxejR4UzJwcEVudlU3Y0tDZGpOVEFSSjA1R1ZpV1RuWFRBY05nY1BnLThEaDRzVUM3VWJhLTd0Qmc?oc=5",
+    "https://news.google.com/rss/articles/CBMib0FVX3lxTE5nclV4TlhTQlNwVW15NlJMeGxjM0h2bDNfdTh3U0VBWklUSDlSSzlGbWk5cDZHZVVsYnJMR0ZXcDF6VFJoNEx3R3hqZWp0M3IwYUhyQVl5OHdyenlkSnpaSHluNGM5RUVuTTFXT2JDUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTFB1X3l1VEhRWDdiTi1fS3RlZXVMTGNyQjlORUpTWmRvTUNWeVNLR2RJakkyMUpCSmZPYU5fclRGNl9nYkJNR2VvWDFicXJ1R0tEM2RwYnBwX3lxTmpwMlZNaXU2cjNYc0F5cXNqMF93?oc=5"
   ],
   "lastCreated": [
     {
-      "slug": "rd905dc-2026",
+      "slug": "rd905dc-2026-2",
       "pageTitle": "기장군 민생지원금 30만원 안내",
       "region": "기장군",
       "amount": "30만원"
+    },
+    {
+      "slug": "naju-2026-4",
+      "pageTitle": "나주시 민생지원금 20만원 안내",
+      "region": "나주시",
+      "amount": "20만원"
     }
   ]
 }
