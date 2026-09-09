@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T03:37:16.194Z",
+  "updatedAt": "2026-09-09T03:42:06.684Z",
   "processedLinks": [
     "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1VdEt6NkVQaHRTZWhTdjE2ZXI1c2FGNld0WGw5U1BqQlRLbjc2dG1yQU9BdG9rdU1MelR0MkRCU0ZkZGdFSXJMQ0laMWZjYnNIOGJLb0djMm9CVE5MYVRndNIBeEFVX3lxTE9taTN4SDEyRUd0T2ZxNVJ6RzlnYlF6MjAxTUxwVkFHTzN1aERscGFDU2Z1dDZHQ2NqdENXQlJ2VWJLdTFreEh4MVVXVUUtZl82amRJaDZ6VlZVdzBEWkV2Z3Q0RXlMVFhKa0JGYlhJR2JMUjRqOVFsXw?oc=5",
     "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBXb29ZZTJJVDdPRDh2Vl9RQjJ5Y3U0cU5SSTRqUEQ5QnNReXdIcWRkVzF0cDllT3RZQzJpRzBNSmJIX0VKOF96MFNVMUtNNHVmTnB1ejg5eTVacFRD?oc=5",
@@ -631,25 +631,38 @@
     "https://news.google.com/rss/articles/CBMib0FVX3lxTE05cnpvV05xYk1MekJzS2Y1NEdIT1V4VEFPS0Y5NnNObU1KUTRMemlqcThBd1JjMG04cnFpRS15SkNDeEM3TXo1RzBnWjhnNUJ2V1M4dlRfaFVsRXNCRU5KQndkNlc0T2VaejZwakhHONIBckFVX3lxTE1CLWsySWplSXM2OFE5b0M1dE1WVU56S1FJbU9BaThKaWt1ZVl3bVhKYnpnYTY1TkNFNHEwcDg0WWRwcUdIcWpGdzBqQTM0ZUhZbWhqOXdJRmZVX3lVWW1LcHFEQjlqa1o4MUpLWkJDQjlNdw?oc=5",
     "https://news.google.com/rss/articles/CBMiT0FVX3lxTE42NFEzaXZid3hwc0QzVE1HcHhOX3RwaVpGamx6dXY2VzZfQm1CNUtpcEJibzQtYmlMald3MU0tUThKcGpabXRQSmxCbWM4ejQ?oc=5",
     "https://news.google.com/rss/articles/CBMibkFVX3lxTFBsQWhLWnpCN3NMS3NtTUE1ckxLNzZReXg0NDZBRFVtdDRjZDBfVnB0TnZEaXNOMkJ3UnBCZ3RNTGRYcTd1aWh3Q2wzTUNCQW45WTRSTGN2OTBVcGdtUTdyeHdULV9LcnAxbG45NUlB?oc=5",
-    "https://news.google.com/rss/articles/CBMia0FVX3lxTE5qRDBPZjB2VGtua3VTNUlMbnFtMjkzNlAyaFB0TWJKSlNQNlNmdUd2Y0xQcC1TRnAzYjFVSW5OUkVhMjJuTF9GWDhmWTFUV2NNcVY2bVVNTDl2Q2ZTTTJHQmNRNUx2am5KQUxR0gFvQVVfeXFMUFE1bC1lWFNmWm5hMkEyenVPSHp4SmpWcTZhUlhmN0FMUkdpZTJtME9UMFNxNXdTbGpHOHc3Yk1MSTZIMXEzazZzMG1hZnNfRjdYakV6VldnczFkclNKenh4Q1pCZmREcDBueTVVMkcw?oc=5"
+    "https://news.google.com/rss/articles/CBMia0FVX3lxTE5qRDBPZjB2VGtua3VTNUlMbnFtMjkzNlAyaFB0TWJKSlNQNlNmdUd2Y0xQcC1TRnAzYjFVSW5OUkVhMjJuTF9GWDhmWTFUV2NNcVY2bVVNTDl2Q2ZTTTJHQmNRNUx2am5KQUxR0gFvQVVfeXFMUFE1bC1lWFNmWm5hMkEyenVPSHp4SmpWcTZhUlhmN0FMUkdpZTJtME9UMFNxNXdTbGpHOHc3Yk1MSTZIMXEzazZzMG1hZnNfRjdYakV6VldnczFkclNKenh4Q1pCZmREcDBueTVVMkcw?oc=5",
+    "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA1SGZobE1TVDYzV25kN0NxbmNHYVZmd1BmVU1xcmhaTmxmY21lZ0hTdXMwNHBiamh5eGJHb05ybFdkYzhxNHIwOEdhT0hNQnBjWWo3eXdqR3c3YnVwX01Caw?oc=5",
+    "https://news.google.com/rss/articles/CBMieEFVX3lxTFA4MGkwSWdmUzc4ZHAyZVhTQm9mYzlzSmN5OVJLanB6VWNTWlBhZ1dUclhHaVFHbC16dkVjWkN4bXlFVWRqZ2c5ZGhpUzlHbnphLTN6ekpZdlZVenFuOE1sV1F6MzFvZDdBUGdMVzJsWGFYNmJteU9yWQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBxaTc5WjZzMnRHYVpoZXVxd0thU3RoRHBkNFpXRDAtcDltNl9LNm1ra1h0d2VETy1LR0VWNnJwOXpMU0xUZ0NlZjBVNzEwTlg5ZG9EVnFlNFF5cUtxNEtfams4cw?oc=5",
+    "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8xN1BBT2VZREZuaUdZcWROajJkaFpCYkxkUDlSRHE5anZhV1NoT1RncVAxNWhON3ZSbG54UU9Ya09oU3hMZ1ZuSl9waTlHbXZiX3lvdGYxa1JCU2xYV1Jv?oc=5",
+    "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB6bnBvOGF1dEdyOGlHM3pRT0tFUjZxZWltbU1NZkZjLUtuN3ZLY2UyTVFiUlBLLWZUa092OGVCcG1HYWk4YzFzQ0ktLThVTW1qTXlEUFRGT3VmcWs2?oc=5",
+    "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBsTGJ6ZUhHNl9fTVlIWFlDOXVMb09kUEVPUkVHcURGaHlvLVZ2MDFjbUxvbUZZQ2ZDM2ZxRFJWdEJmeGs0SEhQZ3RZX09nWlk?oc=5",
+    "https://news.google.com/rss/articles/CBMiXEFVX3lxTE80eFQ5REFxUUcxcE9ncVdZbXIzdE14eUx5VFBxcWhzc0RITjB3SWh2cjlxcmhOV0FhY0FfNFh2TERHcU5QU0xSanJoSW5fUUFGZXNOVkc4NTBBdzc5?oc=5",
+    "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5STGp0OTJ0QXpJQ202VExuNGI4TFVwUGV3c1ZHbmw5eG5GQVhOSzZieTVhSklNMnAxZ2Q0NTFiMlR0NDZoM0ZiSC02MW9RNGJoRkJ3VGpPdU1OUmlpaFhZajVvYVYwQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNendtb3cyV1dfa0RhQV8wd1dPSmg2d3ZPNHhTVXduZEdZd1lpdmhkQkhlZXB6dHZBR3NoVkhPekxZeGR5QkxKR19Ua1JTYzBKRm9MdFoxQUhXeDBlcGoyNnZ1MWxOV2Y4b3NRM1J4ZVhjTDkwOUtPb29xb20wVGFXOEJuclZfZV9ZaExDeDJLOFBXLTA?oc=5",
+    "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBldlRQcWJTZzU5alhzRGd6Q0hVS1lMcjQ2NWhsajVpUkthUWNzeGJUUk0tU19iZFhGOGpuT0dOczJDVzFSVkZXdHg5Z0JrVGpvTnJVd1VONnNmSnFXRENadVFEcHI?oc=5",
+    "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5nbkNVVHI5Mk8yODM5V2JiZ1hvSkpHX0xKRGNNUXhuZ29kVnJ4MlhBTGljQjBBc1VvX1ZuVXY5Z3ViSDAzbTY5WjJGUlFNS1AxSFNWSnlsXzJvY2lJQ0d4alJOT1JFQmw0?oc=5",
+    "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBfbEJtUGJJQUJGVENDVkZsb1BMSGpXcnZwbmJrSXZYNDdvLTlNSjdyQmlvNGM3b2xRZHN5bEhxN00yRmJJMENPbG1oMzVCbUotMFRkeXhUZFlNd2dFb0FQb0JsTXgtQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMib0FVX3lxTE5KQ01CTWNGbVRERGtHdGZvUy04V3VsMnJ2UnJOOFFZTG1TeFJhb3Rha2FYbGQwdnR2ekg5eXVhbEIwTEk1eldnci1pOWtDenJ2VUdLSXJDZnFLbU5qWVhwalRZVGlTbmVWT2o0dWktVQ?oc=5",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE9xS25GNTQ5N1k0RGtKSThPVGJjenFrczY5SHNxODdYNi1hemd6ZUNTckdOVkF6TmpUeFRVZWVCX3pHOTRkZ3FZN0NwbUR2QkIzZ3VmeGN5YmlydHNVWkNnWnJCWTNQNjh1dThHd1p2ZWhZWkXSAXNBVV95cUxPcUtuRjU0OTdZNERrSkk4T1RiY3pxa3M2OUhzcTg3WDYtYXpnemVDU3JHTlZBek5qVHhUVWVlQl96Rzk0ZGdxWTdDcG1EdkJCM2d1ZnhjeWJpcnRzVVpDZ1pyQlkzUDY4dXU4R3dadmVoWVpF?oc=5",
+    "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5HeW9NUm9XMFRQNmUycVdzRV9SRXllbDhqeHREWGxFUXdUV0ZfMmFiNTliekU4MlJxejU3UlJ1b1FXWUZoSTBwY0NZdktzVXM?oc=5",
+    "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5sLTVGNHFkSWJkcENIdXRhbVpRTU1aM2d5M1dNamhBaHFUUUNIMk9kbDNTWFhQVjFpZHdNbGRPVWQ5NGRZSU5yY0ZXbUVOMHU2MmEtMmJEVzhqWWNFQkh2dWhfZ1VtQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5pQ0lOdHhNeG5NT0pxNi1LSnoyMERxTTZaS1MwQ3doaWpJLWh0RHF2QkRrMEZQYVNwdzhjZXl6eUVqbEVPdFFBekJ0bVJTaVlxc0p0bjNXOE4yS3ZxaS1BS0g0QllRc28?oc=5",
+    "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9GWkZER0RfRzZVVERzWlQwc016WmhUVmFiV2pYdWJWbUtQdlN1YUtrTzV6ai02bDJDMHlSUjRuTUk5Z1AzVU5ldTIwQU1vem8?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxPM2tLTUg3MDRZLUFUMXBpTU5iVk54VVFiek5pV2tVTENzdnNDVXFMdEd3RXlWUi1LOEtvNXJVdDRIa18zb294YTF4LVdmQ0NFMEttaXZxb2lKTHRBWHRERDdObzNpQ2JPNTNaZHlWTW5RNG5nY2daQVU5QnVhT3lpRzJNc2d6UC1DOXc1NlNILU9aOS1DUVpFb1Q5UlVjUGxwbk41YUFfTDZaMmxk0gFfQVVfeXFMTk5rMGI4TThCOUpGVzNMcG5ndnQtV3FyQzRqNDNaY25iOVc2Rkg0NlhnVzNnbW1hdEhMQnZhbWFMLU9mUW5QU3ZiMlJJbDJEZ2xlUjdCRklyZlRvX1BxdFk?oc=5"
   ],
   "lastCreated": [
     {
-      "slug": "wanju-2026-3",
+      "slug": "wanju-2026-4",
       "pageTitle": "완주군 민생지원금 30만원 안내",
       "region": "완주군",
       "amount": "30만원"
     },
     {
-      "slug": "buan-2026-3",
-      "pageTitle": "부안군 민생지원금 30만원 안내",
-      "region": "부안군",
-      "amount": "30만원"
-    },
-    {
-      "slug": "r6377d4-2026",
-      "pageTitle": "광양시 민생지원금 30만원 안내",
-      "region": "광양시",
+      "slug": "r136982-2026-3",
+      "pageTitle": "울진군 민생지원금 30만원 안내",
+      "region": "울진군",
       "amount": "30만원"
     }
   ]
