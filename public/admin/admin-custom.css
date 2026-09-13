@@ -676,10 +676,12 @@
   inset: 0;
   z-index: 9000;
   background: rgba(15, 39, 68, 0.55);
+  pointer-events: none;
 }
 
 html.cms-preview-modal-open .cms-preview-backdrop {
   display: block;
+  pointer-events: auto;
 }
 
 .cms-preview-close {

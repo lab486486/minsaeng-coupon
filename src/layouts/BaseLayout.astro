@@ -1,5 +1,6 @@
 ---
 import globalCss from '../styles/global.css?inline';
+import { site } from '../site.config';
 
 interface Props {
   title?: string;
@@ -7,23 +8,24 @@ interface Props {
   path?: string;
   /** SNS 미리보기 이미지 (사이트 상대 경로, 예: /guides/band-id/logo.jpg) */
   image?: string;
+  ogType?: 'website' | 'article';
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
-  title = '민생회복지원금',
-  description = '2026 민생회복 소비쿠폰·지원금 신청 안내 (비공식)',
+  title = site.brandName,
+  description = site.description,
   path = Astro.url.pathname,
   image = '/og-default.jpg',
+  ogType = 'article',
+  jsonLd,
 } = Astro.props;
 
+const brandName = site.brandName;
 const fullTitle =
-  title === '민생회복지원금'
-    ? '민생회복지원금 — 민생회복 소비쿠폰 안내'
-    : `${title} | 민생회복지원금`;
+  title === brandName ? `${brandName} — ${site.tagline}` : `${title} | ${brandName}`;
 const year = new Date().getFullYear();
-const siteOrigin = (Astro.site ?? new URL('https://xn--lg3bwrn5a71ebza324d9pgtrf.kr'))
-  .toString()
-  .replace(/\/$/, '');
+const siteOrigin = (Astro.site ?? new URL(site.baseUrl)).toString().replace(/\/$/, '');
 const canonicalPath = path.endsWith('/') || path.includes('.') ? path : `${path}/`;
 const canonicalUrl = `${siteOrigin}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
 const DEFAULT_OG_IMAGE = '/og-default.jpg';
@@ -48,8 +50,9 @@ const nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
-    <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="민생회복지원금" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={brandName} />
+    <meta property="og:locale" content="ko_KR" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
@@ -76,8 +79,13 @@ const nav = [
     <link rel="icon" type="image/png" href="/favicon-16.v2.png" sizes="16x16" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.v2.png" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    <link rel="alternate" type="application/rss+xml" title="민생쿠폰 블로그" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${brandName} 블로그`} href="/rss.xml" />
     <title>{fullTitle}</title>
+    {
+      jsonLd && (
+        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+      )
+    }
     {/* AdSense: PageSpeed/CLS 악화 방지 → 사용자 제스처 이후에만 로드 */}
     <script is:inline>
       (function () {
@@ -118,7 +126,7 @@ const nav = [
             <img
               class="brand__logo"
               src="/brand-logo.png"
-              alt=""
+              alt={brandName}
               width="36"
               height="36"
               decoding="async"
@@ -126,8 +134,8 @@ const nav = [
             />
           </picture>
           <span class="brand__text">
-            <span class="brand__name">민생회복지원금</span>
-            <span class="brand__tag">민생회복 소비쿠폰 안내</span>
+            <span class="brand__name">{brandName}</span>
+            <span class="brand__tag">{site.tagline}</span>
           </span>
         </a>
         <nav class="nav" aria-label="주요">
@@ -183,9 +191,9 @@ const nav = [
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p class="footer-copy">© {year} 민생회복 소비쿠폰.kr</p>
+        <p class="footer-copy">© {year} {brandName}</p>
         <p class="footer-note">
-          민생쿠폰은 정부·지자체와 제휴·공식 관계가 없는 개인 안내용 사이트입니다. 지원 자격·금액·일정은
+          {brandName}은 정부·지자체와 제휴·공식 관계가 없는 개인 안내용 사이트입니다. 지원 자격·금액·일정은
           정부24·지자체 공고 등 원문에서 확인해 주세요.
         </p>
       </div>

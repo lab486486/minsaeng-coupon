@@ -2,7 +2,7 @@
  * Decap CMS editor UX:
  * - Action bar under body: 삭제(기존) | 미리보기 | 발행
  * - Hide duplicate top Publish / Delete controls
- * - Modal preview
+ * - Modal preview (only when preview is actually open)
  */
 (function () {
   const STORAGE_KEY = "cms.preview-visible";
@@ -15,6 +15,9 @@
   } catch {
     /* ignore */
   }
+
+  // Never leave a stuck overlay from a previous buggy detection.
+  document.documentElement.classList.remove(OPEN_CLASS);
 
   function isPreviewTitle(title) {
     const t = (title || "").trim();
@@ -82,14 +85,14 @@
   function findPublishButton(root) {
     return findToolbarButton(
       root,
-      (el, cls) => /PublishButton/i.test(cls) || isPublishLabel(el.textContent)
+      (el, cls) => /PublishButton/i.test(cls) || isPublishLabel(el.textContent),
     );
   }
 
   function findDeleteButton(root) {
     return findToolbarButton(
       root,
-      (el, cls) => /DeleteButton/i.test(cls) || isDeleteLabel(el.textContent)
+      (el, cls) => /DeleteButton/i.test(cls) || isDeleteLabel(el.textContent),
     );
   }
 
@@ -118,7 +121,7 @@
 
   function clickPublishNow(root) {
     const items = root.querySelectorAll(
-      '[class*="DropdownItem"], [class*="dropdown"], li, button, a, [role="menuitem"]'
+      '[class*="DropdownItem"], [class*="dropdown"], li, button, a, [role="menuitem"]',
     );
     for (const item of items) {
       if (item.closest(`[${BAR_ATTR}]`)) continue;
@@ -267,11 +270,33 @@
     return closeBtn;
   }
 
+  function isVisibleBox(el) {
+    if (!el || !(el instanceof HTMLElement)) return false;
+    const style = window.getComputedStyle(el);
+    if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") {
+      return false;
+    }
+    const rect = el.getBoundingClientRect();
+    return rect.width > 40 && rect.height > 40;
+  }
+
+  /** Only true when Decap preview pane is actually showing content. */
   function previewIsVisible(root) {
-    return Boolean(
+    const frame =
       root.querySelector('[class*="PreviewPaneFrame"]') ||
-        root.querySelector('[class*="PreviewPaneContainer"] iframe') ||
-        root.querySelector(".SplitPane .Pane2")
+      root.querySelector('[class*="PreviewPaneContainer"] iframe');
+    if (frame && isVisibleBox(frame)) return true;
+
+    const pane =
+      root.querySelector('[class*="PreviewPaneContainer"]') ||
+      root.querySelector(".SplitPane > .Pane2");
+    if (!pane || !isVisibleBox(pane)) return false;
+
+    // Pane2 can exist while collapsed — require real preview chrome/content.
+    return Boolean(
+      pane.querySelector("iframe") ||
+        pane.querySelector('[class*="PreviewPane"]') ||
+        pane.querySelector('[class*="preview"]'),
     );
   }
 
@@ -290,12 +315,25 @@
     syncModalState(root, bar);
   }
 
+  var scanPending = false;
+  function scheduleScan(root) {
+    if (scanPending) return;
+    scanPending = true;
+    window.requestAnimationFrame(function () {
+      scanPending = false;
+      scan(root);
+    });
+  }
+
   function start() {
     ensureBackdrop();
     ensureCloseButton();
+    document.documentElement.classList.remove(OPEN_CLASS);
     const root = document.getElementById("nc-root") || document.body;
-    scan(root);
-    const observer = new MutationObserver(() => scan(root));
+    scheduleScan(root);
+    const observer = new MutationObserver(function () {
+      scheduleScan(root);
+    });
     observer.observe(root, { childList: true, subtree: true });
 
     document.addEventListener("keydown", (event) => {

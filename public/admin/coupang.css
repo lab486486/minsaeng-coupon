@@ -396,19 +396,8 @@ a.cms-coupang-nav {
   max-width: 100% !important;
   box-sizing: border-box !important;
   text-decoration: none !important;
-  color: inherit !important;
+  color: inherit;
   cursor: pointer;
-  /* Never keep Decap "selected collection" background */
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-#nc-root aside a.cms-coupang-nav:hover,
-#nc-root [class*="Sidebar"] a.cms-coupang-nav:hover,
-a.cms-coupang-nav:hover,
-#nc-root aside a.cms-coupang-nav:focus-visible,
-#nc-root [class*="Sidebar"] a.cms-coupang-nav:focus-visible {
-  background: rgba(255, 255, 255, 0.08) !important;
 }
 
 #nc-root aside li.cms-coupang-nav-row,
@@ -416,7 +405,6 @@ a.cms-coupang-nav:hover,
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  background: transparent !important;
 }
 
 .cms-coupang-label {
